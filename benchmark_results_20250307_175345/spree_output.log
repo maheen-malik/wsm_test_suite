@@ -1,0 +1,2350 @@
+Starting Spree API load test...
+{
+  "actualRPS": "1.90",
+  "endpointDistribution": {
+    "products": 36.84210526315789,
+    "specificProduct": 63.1578947368421
+  },
+  "failedRequests": 0,
+  "latency": {
+    "p50": "3.142676533s",
+    "p90": "3.142676533s",
+    "p95": "3.142676533s",
+    "p99": "3.142676533s"
+  },
+  "statusCodes": {
+    "200": 19
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 19,
+  "targetRPS": 10,
+  "testDuration": "10.01755828s",
+  "totalRequests": 19
+}
+{
+  "actualRPS": "5.00",
+  "endpointDistribution": {
+    "products": 53,
+    "specificProduct": 47
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:05Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:05Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:05Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:05Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:05Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 74,
+  "latency": {
+    "p50": "10.000626737s",
+    "p90": "10.001243442s",
+    "p95": "10.001243442s",
+    "p99": "10.001243442s"
+  },
+  "statusCodes": {
+    "0": 74,
+    "200": 26
+  },
+  "successRate": "26.00%",
+  "successfulRequests": 26,
+  "targetRPS": 10,
+  "testDuration": "20.017744445s",
+  "totalRequests": 100
+}
+{
+  "actualRPS": "6.66",
+  "endpointDistribution": {
+    "products": 53,
+    "specificProduct": 47
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 171,
+  "latency": {
+    "p50": "10.000510214s",
+    "p90": "10.001130679s",
+    "p95": "10.001243442s",
+    "p99": "10.001243442s"
+  },
+  "statusCodes": {
+    "0": 171,
+    "200": 29
+  },
+  "successRate": "14.50%",
+  "successfulRequests": 29,
+  "targetRPS": 10,
+  "testDuration": "30.017829654s",
+  "totalRequests": 200
+}
+Moving to stage 2: Ramp up to 25 RPS
+{
+  "actualRPS": "7.55",
+  "endpointDistribution": {
+    "products": 54.63576158940398,
+    "specificProduct": 45.36423841059602
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 268,
+  "latency": {
+    "p50": "10.000457591s",
+    "p90": "10.001115079s",
+    "p95": "10.001130679s",
+    "p99": "10.001243442s"
+  },
+  "statusCodes": {
+    "0": 268,
+    "200": 34
+  },
+  "successRate": "11.26%",
+  "successfulRequests": 34,
+  "targetRPS": 14,
+  "testDuration": "40.017452491s",
+  "totalRequests": 302
+}
+{
+  "actualRPS": "8.50",
+  "endpointDistribution": {
+    "products": 54.8235294117647,
+    "specificProduct": 45.1764705882353
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 391,
+  "latency": {
+    "p50": "10.000510214s",
+    "p90": "10.001115079s",
+    "p95": "10.001243442s",
+    "p99": "10.001361544s"
+  },
+  "statusCodes": {
+    "0": 391,
+    "200": 34
+  },
+  "successRate": "8.00%",
+  "successfulRequests": 34,
+  "targetRPS": 19,
+  "testDuration": "50.017732618s",
+  "totalRequests": 425
+}
+Moving to stage 3: Ramp up to 50 RPS
+{
+  "actualRPS": "10.00",
+  "endpointDistribution": {
+    "products": 54.333333333333336,
+    "specificProduct": 45.666666666666664
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 566,
+  "latency": {
+    "p50": "10.000626737s",
+    "p90": "10.001130679s",
+    "p95": "10.001200171s",
+    "p99": "10.001361544s"
+  },
+  "statusCodes": {
+    "0": 566,
+    "200": 34
+  },
+  "successRate": "5.67%",
+  "successfulRequests": 34,
+  "targetRPS": 24,
+  "testDuration": "1m0.018174159s",
+  "totalRequests": 600
+}
+{
+  "actualRPS": "11.80",
+  "endpointDistribution": {
+    "products": 55.690072639225185,
+    "specificProduct": 44.30992736077482
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 788,
+  "latency": {
+    "p50": "10.000558193s",
+    "p90": "10.001115079s",
+    "p95": "10.001200171s",
+    "p99": "10.002177193s"
+  },
+  "statusCodes": {
+    "0": 788,
+    "200": 38
+  },
+  "successRate": "4.60%",
+  "successfulRequests": 38,
+  "targetRPS": 32,
+  "testDuration": "1m10.018219493s",
+  "totalRequests": 826
+}
+{
+  "actualRPS": "13.85",
+  "endpointDistribution": {
+    "products": 56.58844765342961,
+    "specificProduct": 43.411552346570396
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 1070,
+  "latency": {
+    "p50": "10.000581571s",
+    "p90": "10.001200171s",
+    "p95": "10.001361544s",
+    "p99": "10.002177193s"
+  },
+  "statusCodes": {
+    "0": 1070,
+    "200": 38
+  },
+  "successRate": "3.43%",
+  "successfulRequests": 38,
+  "targetRPS": 41,
+  "testDuration": "1m20.017686748s",
+  "totalRequests": 1108
+}
+Moving to stage 4: Ramp up to 100 RPS
+{
+  "actualRPS": "16.42",
+  "endpointDistribution": {
+    "products": 57.1041948579161,
+    "specificProduct": 42.8958051420839
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 1438,
+  "latency": {
+    "p50": "10.0005391s",
+    "p90": "10.001200171s",
+    "p95": "10.00133861s",
+    "p99": "10.002012544s"
+  },
+  "statusCodes": {
+    "0": 1438,
+    "200": 40
+  },
+  "successRate": "2.71%",
+  "successfulRequests": 40,
+  "targetRPS": 49,
+  "testDuration": "1m30.018217025s",
+  "totalRequests": 1478
+}
+{
+  "actualRPS": "19.34",
+  "endpointDistribution": {
+    "products": 57.65253360910031,
+    "specificProduct": 42.34746639089969
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 1893,
+  "latency": {
+    "p50": "10.000614154s",
+    "p90": "10.001200171s",
+    "p95": "10.001361544s",
+    "p99": "10.002107594s"
+  },
+  "statusCodes": {
+    "0": 1893,
+    "200": 41
+  },
+  "successRate": "2.12%",
+  "successfulRequests": 41,
+  "targetRPS": 65,
+  "testDuration": "1m40.017769458s",
+  "totalRequests": 1934
+}
+{
+  "actualRPS": "22.84",
+  "endpointDistribution": {
+    "products": 58.1774771189813,
+    "specificProduct": 41.822522881018706
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 2472,
+  "latency": {
+    "p50": "10.000614235s",
+    "p90": "10.001182029s",
+    "p95": "10.001361544s",
+    "p99": "10.002012544s"
+  },
+  "statusCodes": {
+    "0": 2472,
+    "200": 41
+  },
+  "successRate": "1.63%",
+  "successfulRequests": 41,
+  "targetRPS": 82,
+  "testDuration": "1m50.017778399s",
+  "totalRequests": 2513
+}
+{
+  "actualRPS": "27.19",
+  "endpointDistribution": {
+    "products": 58.627030340177754,
+    "specificProduct": 41.37296965982225
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 3222,
+  "latency": {
+    "p50": "10.000558193s",
+    "p90": "10.001130679s",
+    "p95": "10.001390039s",
+    "p99": "10.001973114s"
+  },
+  "statusCodes": {
+    "0": 3222,
+    "200": 41
+  },
+  "successRate": "1.26%",
+  "successfulRequests": 41,
+  "targetRPS": 99,
+  "testDuration": "2m0.017728059s",
+  "totalRequests": 3263
+}
+Moving to stage 5: Ramp up to 200 RPS
+{
+  "actualRPS": "32.17",
+  "endpointDistribution": {
+    "products": 58.66602916567057,
+    "specificProduct": 41.33397083432943
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 4142,
+  "latency": {
+    "p50": "10.000585718s",
+    "p90": "10.0012278s",
+    "p95": "10.001593147s",
+    "p99": "10.003275816s"
+  },
+  "statusCodes": {
+    "0": 4142,
+    "200": 41
+  },
+  "successRate": "0.98%",
+  "successfulRequests": 41,
+  "targetRPS": 132,
+  "testDuration": "2m10.017921477s",
+  "totalRequests": 4183
+}
+{
+  "actualRPS": "38.25",
+  "endpointDistribution": {
+    "products": 59.48469006721434,
+    "specificProduct": 40.51530993278566
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 5314,
+  "latency": {
+    "p50": "10.000577398s",
+    "p90": "10.001241262s",
+    "p95": "10.001681686s",
+    "p99": "10.003891561s"
+  },
+  "statusCodes": {
+    "0": 5314,
+    "200": 42
+  },
+  "successRate": "0.78%",
+  "successfulRequests": 42,
+  "targetRPS": 166,
+  "testDuration": "2m20.018457303s",
+  "totalRequests": 5356
+}
+{
+  "actualRPS": "45.77",
+  "endpointDistribution": {
+    "products": 59.81648703757646,
+    "specificProduct": 40.183512962423535
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 6822,
+  "latency": {
+    "p50": "10.000611124s",
+    "p90": "10.001292971s",
+    "p95": "10.002107594s",
+    "p99": "10.006312493s"
+  },
+  "statusCodes": {
+    "0": 6822,
+    "200": 44
+  },
+  "successRate": "0.64%",
+  "successfulRequests": 44,
+  "targetRPS": 199,
+  "testDuration": "2m30.017432777s",
+  "totalRequests": 6866
+}
+Moving to stage 6: Ramp up to 300 RPS
+{
+  "actualRPS": "56.16",
+  "endpointDistribution": {
+    "products": 60.11573558869352,
+    "specificProduct": 39.884264411306475
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 8937,
+  "latency": {
+    "p50": "10.000592844s",
+    "p90": "10.001505014s",
+    "p95": "10.002991049s",
+    "p99": "10.006067892s"
+  },
+  "statusCodes": {
+    "0": 8937,
+    "200": 49
+  },
+  "successRate": "0.55%",
+  "successfulRequests": 49,
+  "targetRPS": 232,
+  "testDuration": "2m40.018107165s",
+  "totalRequests": 8986
+}
+{
+  "actualRPS": "67.44",
+  "endpointDistribution": {
+    "products": 59.90755276469562,
+    "specificProduct": 40.09244723530438
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 11416,
+  "latency": {
+    "p50": "10.000584038s",
+    "p90": "10.001589854s",
+    "p95": "10.003264859s",
+    "p99": "10.007918173s"
+  },
+  "statusCodes": {
+    "0": 11416,
+    "200": 50
+  },
+  "successRate": "0.44%",
+  "successfulRequests": 50,
+  "targetRPS": 266,
+  "testDuration": "2m50.017794088s",
+  "totalRequests": 11466
+}
+{
+  "actualRPS": "79.45",
+  "endpointDistribution": {
+    "products": 59.86156750332098,
+    "specificProduct": 40.138432496679016
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 14251,
+  "latency": {
+    "p50": "10.000579761s",
+    "p90": "10.001697352s",
+    "p95": "10.003636552s",
+    "p99": "10.007918173s"
+  },
+  "statusCodes": {
+    "0": 14251,
+    "200": 52
+  },
+  "successRate": "0.36%",
+  "successfulRequests": 52,
+  "targetRPS": 299,
+  "testDuration": "3m0.017670652s",
+  "totalRequests": 14303
+}
+Moving to stage 7: Ramp up to 400 RPS
+{
+  "actualRPS": "92.01",
+  "endpointDistribution": {
+    "products": 59.88674712577933,
+    "specificProduct": 40.11325287422067
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 17428,
+  "latency": {
+    "p50": "10.000519111s",
+    "p90": "10.001622592s",
+    "p95": "10.003440748s",
+    "p99": "10.007944011s"
+  },
+  "statusCodes": {
+    "0": 17428,
+    "200": 55
+  },
+  "successRate": "0.31%",
+  "successfulRequests": 55,
+  "targetRPS": 332,
+  "testDuration": "3m10.018470104s",
+  "totalRequests": 17483
+}
+{
+  "actualRPS": "104.91",
+  "endpointDistribution": {
+    "products": 59.921845215402215,
+    "specificProduct": 40.07815478459779
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 20927,
+  "latency": {
+    "p50": "10.000450387s",
+    "p90": "10.001540811s",
+    "p95": "10.003175225s",
+    "p99": "10.008308447s"
+  },
+  "statusCodes": {
+    "0": 20926,
+    "200": 57,
+    "500": 1
+  },
+  "successRate": "0.27%",
+  "successfulRequests": 57,
+  "targetRPS": 366,
+  "testDuration": "3m20.017804372s",
+  "totalRequests": 20984
+}
+{
+  "actualRPS": "118.13",
+  "endpointDistribution": {
+    "products": 59.85327905195695,
+    "specificProduct": 40.14672094804305
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 24751,
+  "latency": {
+    "p50": "10.000402285s",
+    "p90": "10.001526051s",
+    "p95": "10.003205886s",
+    "p99": "10.008308447s"
+  },
+  "statusCodes": {
+    "0": 24750,
+    "200": 58,
+    "500": 1
+  },
+  "successRate": "0.23%",
+  "successfulRequests": 58,
+  "targetRPS": 399,
+  "testDuration": "3m30.017772642s",
+  "totalRequests": 24809
+}
+Moving to stage 8: Ramp up to 500 RPS
+{
+  "actualRPS": "131.66",
+  "endpointDistribution": {
+    "products": 59.8266993475334,
+    "specificProduct": 40.1733006524666
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 28903,
+  "latency": {
+    "p50": "10.000363475s",
+    "p90": "10.001426704s",
+    "p95": "10.003112249s",
+    "p99": "10.008287812s"
+  },
+  "statusCodes": {
+    "0": 28901,
+    "200": 64,
+    "500": 2
+  },
+  "successRate": "0.22%",
+  "successfulRequests": 64,
+  "targetRPS": 432,
+  "testDuration": "3m40.017855854s",
+  "totalRequests": 28967
+}
+{
+  "actualRPS": "145.66",
+  "endpointDistribution": {
+    "products": 59.58812117594389,
+    "specificProduct": 40.41187882405611
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 33440,
+  "latency": {
+    "p50": "10.000317656s",
+    "p90": "10.001390039s",
+    "p95": "10.003066333s",
+    "p99": "10.007944011s"
+  },
+  "statusCodes": {
+    "0": 33438,
+    "200": 65,
+    "500": 2
+  },
+  "successRate": "0.19%",
+  "successfulRequests": 65,
+  "targetRPS": 466,
+  "testDuration": "3m50.017646797s",
+  "totalRequests": 33505
+}
+{
+  "actualRPS": "159.82",
+  "endpointDistribution": {
+    "products": 59.56359654839803,
+    "specificProduct": 40.43640345160197
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 38292,
+  "latency": {
+    "p50": "10.000278895s",
+    "p90": "10.001326183s",
+    "p95": "10.003016364s",
+    "p99": "10.007879297s"
+  },
+  "statusCodes": {
+    "0": 38283,
+    "200": 67,
+    "500": 9
+  },
+  "successRate": "0.17%",
+  "successfulRequests": 67,
+  "targetRPS": 499,
+  "testDuration": "4m0.017411972s",
+  "totalRequests": 38359
+}
+Moving to stage 9: Ramp up to 600 RPS
+{
+  "actualRPS": "174.14",
+  "endpointDistribution": {
+    "products": 59.63296430704212,
+    "specificProduct": 40.36703569295788
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 43469,
+  "latency": {
+    "p50": "10.00023817s",
+    "p90": "10.001264931s",
+    "p95": "10.002875362s",
+    "p99": "10.007421717s"
+  },
+  "statusCodes": {
+    "0": 43460,
+    "200": 69,
+    "500": 9
+  },
+  "successRate": "0.16%",
+  "successfulRequests": 69,
+  "targetRPS": 532,
+  "testDuration": "4m10.017448205s",
+  "totalRequests": 43538
+}
+{
+  "actualRPS": "188.54",
+  "endpointDistribution": {
+    "products": 59.72910674581319,
+    "specificProduct": 40.27089325418681
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 48952,
+  "latency": {
+    "p50": "10.000199864s",
+    "p90": "10.001201212s",
+    "p95": "10.002679358s",
+    "p99": "10.007124662s"
+  },
+  "statusCodes": {
+    "0": 48941,
+    "200": 71,
+    "500": 11
+  },
+  "successRate": "0.14%",
+  "successfulRequests": 71,
+  "targetRPS": 566,
+  "testDuration": "4m20.018321257s",
+  "totalRequests": 49023
+}
+{
+  "actualRPS": "203.33",
+  "endpointDistribution": {
+    "products": 59.79199300571928,
+    "specificProduct": 40.20800699428072
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 54826,
+  "latency": {
+    "p50": "10.000154081s",
+    "p90": "10.001184879s",
+    "p95": "10.002526913s",
+    "p99": "10.007124662s"
+  },
+  "statusCodes": {
+    "0": 54806,
+    "200": 76,
+    "500": 20
+  },
+  "successRate": "0.14%",
+  "successfulRequests": 76,
+  "targetRPS": 599,
+  "testDuration": "4m30.01739878s",
+  "totalRequests": 54902
+}
+Moving to stage 10: Ramp up to 700 RPS
+{
+  "actualRPS": "217.86",
+  "endpointDistribution": {
+    "products": 59.77706745348742,
+    "specificProduct": 40.22293254651258
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 60926,
+  "latency": {
+    "p50": "10.000125998s",
+    "p90": "10.001168584s",
+    "p95": "10.002370107s",
+    "p99": "10.006851193s"
+  },
+  "statusCodes": {
+    "0": 60894,
+    "200": 79,
+    "500": 32
+  },
+  "successRate": "0.13%",
+  "successfulRequests": 79,
+  "targetRPS": 632,
+  "testDuration": "4m40.017670401s",
+  "totalRequests": 61005
+}
+{
+  "actualRPS": "232.92",
+  "endpointDistribution": {
+    "products": 59.89756039791568,
+    "specificProduct": 40.102439602084324
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 67469,
+  "latency": {
+    "p50": "10.000089078s",
+    "p90": "10.001140594s",
+    "p95": "10.002183515s",
+    "p99": "10.006587046s"
+  },
+  "statusCodes": {
+    "0": 67387,
+    "200": 83,
+    "500": 82
+  },
+  "successRate": "0.12%",
+  "successfulRequests": 83,
+  "targetRPS": 666,
+  "testDuration": "4m50.017604137s",
+  "totalRequests": 67552
+}
+{
+  "actualRPS": "247.60",
+  "endpointDistribution": {
+    "products": 59.94561412955684,
+    "specificProduct": 40.05438587044316
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 74199,
+  "latency": {
+    "p50": "93.859934ms",
+    "p90": "10.001122725s",
+    "p95": "10.002062673s",
+    "p99": "10.00642688s"
+  },
+  "statusCodes": {
+    "0": 74105,
+    "200": 85,
+    "500": 94
+  },
+  "successRate": "0.11%",
+  "successfulRequests": 85,
+  "targetRPS": 699,
+  "testDuration": "5m0.018379934s",
+  "totalRequests": 74284
+}
+Moving to stage 11: Ramp up to 800 RPS
+{
+  "actualRPS": "262.93",
+  "endpointDistribution": {
+    "products": 59.96074342145617,
+    "specificProduct": 40.03925657854383
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 81426,
+  "latency": {
+    "p50": "84.954933ms",
+    "p90": "10.001102055s",
+    "p95": "10.001949685s",
+    "p99": "10.006234063s"
+  },
+  "statusCodes": {
+    "0": 81251,
+    "200": 89,
+    "500": 175
+  },
+  "successRate": "0.11%",
+  "successfulRequests": 89,
+  "targetRPS": 732,
+  "testDuration": "5m10.022655844s",
+  "totalRequests": 81515
+}
+{
+  "actualRPS": "277.80",
+  "endpointDistribution": {
+    "products": 59.967154844660406,
+    "specificProduct": 40.03284515533959
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 88810,
+  "latency": {
+    "p50": "81.162161ms",
+    "p90": "10.001080242s",
+    "p95": "10.001820359s",
+    "p99": "10.006067892s"
+  },
+  "statusCodes": {
+    "0": 88587,
+    "200": 92,
+    "500": 223
+  },
+  "successRate": "0.10%",
+  "successfulRequests": 92,
+  "targetRPS": 766,
+  "testDuration": "5m20.017744711s",
+  "totalRequests": 88902
+}
+{
+  "actualRPS": "293.13",
+  "endpointDistribution": {
+    "products": 59.93487698986976,
+    "specificProduct": 40.06512301013024
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 96647,
+  "latency": {
+    "p50": "78.886878ms",
+    "p90": "10.001061913s",
+    "p95": "10.001745493s",
+    "p99": "10.005979917s"
+  },
+  "statusCodes": {
+    "0": 96342,
+    "200": 93,
+    "500": 305
+  },
+  "successRate": "0.10%",
+  "successfulRequests": 93,
+  "targetRPS": 799,
+  "testDuration": "5m30.020095973s",
+  "totalRequests": 96740
+}
+Moving to stage 12: Ramp up to 900 RPS
+{
+  "actualRPS": "308.53",
+  "endpointDistribution": {
+    "products": 59.917449907536266,
+    "specificProduct": 40.082550092463734
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 104810,
+  "latency": {
+    "p50": "77.528848ms",
+    "p90": "10.001045703s",
+    "p95": "10.001658391s",
+    "p99": "10.005789956s"
+  },
+  "statusCodes": {
+    "0": 104410,
+    "200": 96,
+    "500": 400
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 96,
+  "targetRPS": 832,
+  "testDuration": "5m40.017563571s",
+  "totalRequests": 104906
+}
+{
+  "actualRPS": "323.42",
+  "endpointDistribution": {
+    "products": 59.85830889367867,
+    "specificProduct": 40.14169110632133
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 113106,
+  "latency": {
+    "p50": "76.370607ms",
+    "p90": "10.001036163s",
+    "p95": "10.001618916s",
+    "p99": "10.005675247s"
+  },
+  "statusCodes": {
+    "0": 112585,
+    "200": 98,
+    "500": 521
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 98,
+  "targetRPS": 866,
+  "testDuration": "5m50.018532645s",
+  "totalRequests": 113204
+}
+{
+  "actualRPS": "337.72",
+  "endpointDistribution": {
+    "products": 59.862977645452595,
+    "specificProduct": 40.1370223545474
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 121487,
+  "latency": {
+    "p50": "75.860519ms",
+    "p90": "10.001025393s",
+    "p95": "10.001574693s",
+    "p99": "10.005600005s"
+  },
+  "statusCodes": {
+    "0": 120844,
+    "200": 99,
+    "500": 643
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 99,
+  "targetRPS": 899,
+  "testDuration": "6m0.01757622s",
+  "totalRequests": 121586
+}
+Moving to stage 13: Ramp up to 1K RPS
+{
+  "actualRPS": "351.49",
+  "endpointDistribution": {
+    "products": 59.85637177259376,
+    "specificProduct": 40.14362822740624
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 129957,
+  "latency": {
+    "p50": "74.959686ms",
+    "p90": "10.001015622s",
+    "p95": "10.001518475s",
+    "p99": "10.005512975s"
+  },
+  "statusCodes": {
+    "0": 129195,
+    "200": 101,
+    "500": 762
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 101,
+  "targetRPS": 932,
+  "testDuration": "6m10.018173225s",
+  "totalRequests": 130058
+}
+{
+  "actualRPS": "364.49",
+  "endpointDistribution": {
+    "products": 59.84651038545675,
+    "specificProduct": 40.15348961454325
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 138410,
+  "latency": {
+    "p50": "74.621357ms",
+    "p90": "10.001002457s",
+    "p95": "10.001463592s",
+    "p99": "10.005473021s"
+  },
+  "statusCodes": {
+    "0": 137550,
+    "200": 101,
+    "500": 860
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 101,
+  "targetRPS": 966,
+  "testDuration": "6m20.018197352s",
+  "totalRequests": 138511
+}
+{
+  "actualRPS": "376.57",
+  "endpointDistribution": {
+    "products": 59.83182406209573,
+    "specificProduct": 40.16817593790427
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 146766,
+  "latency": {
+    "p50": "73.767618ms",
+    "p90": "10.000992198s",
+    "p95": "10.001426704s",
+    "p99": "10.005359463s"
+  },
+  "statusCodes": {
+    "0": 145806,
+    "200": 104,
+    "500": 960
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 104,
+  "targetRPS": 999,
+  "testDuration": "6m30.017478473s",
+  "totalRequests": 146870
+}
+Moving to stage 14: Ramp down to 0
+{
+  "actualRPS": "387.24",
+  "endpointDistribution": {
+    "products": 59.853844962041,
+    "specificProduct": 40.14615503795899
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 154799,
+  "latency": {
+    "p50": "73.550904ms",
+    "p90": "10.000987786s",
+    "p95": "10.001403507s",
+    "p99": "10.005291685s"
+  },
+  "statusCodes": {
+    "0": 153732,
+    "200": 105,
+    "500": 1067
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 105,
+  "targetRPS": 667,
+  "testDuration": "6m40.017893622s",
+  "totalRequests": 154904
+}
+{
+  "actualRPS": "390.26",
+  "endpointDistribution": {
+    "products": 59.8573856960728,
+    "specificProduct": 40.1426143039272
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 159903,
+  "latency": {
+    "p50": "73.534065ms",
+    "p90": "10.000982574s",
+    "p95": "10.001389833s",
+    "p99": "10.005270155s"
+  },
+  "statusCodes": {
+    "0": 158829,
+    "200": 109,
+    "500": 1074
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 109,
+  "targetRPS": 334,
+  "testDuration": "6m50.017411898s",
+  "totalRequests": 160012
+}
+{
+  "actualRPS": "386.34",
+  "endpointDistribution": {
+    "products": 59.85160352010255,
+    "specificProduct": 40.14839647989745
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-07T17:54:08Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 162154,
+  "latency": {
+    "p50": "73.978089ms",
+    "p90": "10.000988875s",
+    "p95": "10.001397795s",
+    "p99": "10.005304849s"
+  },
+  "statusCodes": {
+    "0": 161080,
+    "200": 114,
+    "500": 1074
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 114,
+  "targetRPS": 1,
+  "testDuration": "7m0.017450606s",
+  "totalRequests": 162268
+}
+Load test completed all stages.
+
+Received interrupt signal, shutting down...
+
+Final Test Results:
+{
+  "actualRPS": "320.57",
+  "endpointDistribution": {
+    "products": 59.84680840658736,
+    "specificProduct": 40.15319159341264
+  },
+  "failedRequests": 163467,
+  "latency": {
+    "max": "10.036218236s",
+    "mean": "3.776006275s",
+    "min": "2.225513ms",
+    "p50": "74.42302ms",
+    "p90": "10.000991798s",
+    "p95": "10.001390556s",
+    "p99": "10.005299001s"
+  },
+  "platform": "Spree",
+  "statusDistribution": {
+    "2xx": 119,
+    "5xx": 1074,
+    "network_error": 162393
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 119,
+  "testDuration": "8m30.301265889s",
+  "testEndTime": "2025-03-07T18:02:17Z",
+  "testStartTime": "2025-03-07T17:53:46Z",
+  "totalRequests": 163586
+}
+
+Detailed results saved to spree_results.json
