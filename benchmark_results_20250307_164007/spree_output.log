@@ -1,0 +1,2398 @@
+Starting Spree API load test...
+{
+  "actualRPS": "295.72",
+  "endpointDistribution": {
+    "products": 59.149223497636726,
+    "specificProduct": 40.85077650236327
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 2950,
+  "latency": {
+    "p50": "57.654811ms",
+    "p90": "76.795115ms",
+    "p95": "82.045034ms",
+    "p99": "93.481083ms"
+  },
+  "statusCodes": {
+    "0": 2945,
+    "200": 12,
+    "500": 5
+  },
+  "successRate": "0.41%",
+  "successfulRequests": 12,
+  "targetRPS": 500,
+  "testDuration": "10.0160972s",
+  "totalRequests": 2962
+}
+{
+  "actualRPS": "397.78",
+  "endpointDistribution": {
+    "products": 59.62069831700578,
+    "specificProduct": 40.379301682994225
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 7943,
+  "latency": {
+    "p50": "64.188444ms",
+    "p90": "10.001022306s",
+    "p95": "10.003083898s",
+    "p99": "10.007447488s"
+  },
+  "statusCodes": {
+    "0": 7935,
+    "200": 19,
+    "500": 8
+  },
+  "successRate": "0.24%",
+  "successfulRequests": 19,
+  "targetRPS": 500,
+  "testDuration": "20.016099606s",
+  "totalRequests": 7962
+}
+Moving to stage 2: Ramp up to 1K RPS
+{
+  "actualRPS": "431.83",
+  "endpointDistribution": {
+    "products": 59.913593581237464,
+    "specificProduct": 40.086406418762536
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 12940,
+  "latency": {
+    "p50": "66.550217ms",
+    "p90": "10.001110039s",
+    "p95": "10.00293792s",
+    "p99": "10.006901007s"
+  },
+  "statusCodes": {
+    "0": 12922,
+    "200": 22,
+    "500": 18
+  },
+  "successRate": "0.17%",
+  "successfulRequests": 22,
+  "targetRPS": 500,
+  "testDuration": "30.016278935s",
+  "totalRequests": 12962
+}
+{
+  "actualRPS": "471.68",
+  "endpointDistribution": {
+    "products": 59.54966887417219,
+    "specificProduct": 40.450331125827816
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 18846,
+  "latency": {
+    "p50": "65.84143ms",
+    "p90": "10.001137025s",
+    "p95": "10.003012936s",
+    "p99": "10.007309103s"
+  },
+  "statusCodes": {
+    "0": 18803,
+    "200": 29,
+    "500": 43
+  },
+  "successRate": "0.15%",
+  "successfulRequests": 29,
+  "targetRPS": 666,
+  "testDuration": "40.016662804s",
+  "totalRequests": 18875
+}
+{
+  "actualRPS": "528.97",
+  "endpointDistribution": {
+    "products": 59.75734210227917,
+    "specificProduct": 40.24265789772083
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 26425,
+  "latency": {
+    "p50": "65.146114ms",
+    "p90": "10.001086469s",
+    "p95": "10.002519328s",
+    "p99": "10.007256981s"
+  },
+  "statusCodes": {
+    "0": 26341,
+    "200": 32,
+    "500": 84
+  },
+  "successRate": "0.12%",
+  "successfulRequests": 32,
+  "targetRPS": 833,
+  "testDuration": "50.016377121s",
+  "totalRequests": 26457
+}
+{
+  "actualRPS": "580.66",
+  "endpointDistribution": {
+    "products": 59.82668082297914,
+    "specificProduct": 40.17331917702086
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 34815,
+  "latency": {
+    "p50": "65.699077ms",
+    "p90": "10.001020153s",
+    "p95": "10.002240451s",
+    "p99": "10.006901007s"
+  },
+  "statusCodes": {
+    "0": 34686,
+    "200": 34,
+    "500": 129
+  },
+  "successRate": "0.10%",
+  "successfulRequests": 34,
+  "targetRPS": 999,
+  "testDuration": "1m0.016230386s",
+  "totalRequests": 34849
+}
+Moving to stage 3: Hold at 1K RPS
+{
+  "actualRPS": "619.90",
+  "endpointDistribution": {
+    "products": 59.70324631937884,
+    "specificProduct": 40.29675368062116
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 43366,
+  "latency": {
+    "p50": "66.965864ms",
+    "p90": "10.000998021s",
+    "p95": "10.001980434s",
+    "p99": "10.006519015s"
+  },
+  "statusCodes": {
+    "0": 43174,
+    "200": 37,
+    "500": 192
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 37,
+  "targetRPS": 999,
+  "testDuration": "1m10.016681019s",
+  "totalRequests": 43403
+}
+{
+  "actualRPS": "648.59",
+  "endpointDistribution": {
+    "products": 59.72869860110216,
+    "specificProduct": 40.27130139889784
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 51857,
+  "latency": {
+    "p50": "67.250847ms",
+    "p90": "10.000957888s",
+    "p95": "10.001637626s",
+    "p99": "10.006377698s"
+  },
+  "statusCodes": {
+    "0": 51624,
+    "200": 41,
+    "500": 233
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 41,
+  "targetRPS": 999,
+  "testDuration": "1m20.016396398s",
+  "totalRequests": 51898
+}
+{
+  "actualRPS": "670.63",
+  "endpointDistribution": {
+    "products": 59.781006178872566,
+    "specificProduct": 40.218993821127434
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 60325,
+  "latency": {
+    "p50": "66.933106ms",
+    "p90": "10.000942373s",
+    "p95": "10.001516597s",
+    "p99": "10.006085747s"
+  },
+  "statusCodes": {
+    "0": 60030,
+    "200": 42,
+    "500": 295
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 42,
+  "targetRPS": 999,
+  "testDuration": "1m30.015813273s",
+  "totalRequests": 60367
+}
+{
+  "actualRPS": "687.82",
+  "endpointDistribution": {
+    "products": 59.69357347404532,
+    "specificProduct": 40.30642652595468
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 68743,
+  "latency": {
+    "p50": "67.112778ms",
+    "p90": "10.000930945s",
+    "p95": "10.00147654s",
+    "p99": "10.006070014s"
+  },
+  "statusCodes": {
+    "0": 68352,
+    "200": 50,
+    "500": 391
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 50,
+  "targetRPS": 999,
+  "testDuration": "1m40.016174267s",
+  "totalRequests": 68793
+}
+{
+  "actualRPS": "702.64",
+  "endpointDistribution": {
+    "products": 59.82639517735634,
+    "specificProduct": 40.173604822643654
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 77250,
+  "latency": {
+    "p50": "66.517854ms",
+    "p90": "10.000915342s",
+    "p95": "10.001396965s",
+    "p99": "10.005862049s"
+  },
+  "statusCodes": {
+    "0": 76760,
+    "200": 52,
+    "500": 490
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 52,
+  "targetRPS": 999,
+  "testDuration": "1m50.016148315s",
+  "totalRequests": 77302
+}
+{
+  "actualRPS": "714.77",
+  "endpointDistribution": {
+    "products": 59.82001305604775,
+    "specificProduct": 40.17998694395225
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 85729,
+  "latency": {
+    "p50": "66.213088ms",
+    "p90": "10.000902021s",
+    "p95": "10.001341337s",
+    "p99": "10.005777643s"
+  },
+  "statusCodes": {
+    "0": 85153,
+    "200": 55,
+    "500": 576
+  },
+  "successRate": "0.06%",
+  "successfulRequests": 55,
+  "targetRPS": 999,
+  "testDuration": "2m0.015859043s",
+  "totalRequests": 85784
+}
+Moving to stage 4: Ramp up to 2K RPS
+{
+  "actualRPS": "725.39",
+  "endpointDistribution": {
+    "products": 59.861947578250906,
+    "specificProduct": 40.13805242174909
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 94257,
+  "latency": {
+    "p50": "65.817724ms",
+    "p90": "10.000888831s",
+    "p95": "10.001308942s",
+    "p99": "10.005477158s"
+  },
+  "statusCodes": {
+    "0": 93579,
+    "200": 55,
+    "500": 678
+  },
+  "successRate": "0.06%",
+  "successfulRequests": 55,
+  "targetRPS": 1332,
+  "testDuration": "2m10.01583203s",
+  "totalRequests": 94312
+}
+{
+  "actualRPS": "734.41",
+  "endpointDistribution": {
+    "products": 59.83565107458912,
+    "specificProduct": 40.16434892541087
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 102772,
+  "latency": {
+    "p50": "65.546384ms",
+    "p90": "10.000883875s",
+    "p95": "10.001254518s",
+    "p99": "10.005373431s"
+  },
+  "statusCodes": {
+    "0": 101980,
+    "200": 58,
+    "500": 792
+  },
+  "successRate": "0.06%",
+  "successfulRequests": 58,
+  "targetRPS": 1666,
+  "testDuration": "2m20.016353844s",
+  "totalRequests": 102830
+}
+{
+  "actualRPS": "740.83",
+  "endpointDistribution": {
+    "products": 59.910380074863234,
+    "specificProduct": 40.08961992513677
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 111076,
+  "latency": {
+    "p50": "65.546384ms",
+    "p90": "10.000876767s",
+    "p95": "10.001230272s",
+    "p99": "10.005247101s"
+  },
+  "statusCodes": {
+    "0": 110132,
+    "200": 60,
+    "500": 944
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 60,
+  "targetRPS": 1999,
+  "testDuration": "2m30.016047475s",
+  "totalRequests": 111136
+}
+Moving to stage 5: Hold at 2K RPS
+{
+  "actualRPS": "747.34",
+  "endpointDistribution": {
+    "products": 59.94347164383791,
+    "specificProduct": 40.05652835616209
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 119524,
+  "latency": {
+    "p50": "65.408689ms",
+    "p90": "10.000871364s",
+    "p95": "10.001205066s",
+    "p99": "10.005117406s"
+  },
+  "statusCodes": {
+    "0": 118485,
+    "200": 62,
+    "500": 1039
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 62,
+  "targetRPS": 1999,
+  "testDuration": "2m40.015972949s",
+  "totalRequests": 119586
+}
+{
+  "actualRPS": "753.19",
+  "endpointDistribution": {
+    "products": 59.9340903056523,
+    "specificProduct": 40.065909694347695
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 127991,
+  "latency": {
+    "p50": "65.319389ms",
+    "p90": "10.000861297s",
+    "p95": "10.001196736s",
+    "p99": "10.005003523s"
+  },
+  "statusCodes": {
+    "0": 126808,
+    "200": 63,
+    "500": 1183
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 63,
+  "targetRPS": 1999,
+  "testDuration": "2m50.015775239s",
+  "totalRequests": 128054
+}
+{
+  "actualRPS": "758.00",
+  "endpointDistribution": {
+    "products": 59.90384897253247,
+    "specificProduct": 40.096151027467535
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 136385,
+  "latency": {
+    "p50": "65.317176ms",
+    "p90": "10.000850132s",
+    "p95": "10.001187932s",
+    "p99": "10.004938707s"
+  },
+  "statusCodes": {
+    "0": 135082,
+    "200": 67,
+    "500": 1303
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 67,
+  "targetRPS": 1999,
+  "testDuration": "3m0.016324603s",
+  "totalRequests": 136452
+}
+{
+  "actualRPS": "761.96",
+  "endpointDistribution": {
+    "products": 59.844597161308144,
+    "specificProduct": 40.155402838691856
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 144713,
+  "latency": {
+    "p50": "65.146101ms",
+    "p90": "10.000846812s",
+    "p95": "10.001180637s",
+    "p99": "10.004892914s"
+  },
+  "statusCodes": {
+    "0": 143279,
+    "200": 72,
+    "500": 1434
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 72,
+  "targetRPS": 1999,
+  "testDuration": "3m10.016341324s",
+  "totalRequests": 144785
+}
+{
+  "actualRPS": "766.37",
+  "endpointDistribution": {
+    "products": 59.86587163863627,
+    "specificProduct": 40.13412836136372
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 153209,
+  "latency": {
+    "p50": "65.041602ms",
+    "p90": "10.000836171s",
+    "p95": "10.001171971s",
+    "p99": "10.004727343s"
+  },
+  "statusCodes": {
+    "0": 151656,
+    "200": 77,
+    "500": 1553
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 77,
+  "targetRPS": 1999,
+  "testDuration": "3m20.016211487s",
+  "totalRequests": 153286
+}
+{
+  "actualRPS": "769.70",
+  "endpointDistribution": {
+    "products": 59.86328487472935,
+    "specificProduct": 40.13671512527065
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 161573,
+  "latency": {
+    "p50": "65.32784ms",
+    "p90": "10.000835319s",
+    "p95": "10.001163636s",
+    "p99": "10.004678404s"
+  },
+  "statusCodes": {
+    "0": 159884,
+    "200": 77,
+    "500": 1689
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 77,
+  "targetRPS": 1999,
+  "testDuration": "3m30.015872075s",
+  "totalRequests": 161650
+}
+Moving to stage 6: Ramp up to 5K RPS
+{
+  "actualRPS": "772.80",
+  "endpointDistribution": {
+    "products": 59.809797152250496,
+    "specificProduct": 40.190202847749504
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 169949,
+  "latency": {
+    "p50": "65.616503ms",
+    "p90": "10.000830877s",
+    "p95": "10.001162407s",
+    "p99": "10.004584783s"
+  },
+  "statusCodes": {
+    "0": 168172,
+    "200": 80,
+    "500": 1777
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 80,
+  "targetRPS": 2998,
+  "testDuration": "3m40.016294744s",
+  "totalRequests": 170029
+}
+{
+  "actualRPS": "775.60",
+  "endpointDistribution": {
+    "products": 59.80605381165919,
+    "specificProduct": 40.19394618834081
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 178320,
+  "latency": {
+    "p50": "65.790426ms",
+    "p90": "10.000828573s",
+    "p95": "10.001158332s",
+    "p99": "10.004584783s"
+  },
+  "statusCodes": {
+    "0": 176437,
+    "200": 80,
+    "500": 1883
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 80,
+  "targetRPS": 3999,
+  "testDuration": "3m50.01645832s",
+  "totalRequests": 178406
+}
+{
+  "actualRPS": "778.63",
+  "endpointDistribution": {
+    "products": 59.82320583891612,
+    "specificProduct": 40.176794161083876
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 186799,
+  "latency": {
+    "p50": "65.942764ms",
+    "p90": "10.000823887s",
+    "p95": "10.001148067s",
+    "p99": "10.004513137s"
+  },
+  "statusCodes": {
+    "0": 184768,
+    "200": 85,
+    "500": 2031
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 85,
+  "targetRPS": 4999,
+  "testDuration": "4m0.016393173s",
+  "totalRequests": 186884
+}
+Moving to stage 7: Hold at 5K RPS
+{
+  "actualRPS": "780.86",
+  "endpointDistribution": {
+    "products": 59.80853156309546,
+    "specificProduct": 40.19146843690454
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 195139,
+  "latency": {
+    "p50": "66.027857ms",
+    "p90": "10.000810852s",
+    "p95": "10.001138551s",
+    "p99": "10.004453937s"
+  },
+  "statusCodes": {
+    "0": 193004,
+    "200": 89,
+    "500": 2135
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 89,
+  "targetRPS": 4999,
+  "testDuration": "4m10.015913233s",
+  "totalRequests": 195228
+}
+{
+  "actualRPS": "783.44",
+  "endpointDistribution": {
+    "products": 59.828380116442325,
+    "specificProduct": 40.171619883557675
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 203617,
+  "latency": {
+    "p50": "66.148957ms",
+    "p90": "10.000810237s",
+    "p95": "10.0011385s",
+    "p99": "10.004453937s"
+  },
+  "statusCodes": {
+    "0": 201355,
+    "200": 89,
+    "500": 2262
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 89,
+  "targetRPS": 4999,
+  "testDuration": "4m20.015760623s",
+  "totalRequests": 203706
+}
+{
+  "actualRPS": "785.55",
+  "endpointDistribution": {
+    "products": 59.82999467260066,
+    "specificProduct": 40.17000532739933
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 212020,
+  "latency": {
+    "p50": "66.261413ms",
+    "p90": "10.000806859s",
+    "p95": "10.001135449s",
+    "p99": "10.00441143s"
+  },
+  "statusCodes": {
+    "0": 209637,
+    "200": 91,
+    "500": 2383
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 91,
+  "targetRPS": 4999,
+  "testDuration": "4m30.015802131s",
+  "totalRequests": 212111
+}
+{
+  "actualRPS": "787.43",
+  "endpointDistribution": {
+    "products": 59.829563750323146,
+    "specificProduct": 40.17043624967686
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 220399,
+  "latency": {
+    "p50": "66.432318ms",
+    "p90": "10.000806859s",
+    "p95": "10.001132943s",
+    "p99": "10.004347271s"
+  },
+  "statusCodes": {
+    "0": 217862,
+    "200": 94,
+    "500": 2537
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 94,
+  "targetRPS": 4999,
+  "testDuration": "4m40.015770891s",
+  "totalRequests": 220493
+}
+{
+  "actualRPS": "789.34",
+  "endpointDistribution": {
+    "products": 59.816268494371414,
+    "specificProduct": 40.18373150562858
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 228821,
+  "latency": {
+    "p50": "66.563536ms",
+    "p90": "10.00080033s",
+    "p95": "10.001127453s",
+    "p99": "10.00432506s"
+  },
+  "statusCodes": {
+    "0": 226186,
+    "200": 100,
+    "500": 2635
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 100,
+  "targetRPS": 4999,
+  "testDuration": "4m50.016403545s",
+  "totalRequests": 228921
+}
+{
+  "actualRPS": "790.99",
+  "endpointDistribution": {
+    "products": 59.83633153399155,
+    "specificProduct": 40.16366846600845
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 237203,
+  "latency": {
+    "p50": "66.64436ms",
+    "p90": "10.000802831s",
+    "p95": "10.001126999s",
+    "p99": "10.004309767s"
+  },
+  "statusCodes": {
+    "0": 234466,
+    "200": 106,
+    "500": 2737
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 106,
+  "targetRPS": 4999,
+  "testDuration": "5m0.015995978s",
+  "totalRequests": 237309
+}
+Moving to stage 8: Ramp up to 10K RPS
+{
+  "actualRPS": "792.81",
+  "endpointDistribution": {
+    "products": 59.883231279370186,
+    "specificProduct": 40.11676872062982
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 245677,
+  "latency": {
+    "p50": "66.781029ms",
+    "p90": "10.000801171s",
+    "p95": "10.001125585s",
+    "p99": "10.004305972s"
+  },
+  "statusCodes": {
+    "0": 242867,
+    "200": 108,
+    "500": 2810
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 108,
+  "targetRPS": 6664,
+  "testDuration": "5m10.016072252s",
+  "totalRequests": 245785
+}
+{
+  "actualRPS": "794.44",
+  "endpointDistribution": {
+    "products": 59.89458571793813,
+    "specificProduct": 40.10541428206187
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 254123,
+  "latency": {
+    "p50": "66.91309ms",
+    "p90": "10.00080055s",
+    "p95": "10.001125012s",
+    "p99": "10.004286497s"
+  },
+  "statusCodes": {
+    "0": 251191,
+    "200": 112,
+    "500": 2932
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 112,
+  "targetRPS": 8332,
+  "testDuration": "5m20.017126208s",
+  "totalRequests": 254235
+}
+Moving to stage 9: Hold at 10K RPS
+{
+  "actualRPS": "796.06",
+  "endpointDistribution": {
+    "products": 59.91237552909651,
+    "specificProduct": 40.0876244709035
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 262599,
+  "latency": {
+    "p50": "66.867981ms",
+    "p90": "10.000798684s",
+    "p95": "10.001121789s",
+    "p99": "10.004262228s"
+  },
+  "statusCodes": {
+    "0": 259565,
+    "200": 113,
+    "500": 3034
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 113,
+  "targetRPS": 9998,
+  "testDuration": "5m30.015911129s",
+  "totalRequests": 262712
+}
+{
+  "actualRPS": "797.64",
+  "endpointDistribution": {
+    "products": 59.89933999483795,
+    "specificProduct": 40.100660005162055
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 271095,
+  "latency": {
+    "p50": "66.95915ms",
+    "p90": "10.00079267s",
+    "p95": "10.001119132s",
+    "p99": "10.004217674s"
+  },
+  "statusCodes": {
+    "0": 267944,
+    "200": 115,
+    "500": 3151
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 115,
+  "targetRPS": 9999,
+  "testDuration": "5m40.015764807s",
+  "totalRequests": 271210
+}
+{
+  "actualRPS": "799.00",
+  "endpointDistribution": {
+    "products": 59.92269239296007,
+    "specificProduct": 40.07730760703993
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 279541,
+  "latency": {
+    "p50": "67.049159ms",
+    "p90": "10.000789836s",
+    "p95": "10.001115719s",
+    "p99": "10.004212064s"
+  },
+  "statusCodes": {
+    "0": 276275,
+    "200": 121,
+    "500": 3266
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 121,
+  "targetRPS": 9999,
+  "testDuration": "5m50.016164474s",
+  "totalRequests": 279662
+}
+{
+  "actualRPS": "800.46",
+  "endpointDistribution": {
+    "products": 59.908390589215074,
+    "specificProduct": 40.091609410784926
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 288059,
+  "latency": {
+    "p50": "67.058083ms",
+    "p90": "10.000788432s",
+    "p95": "10.001112973s",
+    "p99": "10.004181022s"
+  },
+  "statusCodes": {
+    "0": 284658,
+    "200": 121,
+    "500": 3401
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 121,
+  "targetRPS": 9999,
+  "testDuration": "6m0.016004043s",
+  "totalRequests": 288180
+}
+{
+  "actualRPS": "801.65",
+  "endpointDistribution": {
+    "products": 59.909987357774966,
+    "specificProduct": 40.090012642225034
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 296501,
+  "latency": {
+    "p50": "67.085341ms",
+    "p90": "10.000788739s",
+    "p95": "10.001112331s",
+    "p99": "10.004142922s"
+  },
+  "statusCodes": {
+    "0": 292996,
+    "200": 124,
+    "500": 3505
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 124,
+  "targetRPS": 9999,
+  "testDuration": "6m10.016131134s",
+  "totalRequests": 296625
+}
+{
+  "actualRPS": "802.78",
+  "endpointDistribution": {
+    "products": 59.926246435244366,
+    "specificProduct": 40.073753564755634
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 304945,
+  "latency": {
+    "p50": "67.146052ms",
+    "p90": "10.000786688s",
+    "p95": "10.00111168s",
+    "p99": "10.004082205s"
+  },
+  "statusCodes": {
+    "0": 301275,
+    "200": 125,
+    "500": 3670
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 125,
+  "targetRPS": 9999,
+  "testDuration": "6m20.01674827s",
+  "totalRequests": 305070
+}
+{
+  "actualRPS": "803.64",
+  "endpointDistribution": {
+    "products": 59.9295543226144,
+    "specificProduct": 40.0704456773856
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 313304,
+  "latency": {
+    "p50": "67.164209ms",
+    "p90": "10.000785167s",
+    "p95": "10.001109302s",
+    "p99": "10.004084703s"
+  },
+  "statusCodes": {
+    "0": 309539,
+    "200": 129,
+    "500": 3765
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 129,
+  "targetRPS": 9999,
+  "testDuration": "6m30.016203737s",
+  "totalRequests": 313433
+}
+Moving to stage 10: Ramp down to 0
+{
+  "actualRPS": "804.11",
+  "endpointDistribution": {
+    "products": 59.9212826084929,
+    "specificProduct": 40.0787173915071
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 321526,
+  "latency": {
+    "p50": "67.26931ms",
+    "p90": "10.000787411s",
+    "p95": "10.001110039s",
+    "p99": "10.004063217s"
+  },
+  "statusCodes": {
+    "0": 317662,
+    "200": 131,
+    "500": 3864
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 131,
+  "targetRPS": 6669,
+  "testDuration": "6m40.015774042s",
+  "totalRequests": 321657
+}
+{
+  "actualRPS": "804.70",
+  "endpointDistribution": {
+    "products": 59.93132105437032,
+    "specificProduct": 40.06867894562967
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 329806,
+  "latency": {
+    "p50": "67.334846ms",
+    "p90": "10.000786688s",
+    "p95": "10.001111043s",
+    "p99": "10.004063217s"
+  },
+  "statusCodes": {
+    "0": 325859,
+    "200": 135,
+    "500": 3947
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 135,
+  "targetRPS": 3336,
+  "testDuration": "6m50.016395435s",
+  "totalRequests": 329941
+}
+Load test completed all stages.
+{
+  "actualRPS": "803.38",
+  "endpointDistribution": {
+    "products": 59.937409611418005,
+    "specificProduct": 40.062590388581995
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T16:40:16Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 337293,
+  "latency": {
+    "p50": "67.461546ms",
+    "p90": "10.000789836s",
+    "p95": "10.001113371s",
+    "p99": "10.004093048s"
+  },
+  "statusCodes": {
+    "0": 333245,
+    "200": 139,
+    "500": 4048
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 139,
+  "targetRPS": 3,
+  "testDuration": "7m0.016161986s",
+  "totalRequests": 337432
+}
+
+Received interrupt signal, shutting down...
+
+Final Test Results:
+{
+  "actualRPS": "462.63",
+  "endpointDistribution": {
+    "products": 59.92755096927843,
+    "specificProduct": 40.07244903072157
+  },
+  "failedRequests": 339125,
+  "latency": {
+    "max": "10.025483737s",
+    "mean": "2.61601569s",
+    "min": "1.932434ms",
+    "p50": "67.63335ms",
+    "p90": "10.000800328s",
+    "p95": "10.00111497s",
+    "p99": "10.004083616s"
+  },
+  "platform": "Spree",
+  "statusDistribution": {
+    "2xx": 148,
+    "5xx": 4048,
+    "network_error": 335077
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 148,
+  "testDuration": "12m13.356241131s",
+  "testEndTime": "2025-03-07T16:52:25Z",
+  "testStartTime": "2025-03-07T16:40:12Z",
+  "totalRequests": 339273
+}
+
+Detailed results saved to spree_results.json
