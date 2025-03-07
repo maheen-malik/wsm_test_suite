@@ -8,37 +8,57 @@
     "Content-Type": "application/json"
   },
   "Test": {
-    "MaxWorkers": 1000,
-    "MaxQueueSize": 2000,
+    "MaxWorkers": 5000,
+    "MaxQueueSize": 10000,
     "ReportingSeconds": 10,
     "LogErrors": true,
-    "ErrorSampleRate": 0.1,
+    "ErrorSampleRate": 0.01,
     "BackoffEnabled": true,
     "RampupStages": [
       {
         "Duration": 30000000000,
-        "TargetRPS": 100,
-        "Description": "Warm-up at 100 RPS"
-      },
-      {
-        "Duration": 30000000000,
         "TargetRPS": 500,
-        "Description": "Ramp up to 500 RPS"
-      },
-      {
-        "Duration": 60000000000,
-        "TargetRPS": 500,
-        "Description": "Hold at 500 RPS"
+        "Description": "Warm-up at 500 RPS"
       },
       {
         "Duration": 30000000000,
         "TargetRPS": 1000,
-        "Description": "Ramp up to 1000 RPS"
+        "Description": "Ramp up to 1K RPS"
       },
       {
         "Duration": 60000000000,
         "TargetRPS": 1000,
-        "Description": "Hold at 1000 RPS"
+        "Description": "Hold at 1K RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 2000,
+        "Description": "Ramp up to 2K RPS"
+      },
+      {
+        "Duration": 60000000000,
+        "TargetRPS": 2000,
+        "Description": "Hold at 2K RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 5000,
+        "Description": "Ramp up to 5K RPS"
+      },
+      {
+        "Duration": 60000000000,
+        "TargetRPS": 5000,
+        "Description": "Hold at 5K RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 10000,
+        "Description": "Ramp up to 10K RPS"
+      },
+      {
+        "Duration": 60000000000,
+        "TargetRPS": 10000,
+        "Description": "Hold at 10K RPS"
       },
       {
         "Duration": 30000000000,
