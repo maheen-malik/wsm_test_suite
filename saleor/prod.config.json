@@ -1,0 +1,51 @@
+{
+  "GraphQLURL": "https://wsm-saleor.alphasquadit.com/graphql/",
+  "Headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "Queries": {
+    "Products": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+    "Categories": "{categories(first: 10) {edges {node {id name}}}}",
+    "SpecificProduct": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}"
+  },
+  "Test": {
+    "MaxWorkers": 200,
+    "MaxQueueSize": 5000,
+    "ReportingSeconds": 5,
+    "LogErrors": true,
+    "ErrorSampleRate": 0.1,
+    "RampupStages": [
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 10,
+        "Description": "Warm-up at 10 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 50,
+        "Description": "Ramp up to 50 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 50,
+        "Description": "Hold at 50 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 100,
+        "Description": "Ramp up to 100 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 100,
+        "Description": "Hold at 100 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 0,
+        "Description": "Ramp down to 0"
+      }
+    ]
+  }
+}

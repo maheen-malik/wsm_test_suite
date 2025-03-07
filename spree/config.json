@@ -1,0 +1,50 @@
+{
+  "Endpoints": {
+    "Products": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/",
+    "Categories": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+  },
+  "Headers": {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  },
+  "Test": {
+    "MaxWorkers": 1000,
+    "MaxQueueSize": 2000,
+    "ReportingSeconds": 10,
+    "LogErrors": true,
+    "ErrorSampleRate": 0.1,
+    "BackoffEnabled": true,
+    "RampupStages": [
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 100,
+        "Description": "Warm-up at 100 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 500,
+        "Description": "Ramp up to 500 RPS"
+      },
+      {
+        "Duration": 60000000000,
+        "TargetRPS": 500,
+        "Description": "Hold at 500 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 1000,
+        "Description": "Ramp up to 1000 RPS"
+      },
+      {
+        "Duration": 60000000000,
+        "TargetRPS": 1000,
+        "Description": "Hold at 1000 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 0,
+        "Description": "Ramp down to 0"
+      }
+    ]
+  }
+}

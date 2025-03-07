@@ -1,0 +1,75 @@
+{
+  "Endpoints": {
+    "Products": "https://wsm-medusa.alphasquadit.com/store/products",
+    "Categories": "https://wsm-medusa.alphasquadit.com/store/product-categories/",
+    "SpecificCategory": "https://wsm-medusa.alphasquadit.com/store/product-categories/pcat_01JNGVR2XQS0BWM1VNFBVH8KJ9"
+  },
+  "APIKey": "pk_05c09b4f04e7185405f50dee26b6846b278aa7bd7b4b42b1fe6d42e5fe9ee390",
+  "Test": {
+    "MaxWorkers": 100000,
+    "MaxQueueSize": 1000000,
+    "ReportingSeconds": 30,
+    "RampupStages": [
+      {
+        "Duration": 180000000000,
+        "TargetRPS": 10000,
+        "Description": "Warm-up at 10k RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 100000,
+        "Description": "Ramp up to 100k RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 100000,
+        "Description": "Hold at 100k RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 500000,
+        "Description": "Ramp up to 500k RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 500000,
+        "Description": "Hold at 500k RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 1000000,
+        "Description": "Ramp up to 1M RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 1000000,
+        "Description": "Hold at 1M RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 2400000,
+        "Description": "Ramp up to 2.4M RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 2400000,
+        "Description": "Hold at 2.4M RPS"
+      },
+      {
+        "Duration": 600000000000,
+        "TargetRPS": 4800000,
+        "Description": "Ramp up to 4.8M RPS"
+      },
+      {
+        "Duration": 600000000000,
+        "TargetRPS": 4800000,
+        "Description": "Stay at 4.8M RPS"
+      },
+      {
+        "Duration": 300000000000,
+        "TargetRPS": 0,
+        "Description": "Ramp down to 0"
+      }
+    ]
+  }
+}
