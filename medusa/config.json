@@ -15,48 +15,68 @@
     "RampupStages": [
       {
         "Duration": 30000000000,
+        "TargetRPS": 10,
+        "Description": "Warm-up at 10 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 25,
+        "Description": "Ramp up to 25 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 50,
+        "Description": "Ramp up to 50 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 100,
+        "Description": "Ramp up to 100 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 200,
+        "Description": "Ramp up to 200 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 300,
+        "Description": "Ramp up to 300 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 400,
+        "Description": "Ramp up to 400 RPS"
+      },
+      {
+        "Duration": 30000000000,
         "TargetRPS": 500,
-        "Description": "Warm-up at 500 RPS"
+        "Description": "Ramp up to 500 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 600,
+        "Description": "Ramp up to 600 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 700,
+        "Description": "Ramp up to 700 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 800,
+        "Description": "Ramp up to 800 RPS"
+      },
+      {
+        "Duration": 30000000000,
+        "TargetRPS": 900,
+        "Description": "Ramp up to 900 RPS"
       },
       {
         "Duration": 30000000000,
         "TargetRPS": 1000,
         "Description": "Ramp up to 1K RPS"
-      },
-      {
-        "Duration": 60000000000,
-        "TargetRPS": 1000,
-        "Description": "Hold at 1K RPS"
-      },
-      {
-        "Duration": 30000000000,
-        "TargetRPS": 2000,
-        "Description": "Ramp up to 2K RPS"
-      },
-      {
-        "Duration": 60000000000,
-        "TargetRPS": 2000,
-        "Description": "Hold at 2K RPS"
-      },
-      {
-        "Duration": 30000000000,
-        "TargetRPS": 5000,
-        "Description": "Ramp up to 5K RPS"
-      },
-      {
-        "Duration": 60000000000,
-        "TargetRPS": 5000,
-        "Description": "Hold at 5K RPS"
-      },
-      {
-        "Duration": 30000000000,
-        "TargetRPS": 10000,
-        "Description": "Ramp up to 10K RPS"
-      },
-      {
-        "Duration": 60000000000,
-        "TargetRPS": 10000,
-        "Description": "Hold at 10K RPS"
       },
       {
         "Duration": 30000000000,
