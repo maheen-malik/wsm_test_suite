@@ -1,7 +1,7 @@
 {
   "Endpoints": {
     "Products": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/",
-    "Categories": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    "SpecificProduct": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
   },
   "Headers": {
     "Accept": "application/json",

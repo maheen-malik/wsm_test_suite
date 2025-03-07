@@ -23,8 +23,7 @@ type Config struct {
 	// API endpoints
 	Endpoints struct {
 		Products   string
-		Categories string
-		Countries  string
+		SpecificProduct string
 	}
 	
 	// HTTP headers
@@ -41,8 +40,7 @@ type Config struct {
 		// Traffic distribution percentages
 		TrafficDistribution struct {
 			Products   int
-			Categories int
-			Countries  int
+			SpecificProduct int
 		}
 	}
 }
@@ -302,23 +300,20 @@ func (g *LoadGenerator) selectEndpoint() (string, string) {
 		productsWeight = 60 // Default from K6 script
 	}
 	
-	categoriesWeight := g.Config.Test.TrafficDistribution.Categories
+	categoriesWeight := g.Config.Test.TrafficDistribution.SpecificProduct
 	if categoriesWeight == 0 {
 		categoriesWeight = 20 // Default from K6 script
 	}
 	
 	// Calculate thresholds
 	productsThreshold := productsWeight
-	categoriesThreshold := productsThreshold + categoriesWeight
 	
 	// Random selection based on weights
 	rand := rand.Intn(100)
 	if rand < productsThreshold {
 		return g.Config.Endpoints.Products, "products"
-	} else if rand < categoriesThreshold {
-		return g.Config.Endpoints.Categories, "categories"
 	} else {
-		return g.Config.Endpoints.Countries, "countries"
+		return g.Config.Endpoints.SpecificProduct, "specificProduct"
 	}
 }
 
@@ -687,8 +682,7 @@ func createDefaultSpreeConfig(path string) {
 	
 	// Set default endpoints
 	config.Endpoints.Products = "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
-	config.Endpoints.Categories = "https://wsm-spree.alphasquadit.com/api/v2/storefront/t/categories"
-	config.Endpoints.Countries = "https://wsm-spree.alphasquadit.com/api/v1/countries"
+	config.Endpoints.SpecificProduct = "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
 	
 	// Set default headers
 	config.Headers = map[string]string{
@@ -705,8 +699,7 @@ func createDefaultSpreeConfig(path string) {
 	
 	// Set traffic distribution
 	config.Test.TrafficDistribution.Products = 60   // 60%
-	config.Test.TrafficDistribution.Categories = 20 // 20%
-	config.Test.TrafficDistribution.Countries = 20  // 20%
+	config.Test.TrafficDistribution.SpecificProduct = 40 // 20%
 	
 	// Define realistic ramp-up stages
 	config.Test.RampupStages = []Stage{

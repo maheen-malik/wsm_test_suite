@@ -19,18 +19,21 @@ build_benchmarks() {
   echo -e "${GREEN}Building benchmark executables...${NC}"
   
   # Build Medusa benchmark
-  (cd medusa && go build -o medusa_benchmark)
+  echo "Building Medusa benchmark..."
+  (cd medusa && go build -o ../medusa_benchmark main.go)
   
   # Build Saleor benchmark
-  (cd saleor && go build -o saleor_benchmark)
+  echo "Building Saleor benchmark..."
+  (cd saleor && go build -o ../saleor_benchmark main.go)
   
   # Build Spree benchmark
-  (cd spree && go build -o spree_benchmark)
+  echo "Building Spree benchmark..."
+  (cd spree && go build -o ../spree_benchmark main.go)
   
   echo "All benchmark executables built successfully."
 }
 
-# Function to run a benchmark in the background
+# Function to run a benchmark
 run_benchmark() {
   local platform=$1
   local config=$2
@@ -38,13 +41,13 @@ run_benchmark() {
   echo -e "${GREEN}Starting $platform benchmark...${NC}"
   
   # Run the benchmark and redirect output to a log file
-  (cd $platform && ./${platform}_benchmark -config $config > "../$RESULTS_DIR/${platform}_output.log" 2>&1)
+  ./${platform}_benchmark -config $platform/$config > "$RESULTS_DIR/${platform}_output.log" 2>&1
   
   # Check if the benchmark completed successfully
   if [ $? -eq 0 ]; then
     echo -e "${GREEN}$platform benchmark completed.${NC}"
     # Copy the results file to the results directory
-    cp $platform/${platform}_results.json "$RESULTS_DIR/"
+    cp ${platform}_results.json "$RESULTS_DIR/"
   else
     echo -e "${YELLOW}$platform benchmark failed. Check logs for details.${NC}"
   fi
@@ -88,9 +91,13 @@ go build -o compare_results compare_results.go
   --spree="$RESULTS_DIR/spree_results.json" \
   --output="$RESULTS_DIR/comparison.json"
 
+# Generate HTML report
+echo -e "${GREEN}Generating HTML report...${NC}"
+./generate_report.sh "$RESULTS_DIR"
+
 echo -e "${GREEN}Benchmark suite completed.${NC}"
 echo "Results saved to: $RESULTS_DIR"
-echo "Comparison report available at: $RESULTS_DIR/comparison.json"
+echo "Comparison report available at: $RESULTS_DIR/report.html"
 echo
 echo "You can view the individual benchmark logs at:"
 echo "- $RESULTS_DIR/medusa_output.log"
