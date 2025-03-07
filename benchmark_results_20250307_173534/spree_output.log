@@ -1,0 +1,2431 @@
+Starting Spree API load test...
+{
+  "actualRPS": "295.46",
+  "endpointDistribution": {
+    "products": 59.189189189189186,
+    "specificProduct": 40.81081081081081
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 2948,
+  "latency": {
+    "p50": "56.137948ms",
+    "p90": "75.975901ms",
+    "p95": "81.558483ms",
+    "p99": "124.195952ms"
+  },
+  "statusCodes": {
+    "0": 2940,
+    "200": 12,
+    "500": 8
+  },
+  "successRate": "0.41%",
+  "successfulRequests": 12,
+  "targetRPS": 500,
+  "testDuration": "10.018331708s",
+  "totalRequests": 2960
+}
+{
+  "actualRPS": "397.69",
+  "endpointDistribution": {
+    "products": 59.79148348197463,
+    "specificProduct": 40.20851651802537
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 7943,
+  "latency": {
+    "p50": "62.691339ms",
+    "p90": "10.000749662s",
+    "p95": "10.001205203s",
+    "p99": "10.005014858s"
+  },
+  "statusCodes": {
+    "0": 7927,
+    "200": 18,
+    "500": 16
+  },
+  "successRate": "0.23%",
+  "successfulRequests": 18,
+  "targetRPS": 500,
+  "testDuration": "20.01818053s",
+  "totalRequests": 7961
+}
+Moving to stage 2: Ramp up to 1K RPS
+{
+  "actualRPS": "431.74",
+  "endpointDistribution": {
+    "products": 60.01543209876543,
+    "specificProduct": 39.98456790123457
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 12936,
+  "latency": {
+    "p50": "65.546692ms",
+    "p90": "10.000910768s",
+    "p95": "10.001524271s",
+    "p99": "10.004820787s"
+  },
+  "statusCodes": {
+    "0": 12893,
+    "200": 24,
+    "500": 43
+  },
+  "successRate": "0.19%",
+  "successfulRequests": 24,
+  "targetRPS": 500,
+  "testDuration": "30.017888227s",
+  "totalRequests": 12960
+}
+{
+  "actualRPS": "471.69",
+  "endpointDistribution": {
+    "products": 60.34117397753761,
+    "specificProduct": 39.658826022462385
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 18848,
+  "latency": {
+    "p50": "64.912813ms",
+    "p90": "10.000970334s",
+    "p95": "10.001730209s",
+    "p99": "10.005733257s"
+  },
+  "statusCodes": {
+    "0": 18776,
+    "200": 28,
+    "500": 72
+  },
+  "successRate": "0.15%",
+  "successfulRequests": 28,
+  "targetRPS": 666,
+  "testDuration": "40.017778548s",
+  "totalRequests": 18876
+}
+{
+  "actualRPS": "528.97",
+  "endpointDistribution": {
+    "products": 60.27288532768916,
+    "specificProduct": 39.72711467231083
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 26428,
+  "latency": {
+    "p50": "65.905027ms",
+    "p90": "10.00093602s",
+    "p95": "10.001649283s",
+    "p99": "10.005688001s"
+  },
+  "statusCodes": {
+    "0": 26312,
+    "200": 30,
+    "500": 116
+  },
+  "successRate": "0.11%",
+  "successfulRequests": 30,
+  "targetRPS": 833,
+  "testDuration": "50.017718892s",
+  "totalRequests": 26458
+}
+{
+  "actualRPS": "580.73",
+  "endpointDistribution": {
+    "products": 60.07918746772249,
+    "specificProduct": 39.9208125322775
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 34820,
+  "latency": {
+    "p50": "65.716898ms",
+    "p90": "10.000910768s",
+    "p95": "10.00145857s",
+    "p99": "10.004874529s"
+  },
+  "statusCodes": {
+    "0": 34647,
+    "200": 34,
+    "500": 173
+  },
+  "successRate": "0.10%",
+  "successfulRequests": 34,
+  "targetRPS": 999,
+  "testDuration": "1m0.017602386s",
+  "totalRequests": 34854
+}
+Moving to stage 3: Hold at 1K RPS
+{
+  "actualRPS": "620.20",
+  "endpointDistribution": {
+    "products": 60.07599309153713,
+    "specificProduct": 39.924006908462864
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 43384,
+  "latency": {
+    "p50": "64.974538ms",
+    "p90": "10.000875606s",
+    "p95": "10.00138801s",
+    "p99": "10.004700203s"
+  },
+  "statusCodes": {
+    "0": 43140,
+    "200": 41,
+    "500": 244
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 41,
+  "targetRPS": 999,
+  "testDuration": "1m10.017892882s",
+  "totalRequests": 43425
+}
+{
+  "actualRPS": "649.34",
+  "endpointDistribution": {
+    "products": 60.274447160260976,
+    "specificProduct": 39.725552839739024
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 51917,
+  "latency": {
+    "p50": "64.974538ms",
+    "p90": "10.000856973s",
+    "p95": "10.001287466s",
+    "p99": "10.00440026s"
+  },
+  "statusCodes": {
+    "0": 51598,
+    "200": 42,
+    "500": 319
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 42,
+  "targetRPS": 999,
+  "testDuration": "1m20.017943084s",
+  "totalRequests": 51959
+}
+{
+  "actualRPS": "672.86",
+  "endpointDistribution": {
+    "products": 60.17929964173092,
+    "specificProduct": 39.82070035826908
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 60526,
+  "latency": {
+    "p50": "65.323532ms",
+    "p90": "10.000847245s",
+    "p95": "10.00120498s",
+    "p99": "10.004218505s"
+  },
+  "statusCodes": {
+    "0": 60142,
+    "200": 43,
+    "500": 384
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 43,
+  "targetRPS": 999,
+  "testDuration": "1m30.01762536s",
+  "totalRequests": 60569
+}
+{
+  "actualRPS": "691.06",
+  "endpointDistribution": {
+    "products": 59.987847046398244,
+    "specificProduct": 40.012152953601756
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 69072,
+  "latency": {
+    "p50": "65.756316ms",
+    "p90": "10.000847894s",
+    "p95": "10.001222299s",
+    "p99": "10.004236869s"
+  },
+  "statusCodes": {
+    "0": 68609,
+    "200": 47,
+    "500": 462,
+    "502": 1
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 47,
+  "targetRPS": 999,
+  "testDuration": "1m40.018639131s",
+  "totalRequests": 69119
+}
+{
+  "actualRPS": "705.64",
+  "endpointDistribution": {
+    "products": 60.01700307858771,
+    "specificProduct": 39.98299692141229
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 77582,
+  "latency": {
+    "p50": "65.96073ms",
+    "p90": "10.000822344s",
+    "p95": "10.001195467s",
+    "p99": "10.004202285s"
+  },
+  "statusCodes": {
+    "0": 76986,
+    "200": 51,
+    "500": 595,
+    "502": 1
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 51,
+  "targetRPS": 999,
+  "testDuration": "1m50.018429819s",
+  "totalRequests": 77633
+}
+{
+  "actualRPS": "718.12",
+  "endpointDistribution": {
+    "products": 60.05708451292523,
+    "specificProduct": 39.942915487074764
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 86133,
+  "latency": {
+    "p50": "66.225774ms",
+    "p90": "10.00081993s",
+    "p95": "10.001177892s",
+    "p99": "10.004142217s"
+  },
+  "statusCodes": {
+    "0": 85421,
+    "200": 55,
+    "500": 711,
+    "502": 1
+  },
+  "successRate": "0.06%",
+  "successfulRequests": 55,
+  "targetRPS": 999,
+  "testDuration": "2m0.018343662s",
+  "totalRequests": 86188
+}
+Moving to stage 4: Ramp up to 2K RPS
+{
+  "actualRPS": "727.46",
+  "endpointDistribution": {
+    "products": 60.09853779220368,
+    "specificProduct": 39.90146220779633
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 94523,
+  "latency": {
+    "p50": "66.5401ms",
+    "p90": "10.00081213s",
+    "p95": "10.00118083s",
+    "p99": "10.004202285s"
+  },
+  "statusCodes": {
+    "0": 93722,
+    "200": 60,
+    "500": 800,
+    "502": 1
+  },
+  "successRate": "0.06%",
+  "successfulRequests": 60,
+  "targetRPS": 1332,
+  "testDuration": "2m10.017629929s",
+  "totalRequests": 94583
+}
+{
+  "actualRPS": "735.90",
+  "endpointDistribution": {
+    "products": 60.07142926464737,
+    "specificProduct": 39.92857073535263
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 102974,
+  "latency": {
+    "p50": "66.643718ms",
+    "p90": "10.000804925s",
+    "p95": "10.001172691s",
+    "p99": "10.004142217s"
+  },
+  "statusCodes": {
+    "0": 102072,
+    "200": 65,
+    "500": 901,
+    "502": 1
+  },
+  "successRate": "0.06%",
+  "successfulRequests": 65,
+  "targetRPS": 1666,
+  "testDuration": "2m20.018339224s",
+  "totalRequests": 103039
+}
+{
+  "actualRPS": "743.92",
+  "endpointDistribution": {
+    "products": 60.070250266574675,
+    "specificProduct": 39.92974973342533
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 111536,
+  "latency": {
+    "p50": "66.345893ms",
+    "p90": "10.00080053s",
+    "p95": "10.00115471s",
+    "p99": "10.004142217s"
+  },
+  "statusCodes": {
+    "0": 110495,
+    "200": 65,
+    "500": 1040,
+    "502": 1
+  },
+  "successRate": "0.06%",
+  "successfulRequests": 65,
+  "targetRPS": 1999,
+  "testDuration": "2m30.018035098s",
+  "totalRequests": 111601
+}
+Moving to stage 5: Hold at 2K RPS
+{
+  "actualRPS": "750.46",
+  "endpointDistribution": {
+    "products": 60.009826209331564,
+    "specificProduct": 39.99017379066843
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 120022,
+  "latency": {
+    "p50": "66.232798ms",
+    "p90": "10.000799273s",
+    "p95": "10.001147524s",
+    "p99": "10.004123149s"
+  },
+  "statusCodes": {
+    "0": 118889,
+    "200": 65,
+    "500": 1132,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 65,
+  "targetRPS": 1999,
+  "testDuration": "2m40.017547076s",
+  "totalRequests": 120087
+}
+{
+  "actualRPS": "755.87",
+  "endpointDistribution": {
+    "products": 60.00217878486056,
+    "specificProduct": 39.99782121513944
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 128444,
+  "latency": {
+    "p50": "66.113626ms",
+    "p90": "10.000795687s",
+    "p95": "10.001140176s",
+    "p99": "10.004111998s"
+  },
+  "statusCodes": {
+    "0": 127182,
+    "200": 68,
+    "500": 1261,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 68,
+  "targetRPS": 1999,
+  "testDuration": "2m50.018350384s",
+  "totalRequests": 128512
+}
+{
+  "actualRPS": "760.91",
+  "endpointDistribution": {
+    "products": 60.00525631853291,
+    "specificProduct": 39.9947436814671
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 136906,
+  "latency": {
+    "p50": "66.040635ms",
+    "p90": "10.000788772s",
+    "p95": "10.001138256s",
+    "p99": "10.004053971s"
+  },
+  "statusCodes": {
+    "0": 135517,
+    "200": 72,
+    "500": 1388,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 72,
+  "targetRPS": 1999,
+  "testDuration": "3m0.018163443s",
+  "totalRequests": 136978
+}
+{
+  "actualRPS": "765.47",
+  "endpointDistribution": {
+    "products": 59.990099962874865,
+    "specificProduct": 40.00990003712514
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 145377,
+  "latency": {
+    "p50": "65.843396ms",
+    "p90": "10.000788131s",
+    "p95": "10.00112894s",
+    "p99": "10.004053971s"
+  },
+  "statusCodes": {
+    "0": 143856,
+    "200": 77,
+    "500": 1520,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 77,
+  "targetRPS": 1999,
+  "testDuration": "3m10.019977021s",
+  "totalRequests": 145454
+}
+{
+  "actualRPS": "769.96",
+  "endpointDistribution": {
+    "products": 60.01194758645767,
+    "specificProduct": 39.98805241354233
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 153925,
+  "latency": {
+    "p50": "65.603622ms",
+    "p90": "10.000782861s",
+    "p95": "10.001123318s",
+    "p99": "10.003988237s"
+  },
+  "statusCodes": {
+    "0": 152280,
+    "200": 81,
+    "500": 1644,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 81,
+  "targetRPS": 1999,
+  "testDuration": "3m20.017531652s",
+  "totalRequests": 154007
+}
+{
+  "actualRPS": "773.58",
+  "endpointDistribution": {
+    "products": 59.98215000153879,
+    "specificProduct": 40.01784999846121
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 162378,
+  "latency": {
+    "p50": "65.504056ms",
+    "p90": "10.000779832s",
+    "p95": "10.001118206s",
+    "p99": "10.003930888s"
+  },
+  "statusCodes": {
+    "0": 160632,
+    "200": 87,
+    "500": 1745,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 87,
+  "targetRPS": 1999,
+  "testDuration": "3m30.018105194s",
+  "totalRequests": 162465
+}
+Moving to stage 6: Ramp up to 5K RPS
+{
+  "actualRPS": "776.70",
+  "endpointDistribution": {
+    "products": 59.96559149852535,
+    "specificProduct": 40.03440850147465
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 170800,
+  "latency": {
+    "p50": "65.311899ms",
+    "p90": "10.000779426s",
+    "p95": "10.001117167s",
+    "p99": "10.0038969s"
+  },
+  "statusCodes": {
+    "0": 168946,
+    "200": 88,
+    "500": 1853,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 88,
+  "targetRPS": 2998,
+  "testDuration": "3m40.017632447s",
+  "totalRequests": 170888
+}
+{
+  "actualRPS": "779.46",
+  "endpointDistribution": {
+    "products": 59.9860561102125,
+    "specificProduct": 40.0139438897875
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 179202,
+  "latency": {
+    "p50": "65.199749ms",
+    "p90": "10.000778689s",
+    "p95": "10.001117232s",
+    "p99": "10.003818347s"
+  },
+  "statusCodes": {
+    "0": 177255,
+    "200": 88,
+    "500": 1946,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 88,
+  "targetRPS": 3999,
+  "testDuration": "3m50.017597145s",
+  "totalRequests": 179290
+}
+{
+  "actualRPS": "782.30",
+  "endpointDistribution": {
+    "products": 60.03877145611316,
+    "specificProduct": 39.96122854388684
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 187678,
+  "latency": {
+    "p50": "65.114737ms",
+    "p90": "10.000779832s",
+    "p95": "10.001116742s",
+    "p99": "10.003818347s"
+  },
+  "statusCodes": {
+    "0": 185639,
+    "200": 89,
+    "500": 2038,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 89,
+  "targetRPS": 4999,
+  "testDuration": "4m0.018274831s",
+  "totalRequests": 187767
+}
+Moving to stage 7: Hold at 5K RPS
+{
+  "actualRPS": "784.97",
+  "endpointDistribution": {
+    "products": 60.05666011067065,
+    "specificProduct": 39.94333988932935
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 196167,
+  "latency": {
+    "p50": "65.027725ms",
+    "p90": "10.000775739s",
+    "p95": "10.001110398s",
+    "p99": "10.003812342s"
+  },
+  "statusCodes": {
+    "0": 194019,
+    "200": 91,
+    "500": 2147,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 91,
+  "targetRPS": 4999,
+  "testDuration": "4m10.01836031s",
+  "totalRequests": 196258
+}
+{
+  "actualRPS": "787.75",
+  "endpointDistribution": {
+    "products": 60.08719468434646,
+    "specificProduct": 39.91280531565354
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 204734,
+  "latency": {
+    "p50": "65.031941ms",
+    "p90": "10.000770236s",
+    "p95": "10.001103518s",
+    "p99": "10.003764757s"
+  },
+  "statusCodes": {
+    "0": 202486,
+    "200": 95,
+    "500": 2247,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 95,
+  "targetRPS": 4999,
+  "testDuration": "4m20.018213312s",
+  "totalRequests": 204829
+}
+{
+  "actualRPS": "790.44",
+  "endpointDistribution": {
+    "products": 60.10242042036415,
+    "specificProduct": 39.89757957963586
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 213337,
+  "latency": {
+    "p50": "65.013097ms",
+    "p90": "10.000766147s",
+    "p95": "10.00109896s",
+    "p99": "10.003757984s"
+  },
+  "statusCodes": {
+    "0": 210966,
+    "200": 97,
+    "500": 2370,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 97,
+  "targetRPS": 4999,
+  "testDuration": "4m30.017753381s",
+  "totalRequests": 213434
+}
+{
+  "actualRPS": "792.42",
+  "endpointDistribution": {
+    "products": 60.08211164840711,
+    "specificProduct": 39.917888351592886
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 221792,
+  "latency": {
+    "p50": "64.95257ms",
+    "p90": "10.000764652s",
+    "p95": "10.001098942s",
+    "p99": "10.003733438s"
+  },
+  "statusCodes": {
+    "0": 219330,
+    "200": 101,
+    "500": 2461,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 101,
+  "targetRPS": 4999,
+  "testDuration": "4m40.018477576s",
+  "totalRequests": 221893
+}
+{
+  "actualRPS": "794.64",
+  "endpointDistribution": {
+    "products": 60.07897248980301,
+    "specificProduct": 39.921027510197
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 230353,
+  "latency": {
+    "p50": "64.882568ms",
+    "p90": "10.000761087s",
+    "p95": "10.001094779s",
+    "p99": "10.003708014s"
+  },
+  "statusCodes": {
+    "0": 227810,
+    "200": 107,
+    "500": 2542,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 107,
+  "targetRPS": 4999,
+  "testDuration": "4m50.017731124s",
+  "totalRequests": 230460
+}
+{
+  "actualRPS": "796.50",
+  "endpointDistribution": {
+    "products": 60.06762524899148,
+    "specificProduct": 39.93237475100852
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 238857,
+  "latency": {
+    "p50": "64.821756ms",
+    "p90": "10.000763908s",
+    "p95": "10.001094779s",
+    "p99": "10.003662109s"
+  },
+  "statusCodes": {
+    "0": 236235,
+    "200": 107,
+    "500": 2621,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 107,
+  "targetRPS": 4999,
+  "testDuration": "5m0.018291255s",
+  "totalRequests": 238964
+}
+Moving to stage 8: Ramp up to 10K RPS
+{
+  "actualRPS": "798.27",
+  "endpointDistribution": {
+    "products": 60.03442730262892,
+    "specificProduct": 39.96557269737108
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 247365,
+  "latency": {
+    "p50": "64.768463ms",
+    "p90": "10.000761721s",
+    "p95": "10.001096104s",
+    "p99": "10.003708014s"
+  },
+  "statusCodes": {
+    "0": 244675,
+    "200": 113,
+    "500": 2689,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 113,
+  "targetRPS": 6665,
+  "testDuration": "5m10.017689402s",
+  "totalRequests": 247478
+}
+{
+  "actualRPS": "799.73",
+  "endpointDistribution": {
+    "products": 60.02195930105342,
+    "specificProduct": 39.97804069894658
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 255811,
+  "latency": {
+    "p50": "64.755203ms",
+    "p90": "10.000762867s",
+    "p95": "10.001095445s",
+    "p99": "10.003723419s"
+  },
+  "statusCodes": {
+    "0": 253031,
+    "200": 117,
+    "500": 2779,
+    "502": 1
+  },
+  "successRate": "0.05%",
+  "successfulRequests": 117,
+  "targetRPS": 8332,
+  "testDuration": "5m20.017871973s",
+  "totalRequests": 255928
+}
+Moving to stage 9: Hold at 10K RPS
+{
+  "actualRPS": "801.31",
+  "endpointDistribution": {
+    "products": 60.019285309132165,
+    "specificProduct": 39.98071469086784
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 264332,
+  "latency": {
+    "p50": "64.657625ms",
+    "p90": "10.000759157s",
+    "p95": "10.001093331s",
+    "p99": "10.003709683s"
+  },
+  "statusCodes": {
+    "0": 261489,
+    "200": 118,
+    "500": 2842,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 118,
+  "targetRPS": 9998,
+  "testDuration": "5m30.021206087s",
+  "totalRequests": 264450
+}
+{
+  "actualRPS": "802.79",
+  "endpointDistribution": {
+    "products": 60.00468929741136,
+    "specificProduct": 39.99531070258864
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 272841,
+  "latency": {
+    "p50": "64.657625ms",
+    "p90": "10.000758791s",
+    "p95": "10.001094613s",
+    "p99": "10.003740913s"
+  },
+  "statusCodes": {
+    "0": 269856,
+    "200": 121,
+    "500": 2984,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 121,
+  "targetRPS": 9999,
+  "testDuration": "5m40.017863179s",
+  "totalRequests": 272962
+}
+{
+  "actualRPS": "803.73",
+  "endpointDistribution": {
+    "products": 59.98720318498507,
+    "specificProduct": 40.01279681501493
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 281198,
+  "latency": {
+    "p50": "64.678942ms",
+    "p90": "10.000755876s",
+    "p95": "10.001091284s",
+    "p99": "10.003714146s"
+  },
+  "statusCodes": {
+    "0": 278150,
+    "200": 122,
+    "500": 3047,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 122,
+  "targetRPS": 9999,
+  "testDuration": "5m50.01771275s",
+  "totalRequests": 281320
+}
+{
+  "actualRPS": "804.69",
+  "endpointDistribution": {
+    "products": 59.974594495704196,
+    "specificProduct": 40.025405504295804
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 289578,
+  "latency": {
+    "p50": "64.643886ms",
+    "p90": "10.000753913s",
+    "p95": "10.001089783s",
+    "p99": "10.003710947s"
+  },
+  "statusCodes": {
+    "0": 286442,
+    "200": 123,
+    "500": 3135,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 123,
+  "targetRPS": 9999,
+  "testDuration": "6m0.0176718s",
+  "totalRequests": 289701
+}
+{
+  "actualRPS": "805.88",
+  "endpointDistribution": {
+    "products": 59.98611618805523,
+    "specificProduct": 40.01388381194477
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 298065,
+  "latency": {
+    "p50": "64.648959ms",
+    "p90": "10.000752865s",
+    "p95": "10.001086961s",
+    "p99": "10.003709683s"
+  },
+  "statusCodes": {
+    "0": 294794,
+    "200": 124,
+    "500": 3270,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 124,
+  "targetRPS": 9999,
+  "testDuration": "6m10.018179343s",
+  "totalRequests": 298189
+}
+{
+  "actualRPS": "807.06",
+  "endpointDistribution": {
+    "products": 59.985197212902555,
+    "specificProduct": 40.014802787097445
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 306575,
+  "latency": {
+    "p50": "64.587746ms",
+    "p90": "10.000748945s",
+    "p95": "10.001083081s",
+    "p99": "10.003662109s"
+  },
+  "statusCodes": {
+    "0": 303222,
+    "200": 124,
+    "500": 3352,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 124,
+  "targetRPS": 9999,
+  "testDuration": "6m20.020142541s",
+  "totalRequests": 306699
+}
+{
+  "actualRPS": "808.10",
+  "endpointDistribution": {
+    "products": 59.99054487535417,
+    "specificProduct": 40.00945512464583
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 315045,
+  "latency": {
+    "p50": "64.597321ms",
+    "p90": "10.00074941s",
+    "p95": "10.001082944s",
+    "p99": "10.003662109s"
+  },
+  "statusCodes": {
+    "0": 311627,
+    "200": 128,
+    "500": 3417,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 128,
+  "targetRPS": 9999,
+  "testDuration": "6m30.01754094s",
+  "totalRequests": 315173
+}
+Moving to stage 10: Ramp down to 0
+{
+  "actualRPS": "809.06",
+  "endpointDistribution": {
+    "products": 59.99128653398715,
+    "specificProduct": 40.00871346601285
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 323508,
+  "latency": {
+    "p50": "64.576018ms",
+    "p90": "10.00074921s",
+    "p95": "10.00107883s",
+    "p99": "10.003589827s"
+  },
+  "statusCodes": {
+    "0": 320000,
+    "200": 129,
+    "500": 3507,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 129,
+  "targetRPS": 6669,
+  "testDuration": "6m40.018169986s",
+  "totalRequests": 323637
+}
+{
+  "actualRPS": "810.43",
+  "endpointDistribution": {
+    "products": 59.985976147412956,
+    "specificProduct": 40.01402385258704
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 332160,
+  "latency": {
+    "p50": "64.537645ms",
+    "p90": "10.0007476s",
+    "p95": "10.0010789s",
+    "p99": "10.00357258s"
+  },
+  "statusCodes": {
+    "0": 328547,
+    "200": 131,
+    "500": 3612,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 131,
+  "targetRPS": 3336,
+  "testDuration": "6m50.018375973s",
+  "totalRequests": 332291
+}
+{
+  "actualRPS": "809.02",
+  "endpointDistribution": {
+    "products": 59.973572923134874,
+    "specificProduct": 40.026427076865126
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": read tcp 172.31.26.253:42880-\u003e44.195.9.58:443: read: connection reset by peer",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": EOF",
+      "statusCode": 0,
+      "time": "2025-03-07T17:35:40Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    }
+  ],
+  "failedRequests": 339672,
+  "latency": {
+    "p50": "64.475194ms",
+    "p90": "10.000747053s",
+    "p95": "10.001077899s",
+    "p99": "10.003570706s"
+  },
+  "statusCodes": {
+    "0": 335988,
+    "200": 131,
+    "500": 3683,
+    "502": 1
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 131,
+  "targetRPS": 3,
+  "testDuration": "7m0.017935555s",
+  "totalRequests": 339803
+}
+Load test completed all stages.
+
+Received interrupt signal, shutting down...
+
+Final Test Results:
+{
+  "actualRPS": "741.77",
+  "endpointDistribution": {
+    "products": 59.965697594441366,
+    "specificProduct": 40.034302405558634
+  },
+  "failedRequests": 341532,
+  "latency": {
+    "max": "10.013186412s",
+    "mean": "2.502275378s",
+    "min": "1.668189ms",
+    "p50": "64.618775ms",
+    "p90": "10.000758492s",
+    "p95": "10.001081038s",
+    "p99": "10.003564817s"
+  },
+  "platform": "Spree",
+  "statusDistribution": {
+    "2xx": 135,
+    "5xx": 3684,
+    "network_error": 337848
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 135,
+  "testDuration": "7m40.612827016s",
+  "testEndTime": "2025-03-07T17:43:16Z",
+  "testStartTime": "2025-03-07T17:35:36Z",
+  "totalRequests": 341667
+}
+
+Detailed results saved to spree_results.json

@@ -1,0 +1,30 @@
+{
+  "actualRPS": "745.24",
+  "failedRequests": 341555,
+  "latency": {
+    "max": "10.015725514s",
+    "mean": "2.501111371s",
+    "min": "103.27µs",
+    "p50": "65.912151ms",
+    "p90": "10.000747627s",
+    "p95": "10.00106678s",
+    "p99": "10.003243677s"
+  },
+  "operationDistribution": {
+    "categories": 33.13164388071093,
+    "products": 33.37169025860336,
+    "specific_product": 33.4966658606857
+  },
+  "platform": "Saleor",
+  "statusDistribution": {
+    "2xx": 1712,
+    "5xx": 5781,
+    "network_error": 335774
+  },
+  "successRate": "0.50%",
+  "successfulRequests": 1712,
+  "testDuration": "7m40.614525131s",
+  "testEndTime": "2025-03-07T17:43:16Z",
+  "testStartTime": "2025-03-07T17:35:36Z",
+  "totalRequests": 343267
+}

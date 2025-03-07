@@ -1,0 +1,29 @@
+{
+  "actualRPS": "741.77",
+  "endpointDistribution": {
+    "products": 59.965697594441366,
+    "specificProduct": 40.034302405558634
+  },
+  "failedRequests": 341532,
+  "latency": {
+    "max": "10.013186412s",
+    "mean": "2.502275378s",
+    "min": "1.668189ms",
+    "p50": "64.618775ms",
+    "p90": "10.000758492s",
+    "p95": "10.001081038s",
+    "p99": "10.003564817s"
+  },
+  "platform": "Spree",
+  "statusDistribution": {
+    "2xx": 135,
+    "5xx": 3684,
+    "network_error": 337848
+  },
+  "successRate": "0.04%",
+  "successfulRequests": 135,
+  "testDuration": "7m40.612827016s",
+  "testEndTime": "2025-03-07T17:43:16Z",
+  "testStartTime": "2025-03-07T17:35:36Z",
+  "totalRequests": 341667
+}

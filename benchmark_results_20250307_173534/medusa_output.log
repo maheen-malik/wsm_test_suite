@@ -1,0 +1,618 @@
+Starting extreme load test...
+2025/03/07 17:35:36 Interval: 2ms
+{
+  "actualRPS": "303.53",
+  "failedRequests": 2789,
+  "latency": {
+    "p50": "5.000361764s",
+    "p90": "5.001101712s",
+    "p95": "5.001633593s",
+    "p99": "5.003839293s"
+  },
+  "successRate": "8.26%",
+  "successfulRequests": 251,
+  "testDuration": "10.015372213s",
+  "totalRequests": 3040
+}
+{
+  "actualRPS": "405.94",
+  "failedRequests": 7874,
+  "latency": {
+    "p50": "5.000315066s",
+    "p90": "5.001633593s",
+    "p95": "5.00296993s",
+    "p99": "5.004259402s"
+  },
+  "successRate": "3.09%",
+  "successfulRequests": 251,
+  "testDuration": "20.015320281s",
+  "totalRequests": 8125
+}
+Moving to stage 2: Ramp up to 1K RPS
+{
+  "actualRPS": "440.05",
+  "failedRequests": 12957,
+  "latency": {
+    "p50": "5.000311685s",
+    "p90": "5.001504731s",
+    "p95": "5.00296993s",
+    "p99": "5.004259402s"
+  },
+  "successRate": "1.90%",
+  "successfulRequests": 251,
+  "testDuration": "30.014689382s",
+  "totalRequests": 13208
+}
+{
+  "actualRPS": "474.27",
+  "failedRequests": 18727,
+  "latency": {
+    "p50": "5.000351844s",
+    "p90": "5.001504731s",
+    "p95": "5.00277465s",
+    "p99": "5.004259402s"
+  },
+  "successRate": "1.32%",
+  "successfulRequests": 251,
+  "testDuration": "40.015044862s",
+  "totalRequests": 18978
+}
+{
+  "actualRPS": "530.14",
+  "failedRequests": 26264,
+  "latency": {
+    "p50": "5.000304234s",
+    "p90": "5.001460007s",
+    "p95": "5.00277465s",
+    "p99": "5.006174095s"
+  },
+  "successRate": "0.95%",
+  "successfulRequests": 251,
+  "testDuration": "50.014964791s",
+  "totalRequests": 26515
+}
+Moving to stage 3: Hold at 1K RPS
+{
+  "actualRPS": "580.45",
+  "failedRequests": 34585,
+  "latency": {
+    "p50": "5.000281612s",
+    "p90": "5.00137458s",
+    "p95": "5.00228258s",
+    "p99": "5.006174095s"
+  },
+  "successRate": "0.72%",
+  "successfulRequests": 251,
+  "testDuration": "1m0.015202183s",
+  "totalRequests": 34836
+}
+{
+  "actualRPS": "617.38",
+  "failedRequests": 42975,
+  "latency": {
+    "p50": "5.000270811s",
+    "p90": "5.001254917s",
+    "p95": "5.00201051s",
+    "p99": "5.005983244s"
+  },
+  "successRate": "0.58%",
+  "successfulRequests": 251,
+  "testDuration": "1m10.014796833s",
+  "totalRequests": 43226
+}
+{
+  "actualRPS": "645.03",
+  "failedRequests": 51361,
+  "latency": {
+    "p50": "5.000242251s",
+    "p90": "5.001254917s",
+    "p95": "5.00201051s",
+    "p99": "5.005983244s"
+  },
+  "successRate": "0.49%",
+  "successfulRequests": 251,
+  "testDuration": "1m20.015352174s",
+  "totalRequests": 51612
+}
+{
+  "actualRPS": "666.79",
+  "failedRequests": 59770,
+  "latency": {
+    "p50": "5.000233919s",
+    "p90": "5.001200478s",
+    "p95": "5.001850826s",
+    "p99": "5.005983244s"
+  },
+  "successRate": "0.42%",
+  "successfulRequests": 251,
+  "testDuration": "1m30.015288469s",
+  "totalRequests": 60021
+}
+{
+  "actualRPS": "683.48",
+  "failedRequests": 68107,
+  "latency": {
+    "p50": "5.000178439s",
+    "p90": "5.001138991s",
+    "p95": "5.00170734s",
+    "p99": "5.004259402s"
+  },
+  "successRate": "0.37%",
+  "successfulRequests": 251,
+  "testDuration": "1m40.014885625s",
+  "totalRequests": 68358
+}
+{
+  "actualRPS": "697.27",
+  "failedRequests": 76460,
+  "latency": {
+    "p50": "5.000150851s",
+    "p90": "5.001133023s",
+    "p95": "5.001704744s",
+    "p99": "5.004259402s"
+  },
+  "successRate": "0.33%",
+  "successfulRequests": 251,
+  "testDuration": "1m50.016914308s",
+  "totalRequests": 76711
+}
+{
+  "actualRPS": "708.90",
+  "failedRequests": 84827,
+  "latency": {
+    "p50": "5.00013025s",
+    "p90": "5.001115174s",
+    "p95": "5.001633593s",
+    "p99": "5.004259402s"
+  },
+  "successRate": "0.30%",
+  "successfulRequests": 251,
+  "testDuration": "2m0.014849508s",
+  "totalRequests": 85078
+}
+Moving to stage 4: Ramp up to 2K RPS
+{
+  "actualRPS": "718.41",
+  "failedRequests": 93153,
+  "latency": {
+    "p50": "5.000126741s",
+    "p90": "5.001122885s",
+    "p95": "5.001704744s",
+    "p99": "5.00411377s"
+  },
+  "successRate": "0.27%",
+  "successfulRequests": 251,
+  "testDuration": "2m10.015074134s",
+  "totalRequests": 93404
+}
+{
+  "actualRPS": "726.18",
+  "failedRequests": 101426,
+  "latency": {
+    "p50": "5.000111459s",
+    "p90": "5.001125582s",
+    "p95": "5.001824649s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.25%",
+  "successfulRequests": 251,
+  "testDuration": "2m20.015656834s",
+  "totalRequests": 101677
+}
+{
+  "actualRPS": "733.38",
+  "failedRequests": 109768,
+  "latency": {
+    "p50": "5.000108598s",
+    "p90": "5.001132629s",
+    "p95": "5.001832396s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.23%",
+  "successfulRequests": 251,
+  "testDuration": "2m30.01565229s",
+  "totalRequests": 110019
+}
+Moving to stage 5: Hold at 2K RPS
+{
+  "actualRPS": "739.32",
+  "failedRequests": 118051,
+  "latency": {
+    "p50": "5.000102081s",
+    "p90": "5.001122885s",
+    "p95": "5.001824649s",
+    "p99": "5.004259402s"
+  },
+  "successRate": "0.21%",
+  "successfulRequests": 251,
+  "testDuration": "2m40.014697589s",
+  "totalRequests": 118302
+}
+{
+  "actualRPS": "744.19",
+  "failedRequests": 126272,
+  "latency": {
+    "p50": "5.000094453s",
+    "p90": "5.00113125s",
+    "p95": "5.001827374s",
+    "p99": "5.004959077s"
+  },
+  "successRate": "0.20%",
+  "successfulRequests": 251,
+  "testDuration": "2m50.014672572s",
+  "totalRequests": 126523
+}
+{
+  "actualRPS": "748.89",
+  "failedRequests": 134561,
+  "latency": {
+    "p50": "5.000102924s",
+    "p90": "5.001123493s",
+    "p95": "5.001824649s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.19%",
+  "successfulRequests": 251,
+  "testDuration": "3m0.015137735s",
+  "totalRequests": 134812
+}
+{
+  "actualRPS": "753.38",
+  "failedRequests": 142902,
+  "latency": {
+    "p50": "5.000067003s",
+    "p90": "5.001111095s",
+    "p95": "5.001808119s",
+    "p99": "5.004301666s"
+  },
+  "successRate": "0.18%",
+  "successfulRequests": 251,
+  "testDuration": "3m10.014942044s",
+  "totalRequests": 143153
+}
+{
+  "actualRPS": "757.42",
+  "failedRequests": 151245,
+  "latency": {
+    "p50": "5.000069924s",
+    "p90": "5.00110507s",
+    "p95": "5.00182073s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.17%",
+  "successfulRequests": 251,
+  "testDuration": "3m20.01475367s",
+  "totalRequests": 151496
+}
+{
+  "actualRPS": "761.12",
+  "failedRequests": 159596,
+  "latency": {
+    "p50": "5.0000564s",
+    "p90": "5.001113724s",
+    "p95": "5.001832396s",
+    "p99": "5.00483837s"
+  },
+  "successRate": "0.16%",
+  "successfulRequests": 251,
+  "testDuration": "3m30.015293144s",
+  "totalRequests": 159847
+}
+Moving to stage 6: Ramp up to 5K RPS
+{
+  "actualRPS": "764.40",
+  "failedRequests": 167928,
+  "latency": {
+    "p50": "120.05189ms",
+    "p90": "5.001101712s",
+    "p95": "5.00182073s",
+    "p99": "5.004645375s"
+  },
+  "successRate": "0.15%",
+  "successfulRequests": 251,
+  "testDuration": "3m40.014973923s",
+  "totalRequests": 168179
+}
+{
+  "actualRPS": "767.21",
+  "failedRequests": 176219,
+  "latency": {
+    "p50": "3.473350816s",
+    "p90": "5.00110507s",
+    "p95": "5.001862452s",
+    "p99": "5.00483837s"
+  },
+  "successRate": "0.14%",
+  "successfulRequests": 251,
+  "testDuration": "3m50.015477455s",
+  "totalRequests": 176470
+}
+{
+  "actualRPS": "769.79",
+  "failedRequests": 184511,
+  "latency": {
+    "p50": "111.526947ms",
+    "p90": "5.001104642s",
+    "p95": "5.001869037s",
+    "p99": "5.00483837s"
+  },
+  "successRate": "0.14%",
+  "successfulRequests": 251,
+  "testDuration": "4m0.014675691s",
+  "totalRequests": 184762
+}
+Moving to stage 7: Hold at 5K RPS
+{
+  "actualRPS": "772.37",
+  "failedRequests": 192853,
+  "latency": {
+    "p50": "95.738167ms",
+    "p90": "5.001100118s",
+    "p95": "5.001862452s",
+    "p99": "5.00483837s"
+  },
+  "successRate": "0.13%",
+  "successfulRequests": 251,
+  "testDuration": "4m10.015159665s",
+  "totalRequests": 193104
+}
+{
+  "actualRPS": "774.40",
+  "failedRequests": 201107,
+  "latency": {
+    "p50": "89.498504ms",
+    "p90": "5.00109911s",
+    "p95": "5.001869037s",
+    "p99": "5.004645375s"
+  },
+  "successRate": "0.12%",
+  "successfulRequests": 251,
+  "testDuration": "4m20.014803853s",
+  "totalRequests": 201358
+}
+{
+  "actualRPS": "776.62",
+  "failedRequests": 209449,
+  "latency": {
+    "p50": "88.031158ms",
+    "p90": "5.001092876s",
+    "p95": "5.001850826s",
+    "p99": "5.004640773s"
+  },
+  "successRate": "0.12%",
+  "successfulRequests": 251,
+  "testDuration": "4m30.014752582s",
+  "totalRequests": 209700
+}
+{
+  "actualRPS": "778.57",
+  "failedRequests": 217760,
+  "latency": {
+    "p50": "86.287051ms",
+    "p90": "5.001094398s",
+    "p95": "5.001869037s",
+    "p99": "5.004645375s"
+  },
+  "successRate": "0.12%",
+  "successfulRequests": 251,
+  "testDuration": "4m40.014796765s",
+  "totalRequests": 218011
+}
+{
+  "actualRPS": "780.35",
+  "failedRequests": 226065,
+  "latency": {
+    "p50": "88.031158ms",
+    "p90": "5.001100118s",
+    "p95": "5.001898854s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.11%",
+  "successfulRequests": 251,
+  "testDuration": "4m50.017518207s",
+  "totalRequests": 226316
+}
+{
+  "actualRPS": "782.44",
+  "failedRequests": 234501,
+  "latency": {
+    "p50": "86.383025ms",
+    "p90": "5.001097254s",
+    "p95": "5.001869037s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.11%",
+  "successfulRequests": 251,
+  "testDuration": "5m0.014662697s",
+  "totalRequests": 234752
+}
+Moving to stage 8: Ramp up to 10K RPS
+{
+  "actualRPS": "783.95",
+  "failedRequests": 242784,
+  "latency": {
+    "p50": "85.937315ms",
+    "p90": "5.00109911s",
+    "p95": "5.001850826s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.10%",
+  "successfulRequests": 251,
+  "testDuration": "5m10.014671986s",
+  "totalRequests": 243035
+}
+{
+  "actualRPS": "785.10",
+  "failedRequests": 250997,
+  "latency": {
+    "p50": "86.10551ms",
+    "p90": "5.001100632s",
+    "p95": "5.001871949s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.10%",
+  "successfulRequests": 251,
+  "testDuration": "5m20.015430365s",
+  "totalRequests": 251248
+}
+{
+  "actualRPS": "786.17",
+  "failedRequests": 259198,
+  "latency": {
+    "p50": "89.005367ms",
+    "p90": "5.001101712s",
+    "p95": "5.001898854s",
+    "p99": "5.004959077s"
+  },
+  "successRate": "0.10%",
+  "successfulRequests": 251,
+  "testDuration": "5m30.015545594s",
+  "totalRequests": 259449
+}
+Moving to stage 9: Hold at 10K RPS
+{
+  "actualRPS": "787.22",
+  "failedRequests": 267417,
+  "latency": {
+    "p50": "86.58868ms",
+    "p90": "5.001097254s",
+    "p95": "5.001869037s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 251,
+  "testDuration": "5m40.014759554s",
+  "totalRequests": 267668
+}
+{
+  "actualRPS": "788.44",
+  "failedRequests": 275715,
+  "latency": {
+    "p50": "86.287051ms",
+    "p90": "5.001097254s",
+    "p95": "5.001869037s",
+    "p99": "5.004963217s"
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 251,
+  "testDuration": "5m50.015217237s",
+  "totalRequests": 275966
+}
+{
+  "actualRPS": "789.77",
+  "failedRequests": 284079,
+  "latency": {
+    "p50": "86.79314ms",
+    "p90": "5.001100118s",
+    "p95": "5.001869037s",
+    "p99": "5.004959077s"
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 251,
+  "testDuration": "6m0.017370758s",
+  "totalRequests": 284330
+}
+{
+  "actualRPS": "790.69",
+  "failedRequests": 292318,
+  "latency": {
+    "p50": "86.79314ms",
+    "p90": "5.001100632s",
+    "p95": "5.001862452s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.09%",
+  "successfulRequests": 251,
+  "testDuration": "6m10.01572788s",
+  "totalRequests": 292569
+}
+{
+  "actualRPS": "791.68",
+  "failedRequests": 300601,
+  "latency": {
+    "p50": "86.79314ms",
+    "p90": "5.001101658s",
+    "p95": "5.001869037s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 251,
+  "testDuration": "6m20.015149077s",
+  "totalRequests": 300852
+}
+{
+  "actualRPS": "792.80",
+  "failedRequests": 308951,
+  "latency": {
+    "p50": "86.383025ms",
+    "p90": "5.001102632s",
+    "p95": "5.001898854s",
+    "p99": "5.004959077s"
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 251,
+  "testDuration": "6m30.015055398s",
+  "totalRequests": 309202
+}
+Moving to stage 10: Ramp down to 0
+{
+  "actualRPS": "793.85",
+  "failedRequests": 317303,
+  "latency": {
+    "p50": "85.887979ms",
+    "p90": "5.001100118s",
+    "p95": "5.001862452s",
+    "p99": "5.004903305s"
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 251,
+  "testDuration": "6m40.014686982s",
+  "totalRequests": 317554
+}
+{
+  "actualRPS": "794.77",
+  "failedRequests": 325618,
+  "latency": {
+    "p50": "85.169904ms",
+    "p90": "5.001097254s",
+    "p95": "5.001827374s",
+    "p99": "5.00483837s"
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 251,
+  "testDuration": "6m50.015401963s",
+  "totalRequests": 325869
+}
+{
+  "actualRPS": "793.93",
+  "failedRequests": 333214,
+  "latency": {
+    "p50": "85.122279ms",
+    "p90": "5.00109911s",
+    "p95": "5.001830542s",
+    "p99": "5.004959077s"
+  },
+  "successRate": "0.08%",
+  "successfulRequests": 251,
+  "testDuration": "7m0.015602499s",
+  "totalRequests": 333465
+}
+Load test completed all stages.
+
+Received interrupt signal, shutting down...
+
+Final Test Results:
+{
+  "actualRPS": "727.61",
+  "failedRequests": 334894,
+  "latency": {
+    "p50": "85.576665ms",
+    "p90": "5.001101658s",
+    "p95": "5.001827374s",
+    "p99": "5.004959077s"
+  },
+  "successRate": "0.07%",
+  "successfulRequests": 251,
+  "testDuration": "7m40.613615169s",
+  "totalRequests": 335145
+}
