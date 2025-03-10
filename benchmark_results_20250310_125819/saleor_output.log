@@ -1,0 +1,5313 @@
+Starting Saleor GraphQL load test...
+Using adaptive load testing with initial RPS: 10, error threshold: 2.00%
+{
+  "actualRPS": "9.99",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "85.961181ms",
+    "p90": "174.043505ms",
+    "p95": "174.043505ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 22,
+    "products": 36,
+    "specific_product": 42
+  },
+  "statusCodes": {
+    "200": 50
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 50,
+  "targetRPS": 10,
+  "testDuration": "5.005446013s",
+  "totalRequests": 50
+}
+{
+  "actualRPS": "9.99",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "84.013124ms",
+    "p90": "117.057563ms",
+    "p95": "174.043505ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 31,
+    "products": 28.999999999999996,
+    "specific_product": 40
+  },
+  "statusCodes": {
+    "200": 100
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 100,
+  "targetRPS": 10,
+  "testDuration": "10.005554336s",
+  "totalRequests": 100
+}
+Error rate 0.00% below threshold. Increasing RPS from 10 to 12
+{
+  "actualRPS": "10.00",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "81.225821ms",
+    "p90": "117.057563ms",
+    "p95": "174.043505ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 30.666666666666664,
+    "products": 32.666666666666664,
+    "specific_product": 36.666666666666664
+  },
+  "statusCodes": {
+    "200": 150
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 150,
+  "targetRPS": 10,
+  "testDuration": "15.00641787s",
+  "totalRequests": 150
+}
+{
+  "actualRPS": "10.60",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "84.013124ms",
+    "p90": "117.057563ms",
+    "p95": "127.860533ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 30.660377358490564,
+    "products": 33.9622641509434,
+    "specific_product": 35.37735849056604
+  },
+  "statusCodes": {
+    "200": 212
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 212,
+  "targetRPS": 12,
+  "testDuration": "20.005683132s",
+  "totalRequests": 212
+}
+{
+  "actualRPS": "10.88",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "85.961181ms",
+    "p90": "117.057563ms",
+    "p95": "127.860533ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 31.61764705882353,
+    "products": 33.82352941176471,
+    "specific_product": 34.55882352941176
+  },
+  "statusCodes": {
+    "200": 272
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 272,
+  "targetRPS": 12,
+  "testDuration": "25.006179994s",
+  "totalRequests": 272
+}
+{
+  "actualRPS": "11.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "86.051228ms",
+    "p90": "117.057563ms",
+    "p95": "127.860533ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 31.92771084337349,
+    "products": 33.734939759036145,
+    "specific_product": 34.33734939759036
+  },
+  "statusCodes": {
+    "200": 332
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 332,
+  "targetRPS": 12,
+  "testDuration": "30.005691896s",
+  "totalRequests": 332
+}
+Error rate 0.00% below threshold. Increasing RPS from 12 to 15
+{
+  "actualRPS": "11.71",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "87.81273ms",
+    "p90": "117.057563ms",
+    "p95": "127.860533ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 31.951219512195124,
+    "products": 33.65853658536586,
+    "specific_product": 34.390243902439025
+  },
+  "statusCodes": {
+    "200": 410
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 410,
+  "targetRPS": 15,
+  "testDuration": "35.006750541s",
+  "totalRequests": 410
+}
+{
+  "actualRPS": "12.12",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "90.515975ms",
+    "p90": "122.749993ms",
+    "p95": "132.811115ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 33.4020618556701,
+    "products": 32.78350515463917,
+    "specific_product": 33.81443298969072
+  },
+  "statusCodes": {
+    "200": 485
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 485,
+  "targetRPS": 15,
+  "testDuration": "40.006167884s",
+  "totalRequests": 485
+}
+{
+  "actualRPS": "12.44",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "90.515975ms",
+    "p90": "117.057563ms",
+    "p95": "132.811115ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 32.857142857142854,
+    "products": 33.035714285714285,
+    "specific_product": 34.10714285714286
+  },
+  "statusCodes": {
+    "200": 560
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 560,
+  "targetRPS": 15,
+  "testDuration": "45.006057114s",
+  "totalRequests": 560
+}
+Error rate 0.00% below threshold. Increasing RPS from 15 to 18
+{
+  "actualRPS": "13.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "92.839689ms",
+    "p90": "129.44619ms",
+    "p95": "151.401191ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 31.852986217457886,
+    "products": 33.078101071975496,
+    "specific_product": 35.068912710566615
+  },
+  "statusCodes": {
+    "200": 653
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 653,
+  "targetRPS": 18,
+  "testDuration": "50.005486873s",
+  "totalRequests": 653
+}
+{
+  "actualRPS": "13.51",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "102.283879ms",
+    "p90": "141.693273ms",
+    "p95": "153.472156ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 32.16689098250337,
+    "products": 32.70524899057873,
+    "specific_product": 35.1278600269179
+  },
+  "statusCodes": {
+    "200": 743
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 743,
+  "targetRPS": 18,
+  "testDuration": "55.006422439s",
+  "totalRequests": 743
+}
+{
+  "actualRPS": "13.88",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "106.4022ms",
+    "p90": "151.401191ms",
+    "p95": "157.179748ms",
+    "p99": "174.043505ms"
+  },
+  "operationDistribution": {
+    "categories": 32.6530612244898,
+    "products": 32.6530612244898,
+    "specific_product": 34.69387755102041
+  },
+  "statusCodes": {
+    "200": 833
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 833,
+  "targetRPS": 18,
+  "testDuration": "1m0.005932997s",
+  "totalRequests": 833
+}
+Error rate 0.00% below threshold. Increasing RPS from 18 to 22
+{
+  "actualRPS": "14.57",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "107.534144ms",
+    "p90": "158.120782ms",
+    "p95": "174.043505ms",
+    "p99": "188.22849ms"
+  },
+  "operationDistribution": {
+    "categories": 32.418162618796195,
+    "products": 32.101372756071804,
+    "specific_product": 35.480464625131994
+  },
+  "statusCodes": {
+    "200": 947
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 947,
+  "targetRPS": 22,
+  "testDuration": "1m5.006523483s",
+  "totalRequests": 947
+}
+{
+  "actualRPS": "15.10",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "110.993007ms",
+    "p90": "165.329749ms",
+    "p95": "181.468927ms",
+    "p99": "185.467492ms"
+  },
+  "operationDistribution": {
+    "categories": 32.26111636707663,
+    "products": 32.73415326395459,
+    "specific_product": 35.00473036896878
+  },
+  "statusCodes": {
+    "200": 1057
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1057,
+  "targetRPS": 22,
+  "testDuration": "1m10.00615783s",
+  "totalRequests": 1057
+}
+{
+  "actualRPS": "15.56",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "112.389531ms",
+    "p90": "165.329749ms",
+    "p95": "181.468927ms",
+    "p99": "185.467492ms"
+  },
+  "operationDistribution": {
+    "categories": 32.904884318766065,
+    "products": 32.64781491002571,
+    "specific_product": 34.447300771208226
+  },
+  "statusCodes": {
+    "200": 1167
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1167,
+  "targetRPS": 22,
+  "testDuration": "1m15.005672365s",
+  "totalRequests": 1167
+}
+Error rate 0.00% below threshold. Increasing RPS from 22 to 27
+{
+  "actualRPS": "16.34",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "116.261055ms",
+    "p90": "181.468927ms",
+    "p95": "189.410992ms",
+    "p99": "351.163587ms"
+  },
+  "operationDistribution": {
+    "categories": 32.4407039020658,
+    "products": 33.511859219586846,
+    "specific_product": 34.04743687834736
+  },
+  "statusCodes": {
+    "200": 1307
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1307,
+  "targetRPS": 27,
+  "testDuration": "1m20.006640075s",
+  "totalRequests": 1307
+}
+{
+  "actualRPS": "16.96",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "125.613225ms",
+    "p90": "187.232375ms",
+    "p95": "211.283304ms",
+    "p99": "351.163587ms"
+  },
+  "operationDistribution": {
+    "categories": 31.900138696255205,
+    "products": 34.0499306518724,
+    "specific_product": 34.0499306518724
+  },
+  "statusCodes": {
+    "200": 1442
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1442,
+  "targetRPS": 27,
+  "testDuration": "1m25.005825487s",
+  "totalRequests": 1442
+}
+{
+  "actualRPS": "17.43",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "127.248784ms",
+    "p90": "185.467492ms",
+    "p95": "211.283304ms",
+    "p99": "351.163587ms"
+  },
+  "operationDistribution": {
+    "categories": 31.485022307202037,
+    "products": 34.54429572976418,
+    "specific_product": 33.970681963033776
+  },
+  "statusCodes": {
+    "200": 1569
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1569,
+  "targetRPS": 27,
+  "testDuration": "1m30.006381599s",
+  "totalRequests": 1569
+}
+Error rate 0.00% below threshold. Increasing RPS from 27 to 33
+{
+  "actualRPS": "18.40",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "129.660876ms",
+    "p90": "196.513768ms",
+    "p95": "235.236719ms",
+    "p99": "359.366999ms"
+  },
+  "operationDistribution": {
+    "categories": 31.97940503432494,
+    "products": 34.38215102974828,
+    "specific_product": 33.63844393592677
+  },
+  "statusCodes": {
+    "200": 1748
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1748,
+  "targetRPS": 33,
+  "testDuration": "1m35.005573606s",
+  "totalRequests": 1748
+}
+{
+  "actualRPS": "19.13",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "138.468332ms",
+    "p90": "211.246967ms",
+    "p95": "239.204508ms",
+    "p99": "359.366999ms"
+  },
+  "operationDistribution": {
+    "categories": 32.30527966544694,
+    "products": 34.396236278097234,
+    "specific_product": 33.29848405645583
+  },
+  "statusCodes": {
+    "200": 1913
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1913,
+  "targetRPS": 33,
+  "testDuration": "1m40.005988826s",
+  "totalRequests": 1913
+}
+{
+  "actualRPS": "19.79",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "146.793443ms",
+    "p90": "223.941743ms",
+    "p95": "258.086349ms",
+    "p99": "351.163587ms"
+  },
+  "operationDistribution": {
+    "categories": 32.53128007699711,
+    "products": 34.50433108758422,
+    "specific_product": 32.964388835418674
+  },
+  "statusCodes": {
+    "200": 2078
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2078,
+  "targetRPS": 33,
+  "testDuration": "1m45.006014717s",
+  "totalRequests": 2078
+}
+Error rate 0.00% below threshold. Increasing RPS from 33 to 41
+{
+  "actualRPS": "20.83",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "151.401191ms",
+    "p90": "238.279281ms",
+    "p95": "287.808003ms",
+    "p99": "351.163587ms"
+  },
+  "operationDistribution": {
+    "categories": 32.56219991270188,
+    "products": 34.43910955914448,
+    "specific_product": 32.998690528153645
+  },
+  "statusCodes": {
+    "200": 2291
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2291,
+  "targetRPS": 41,
+  "testDuration": "1m50.00660107s",
+  "totalRequests": 2291
+}
+{
+  "actualRPS": "21.70",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "158.492989ms",
+    "p90": "249.337315ms",
+    "p95": "285.840455ms",
+    "p99": "351.163587ms"
+  },
+  "operationDistribution": {
+    "categories": 32.532051282051285,
+    "products": 34.455128205128204,
+    "specific_product": 33.01282051282051
+  },
+  "statusCodes": {
+    "200": 2496
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2496,
+  "targetRPS": 41,
+  "testDuration": "1m55.005721496s",
+  "totalRequests": 2496
+}
+{
+  "actualRPS": "22.51",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "159.58041ms",
+    "p90": "249.337315ms",
+    "p95": "283.621687ms",
+    "p99": "351.163587ms"
+  },
+  "operationDistribution": {
+    "categories": 32.69159570529433,
+    "products": 34.098482043687525,
+    "specific_product": 33.20992225101814
+  },
+  "statusCodes": {
+    "200": 2701
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2701,
+  "targetRPS": 41,
+  "testDuration": "2m0.005707736s",
+  "totalRequests": 2701
+}
+Error rate 0.00% below threshold. Increasing RPS from 41 to 51
+{
+  "actualRPS": "23.73",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "166.309386ms",
+    "p90": "276.070953ms",
+    "p95": "304.671954ms",
+    "p99": "510.94469ms"
+  },
+  "operationDistribution": {
+    "categories": 32.872555630478764,
+    "products": 34.28860418071476,
+    "specific_product": 32.83884018880647
+  },
+  "statusCodes": {
+    "200": 2966
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2966,
+  "targetRPS": 51,
+  "testDuration": "2m5.006145869s",
+  "totalRequests": 2966
+}
+{
+  "actualRPS": "24.78",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "174.330577ms",
+    "p90": "289.633326ms",
+    "p95": "330.75965ms",
+    "p99": "377.262226ms"
+  },
+  "operationDistribution": {
+    "categories": 32.846941943495814,
+    "products": 34.39925488978578,
+    "specific_product": 32.75380316671841
+  },
+  "statusCodes": {
+    "200": 3221
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 3221,
+  "targetRPS": 51,
+  "testDuration": "2m10.006227332s",
+  "totalRequests": 3221
+}
+{
+  "actualRPS": "25.75",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "178.552861ms",
+    "p90": "306.269585ms",
+    "p95": "338.532856ms",
+    "p99": "408.202532ms"
+  },
+  "operationDistribution": {
+    "categories": 33.05523590333717,
+    "products": 34.321058688147296,
+    "specific_product": 32.623705408515534
+  },
+  "statusCodes": {
+    "200": 3476
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 3476,
+  "targetRPS": 51,
+  "testDuration": "2m15.005737641s",
+  "totalRequests": 3476
+}
+Error rate 0.00% below threshold. Increasing RPS from 51 to 63
+{
+  "actualRPS": "27.16",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "184.725628ms",
+    "p90": "328.672378ms",
+    "p95": "366.125753ms",
+    "p99": "431.707917ms"
+  },
+  "operationDistribution": {
+    "categories": 33.00026295030239,
+    "products": 34.44648961346306,
+    "specific_product": 32.55324743623455
+  },
+  "statusCodes": {
+    "200": 3803
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 3803,
+  "targetRPS": 63,
+  "testDuration": "2m20.005985826s",
+  "totalRequests": 3803
+}
+{
+  "actualRPS": "28.40",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "196.513768ms",
+    "p90": "349.683349ms",
+    "p95": "391.779822ms",
+    "p99": "439.815925ms"
+  },
+  "operationDistribution": {
+    "categories": 33.00145701796989,
+    "products": 34.48275862068966,
+    "specific_product": 32.51578436134046
+  },
+  "statusCodes": {
+    "200": 4118
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 4118,
+  "targetRPS": 63,
+  "testDuration": "2m25.005925028s",
+  "totalRequests": 4118
+}
+{
+  "actualRPS": "29.55",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "211.246967ms",
+    "p90": "369.899841ms",
+    "p95": "408.202532ms",
+    "p99": "439.815925ms"
+  },
+  "operationDistribution": {
+    "categories": 32.97992330250395,
+    "products": 34.46875704940221,
+    "specific_product": 32.55131964809384
+  },
+  "statusCodes": {
+    "200": 4433
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 4433,
+  "targetRPS": 63,
+  "testDuration": "2m30.005902801s",
+  "totalRequests": 4433
+}
+Error rate 0.00% below threshold. Increasing RPS from 63 to 78
+{
+  "actualRPS": "31.21",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "227.08994ms",
+    "p90": "402.13783ms",
+    "p95": "439.438666ms",
+    "p99": "521.265272ms"
+  },
+  "operationDistribution": {
+    "categories": 32.988838362959896,
+    "products": 34.063662670525005,
+    "specific_product": 32.947498966515084
+  },
+  "statusCodes": {
+    "200": 4838
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 4838,
+  "targetRPS": 78,
+  "testDuration": "2m35.006075925s",
+  "totalRequests": 4838
+}
+{
+  "actualRPS": "32.67",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "235.953321ms",
+    "p90": "416.709234ms",
+    "p95": "478.499265ms",
+    "p99": "549.868749ms"
+  },
+  "operationDistribution": {
+    "categories": 32.899770466717676,
+    "products": 34.009181331293036,
+    "specific_product": 33.09104820198929
+  },
+  "statusCodes": {
+    "200": 5228
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 5228,
+  "targetRPS": 78,
+  "testDuration": "2m40.005515426s",
+  "totalRequests": 5228
+}
+{
+  "actualRPS": "34.05",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "241.663932ms",
+    "p90": "431.707917ms",
+    "p95": "481.304284ms",
+    "p99": "549.868749ms"
+  },
+  "operationDistribution": {
+    "categories": 32.983268066927735,
+    "products": 33.94446422214311,
+    "specific_product": 33.072267710929154
+  },
+  "statusCodes": {
+    "200": 5618
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 5618,
+  "targetRPS": 78,
+  "testDuration": "2m45.005643943s",
+  "totalRequests": 5618
+}
+Error rate 0.00% below threshold. Increasing RPS from 78 to 97
+{
+  "actualRPS": "36.01",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "259.451414ms",
+    "p90": "459.069618ms",
+    "p95": "515.02892ms",
+    "p99": "643.196531ms"
+  },
+  "operationDistribution": {
+    "categories": 33.142763802678864,
+    "products": 33.94315583142764,
+    "specific_product": 32.9140803658935
+  },
+  "statusCodes": {
+    "200": 6122
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 6122,
+  "targetRPS": 97,
+  "testDuration": "2m50.005740583s",
+  "totalRequests": 6122
+}
+{
+  "actualRPS": "37.73",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "278.49122ms",
+    "p90": "513.417739ms",
+    "p95": "645.814038ms",
+    "p99": "2.207159808s"
+  },
+  "operationDistribution": {
+    "categories": 33.257610177192184,
+    "products": 33.969407844918976,
+    "specific_product": 32.77298197788884
+  },
+  "statusCodes": {
+    "200": 6603
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 6603,
+  "targetRPS": 97,
+  "testDuration": "2m55.005901293s",
+  "totalRequests": 6603
+}
+{
+  "actualRPS": "39.40",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "290.800601ms",
+    "p90": "538.302275ms",
+    "p95": "643.463633ms",
+    "p99": "2.04858861s"
+  },
+  "operationDistribution": {
+    "categories": 33.37563451776649,
+    "products": 33.91144952058658,
+    "specific_product": 32.71291596164693
+  },
+  "statusCodes": {
+    "200": 7092
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 7092,
+  "targetRPS": 97,
+  "testDuration": "3m0.005928378s",
+  "totalRequests": 7092
+}
+Error rate 0.00% below threshold. Increasing RPS from 97 to 121
+{
+  "actualRPS": "41.73",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "308.099314ms",
+    "p90": "601.021375ms",
+    "p95": "750.581296ms",
+    "p99": "2.04858861s"
+  },
+  "operationDistribution": {
+    "categories": 33.208133661442815,
+    "products": 34.01113845356819,
+    "specific_product": 32.78072788498899
+  },
+  "statusCodes": {
+    "200": 7721
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 7721,
+  "targetRPS": 121,
+  "testDuration": "3m5.005857596s",
+  "totalRequests": 7721
+}
+{
+  "actualRPS": "43.82",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "322.554491ms",
+    "p90": "652.777451ms",
+    "p95": "746.915179ms",
+    "p99": "1.911188666s"
+  },
+  "operationDistribution": {
+    "categories": 32.99303386980543,
+    "products": 34.27816478501081,
+    "specific_product": 32.72880134518376
+  },
+  "statusCodes": {
+    "200": 8326
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 8326,
+  "targetRPS": 121,
+  "testDuration": "3m10.006040403s",
+  "totalRequests": 8326
+}
+{
+  "actualRPS": "45.78",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "336.445328ms",
+    "p90": "677.103181ms",
+    "p95": "753.536195ms",
+    "p99": "1.911188666s"
+  },
+  "operationDistribution": {
+    "categories": 32.77329749103943,
+    "products": 34.17338709677419,
+    "specific_product": 33.05331541218638
+  },
+  "statusCodes": {
+    "200": 8928
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 8928,
+  "targetRPS": 121,
+  "testDuration": "3m15.005696229s",
+  "totalRequests": 8928
+}
+Error rate 0.00% below threshold. Increasing RPS from 121 to 151
+{
+  "actualRPS": "47.83",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "366.319074ms",
+    "p90": "743.850323ms",
+    "p95": "874.591416ms",
+    "p99": "1.74651503s"
+  },
+  "operationDistribution": {
+    "categories": 32.939577670917835,
+    "products": 33.94313192556972,
+    "specific_product": 33.11729040351244
+  },
+  "statusCodes": {
+    "200": 9566
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 9566,
+  "targetRPS": 151,
+  "testDuration": "3m20.005977893s",
+  "totalRequests": 9566
+}
+{
+  "actualRPS": "49.99",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "390.371839ms",
+    "p90": "996.672362ms",
+    "p95": "1.518334052s",
+    "p99": "2.335321342s"
+  },
+  "operationDistribution": {
+    "categories": 32.70882123341139,
+    "products": 34.006635441061675,
+    "specific_product": 33.28454332552693
+  },
+  "statusCodes": {
+    "200": 10248
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 10248,
+  "targetRPS": 151,
+  "testDuration": "3m25.005921486s",
+  "totalRequests": 10248
+}
+{
+  "actualRPS": "51.59",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "409.953273ms",
+    "p90": "1.465781803s",
+    "p95": "1.926872521s",
+    "p99": "2.762406404s"
+  },
+  "operationDistribution": {
+    "categories": 32.92412774598486,
+    "products": 33.70869484954772,
+    "specific_product": 33.36717740446742
+  },
+  "statusCodes": {
+    "200": 10834
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 10834,
+  "targetRPS": 151,
+  "testDuration": "3m30.005480568s",
+  "totalRequests": 10834
+}
+Error rate 0.00% below threshold. Increasing RPS from 151 to 188
+{
+  "actualRPS": "53.85",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "434.697536ms",
+    "p90": "2.219666289s",
+    "p95": "3.136266465s",
+    "p99": "3.931771892s"
+  },
+  "operationDistribution": {
+    "categories": 33.20953532561755,
+    "products": 33.537743997236134,
+    "specific_product": 33.252720677146314
+  },
+  "statusCodes": {
+    "200": 11578
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 11578,
+  "targetRPS": 188,
+  "testDuration": "3m35.006351465s",
+  "totalRequests": 11578
+}
+{
+  "actualRPS": "55.83",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "459.069618ms",
+    "p90": "3.178880183s",
+    "p95": "3.931771892s",
+    "p99": "4.660551805s"
+  },
+  "operationDistribution": {
+    "categories": 33.27363022063014,
+    "products": 33.493446226491905,
+    "specific_product": 33.23292355287796
+  },
+  "statusCodes": {
+    "200": 12283
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 12283,
+  "targetRPS": 188,
+  "testDuration": "3m40.006350985s",
+  "totalRequests": 12283
+}
+{
+  "actualRPS": "57.95",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "495.467598ms",
+    "p90": "3.931050199s",
+    "p95": "4.837708956s",
+    "p99": "5.656711574s"
+  },
+  "operationDistribution": {
+    "categories": 33.315438300483166,
+    "products": 33.36912339903367,
+    "specific_product": 33.315438300483166
+  },
+  "statusCodes": {
+    "200": 13039
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 13039,
+  "targetRPS": 188,
+  "testDuration": "3m45.0062952s",
+  "totalRequests": 13039
+}
+Error rate 0.00% below threshold. Increasing RPS from 188 to 235
+{
+  "actualRPS": "59.61",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "515.02892ms",
+    "p90": "4.663165628s",
+    "p95": "5.73087879s",
+    "p99": "6.934223576s"
+  },
+  "operationDistribution": {
+    "categories": 33.223924142961344,
+    "products": 33.58862144420131,
+    "specific_product": 33.18745441283735
+  },
+  "statusCodes": {
+    "200": 13710
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 13710,
+  "targetRPS": 235,
+  "testDuration": "3m50.006462975s",
+  "totalRequests": 13710
+}
+{
+  "actualRPS": "62.08",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 179,
+  "latency": {
+    "p50": "530.54663ms",
+    "p90": "5.356820184s",
+    "p95": "6.934386288s",
+    "p99": "8.657422303s"
+  },
+  "operationDistribution": {
+    "categories": 33.32419465387251,
+    "products": 33.36531871144619,
+    "specific_product": 33.31048663468129
+  },
+  "statusCodes": {
+    "0": 179,
+    "200": 14411
+  },
+  "successRate": "98.77%",
+  "successfulRequests": 14411,
+  "targetRPS": 235,
+  "testDuration": "3m55.006488935s",
+  "totalRequests": 14590
+}
+{
+  "actualRPS": "65.86",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 1036,
+  "latency": {
+    "p50": "551.026325ms",
+    "p90": "6.924461961s",
+    "p95": "9.365843802s",
+    "p99": "10.000826266s"
+  },
+  "operationDistribution": {
+    "categories": 33.354422371251424,
+    "products": 33.411362773630266,
+    "specific_product": 33.23421485511831
+  },
+  "statusCodes": {
+    "0": 1036,
+    "200": 14770
+  },
+  "successRate": "93.45%",
+  "successfulRequests": 14770,
+  "targetRPS": 235,
+  "testDuration": "4m0.005868924s",
+  "totalRequests": 15806
+}
+Error rate 70.48% exceeds threshold. Decreasing RPS from 235 to 200
+{
+  "actualRPS": "68.79",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 2084,
+  "latency": {
+    "p50": "605.573799ms",
+    "p90": "9.563295995s",
+    "p95": "10.000571326s",
+    "p99": "10.002148687s"
+  },
+  "operationDistribution": {
+    "categories": 33.39859973893438,
+    "products": 33.33926664293343,
+    "specific_product": 33.2621336181322
+  },
+  "statusCodes": {
+    "0": 2084,
+    "200": 14770
+  },
+  "successRate": "87.63%",
+  "successfulRequests": 14770,
+  "targetRPS": 200,
+  "testDuration": "4m5.006384326s",
+  "totalRequests": 16854
+}
+{
+  "actualRPS": "71.30",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 3056,
+  "latency": {
+    "p50": "646.160604ms",
+    "p90": "10.000287508s",
+    "p95": "10.000782635s",
+    "p99": "10.002860879s"
+  },
+  "operationDistribution": {
+    "categories": 33.43991921911814,
+    "products": 33.45113878604286,
+    "specific_product": 33.108941994839
+  },
+  "statusCodes": {
+    "0": 3056,
+    "200": 14770
+  },
+  "successRate": "82.86%",
+  "successfulRequests": 14770,
+  "targetRPS": 200,
+  "testDuration": "4m10.005586552s",
+  "totalRequests": 17826
+}
+{
+  "actualRPS": "74.35",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 4189,
+  "latency": {
+    "p50": "697.170299ms",
+    "p90": "10.000509943s",
+    "p95": "10.000946806s",
+    "p99": "10.003795211s"
+  },
+  "operationDistribution": {
+    "categories": 33.377287831636686,
+    "products": 33.551347644917975,
+    "specific_product": 33.07136452344533
+  },
+  "statusCodes": {
+    "0": 4189,
+    "200": 14770
+  },
+  "successRate": "77.90%",
+  "successfulRequests": 14770,
+  "targetRPS": 200,
+  "testDuration": "4m15.006037953s",
+  "totalRequests": 18959
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 200 to 170
+{
+  "actualRPS": "76.29",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 5067,
+  "latency": {
+    "p50": "791.998002ms",
+    "p90": "10.000676951s",
+    "p95": "10.00104905s",
+    "p99": "10.00382109s"
+  },
+  "operationDistribution": {
+    "categories": 33.34173514140243,
+    "products": 33.58874829863387,
+    "specific_product": 33.0695165599637
+  },
+  "statusCodes": {
+    "0": 5067,
+    "200": 14770
+  },
+  "successRate": "74.46%",
+  "successfulRequests": 14770,
+  "targetRPS": 170,
+  "testDuration": "4m20.005772294s",
+  "totalRequests": 19837
+}
+{
+  "actualRPS": "78.09",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 5925,
+  "latency": {
+    "p50": "910.114234ms",
+    "p90": "10.00077213s",
+    "p95": "10.001105823s",
+    "p99": "10.003896501s"
+  },
+  "operationDistribution": {
+    "categories": 33.33172263831843,
+    "products": 33.51534187001691,
+    "specific_product": 33.15293549166466
+  },
+  "statusCodes": {
+    "0": 5925,
+    "200": 14770
+  },
+  "successRate": "71.37%",
+  "successfulRequests": 14770,
+  "targetRPS": 170,
+  "testDuration": "4m25.005467218s",
+  "totalRequests": 20695
+}
+{
+  "actualRPS": "79.99",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 6829,
+  "latency": {
+    "p50": "1.16155851s",
+    "p90": "10.000819893s",
+    "p95": "10.001139766s",
+    "p99": "10.004322678s"
+  },
+  "operationDistribution": {
+    "categories": 33.265428955044214,
+    "products": 33.52007037362841,
+    "specific_product": 33.21450067132737
+  },
+  "statusCodes": {
+    "0": 6829,
+    "200": 14770
+  },
+  "successRate": "68.38%",
+  "successfulRequests": 14770,
+  "targetRPS": 170,
+  "testDuration": "4m30.005449451s",
+  "totalRequests": 21599
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 170 to 145
+{
+  "actualRPS": "81.83",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 7733,
+  "latency": {
+    "p50": "1.605574593s",
+    "p90": "10.000867614s",
+    "p95": "10.001308634s",
+    "p99": "10.005126576s"
+  },
+  "operationDistribution": {
+    "categories": 33.24001244278541,
+    "products": 33.506643558636625,
+    "specific_product": 33.25334399857797
+  },
+  "statusCodes": {
+    "0": 7733,
+    "200": 14770
+  },
+  "successRate": "65.64%",
+  "successfulRequests": 14770,
+  "targetRPS": 145,
+  "testDuration": "4m35.005578355s",
+  "totalRequests": 22503
+}
+{
+  "actualRPS": "83.21",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 8529,
+  "latency": {
+    "p50": "1.88367082s",
+    "p90": "10.000893983s",
+    "p95": "10.001371814s",
+    "p99": "10.005273481s"
+  },
+  "operationDistribution": {
+    "categories": 33.254646122151165,
+    "products": 33.44778745868921,
+    "specific_product": 33.29756641915962
+  },
+  "statusCodes": {
+    "0": 8529,
+    "200": 14770
+  },
+  "successRate": "63.39%",
+  "successfulRequests": 14770,
+  "targetRPS": 145,
+  "testDuration": "4m40.00605948s",
+  "totalRequests": 23299
+}
+{
+  "actualRPS": "83.96",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 9160,
+  "latency": {
+    "p50": "2.449409588s",
+    "p90": "10.000931837s",
+    "p95": "10.001392206s",
+    "p99": "10.005282893s"
+  },
+  "operationDistribution": {
+    "categories": 33.28875888006686,
+    "products": 33.468449644797325,
+    "specific_product": 33.24279147513581
+  },
+  "statusCodes": {
+    "0": 9160,
+    "200": 14770
+  },
+  "successRate": "61.72%",
+  "successfulRequests": 14770,
+  "targetRPS": 145,
+  "testDuration": "4m45.00619316s",
+  "totalRequests": 23930
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 145 to 124
+{
+  "actualRPS": "85.02",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 9885,
+  "latency": {
+    "p50": "2.854455538s",
+    "p90": "10.000931837s",
+    "p95": "10.001390371s",
+    "p99": "10.005469697s"
+  },
+  "operationDistribution": {
+    "categories": 33.295477590752384,
+    "products": 33.502332184141146,
+    "specific_product": 33.20219022510647
+  },
+  "statusCodes": {
+    "0": 9885,
+    "200": 14770
+  },
+  "successRate": "59.91%",
+  "successfulRequests": 14770,
+  "targetRPS": 124,
+  "testDuration": "4m50.006383846s",
+  "totalRequests": 24655
+}
+{
+  "actualRPS": "86.15",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 10645,
+  "latency": {
+    "p50": "3.25562543s",
+    "p90": "10.000952795s",
+    "p95": "10.001423884s",
+    "p99": "10.005469697s"
+  },
+  "operationDistribution": {
+    "categories": 33.28742868384812,
+    "products": 33.49990163289396,
+    "specific_product": 33.212669683257914
+  },
+  "statusCodes": {
+    "0": 10645,
+    "200": 14770
+  },
+  "successRate": "58.12%",
+  "successfulRequests": 14770,
+  "targetRPS": 124,
+  "testDuration": "4m55.005665959s",
+  "totalRequests": 25415
+}
+{
+  "actualRPS": "86.78",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 11265,
+  "latency": {
+    "p50": "3.696233559s",
+    "p90": "10.000972063s",
+    "p95": "10.00147084s",
+    "p99": "10.005469697s"
+  },
+  "operationDistribution": {
+    "categories": 33.36662185519493,
+    "products": 33.451123487612826,
+    "specific_product": 33.18225465719224
+  },
+  "statusCodes": {
+    "0": 11265,
+    "200": 14770
+  },
+  "successRate": "56.73%",
+  "successfulRequests": 14770,
+  "targetRPS": 124,
+  "testDuration": "5m0.005632267s",
+  "totalRequests": 26035
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 124 to 106
+{
+  "actualRPS": "87.28",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 11850,
+  "latency": {
+    "p50": "4.033085717s",
+    "p90": "10.001005506s",
+    "p95": "10.001542157s",
+    "p99": "10.005606017s"
+  },
+  "operationDistribution": {
+    "categories": 33.388429752066116,
+    "products": 33.36589030803907,
+    "specific_product": 33.24567993989482
+  },
+  "statusCodes": {
+    "0": 11850,
+    "200": 14770
+  },
+  "successRate": "55.48%",
+  "successfulRequests": 14770,
+  "targetRPS": 106,
+  "testDuration": "5m5.00632488s",
+  "totalRequests": 26620
+}
+{
+  "actualRPS": "87.87",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 12470,
+  "latency": {
+    "p50": "4.559285926s",
+    "p90": "10.001018604s",
+    "p95": "10.001567727s",
+    "p99": "10.005594544s"
+  },
+  "operationDistribution": {
+    "categories": 33.37738619676946,
+    "products": 33.45447870778267,
+    "specific_product": 33.16813509544787
+  },
+  "statusCodes": {
+    "0": 12470,
+    "200": 14770
+  },
+  "successRate": "54.22%",
+  "successfulRequests": 14770,
+  "targetRPS": 106,
+  "testDuration": "5m10.0067584s",
+  "totalRequests": 27240
+}
+{
+  "actualRPS": "88.16",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 13000,
+  "latency": {
+    "p50": "4.902468203s",
+    "p90": "10.001039296s",
+    "p95": "10.0015862s",
+    "p99": "10.005606017s"
+  },
+  "operationDistribution": {
+    "categories": 33.266114512063375,
+    "products": 33.48217500900252,
+    "specific_product": 33.2517104789341
+  },
+  "statusCodes": {
+    "0": 13000,
+    "200": 14770
+  },
+  "successRate": "53.19%",
+  "successfulRequests": 14770,
+  "targetRPS": 106,
+  "testDuration": "5m15.006244946s",
+  "totalRequests": 27770
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 106 to 91
+{
+  "actualRPS": "88.44",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 13530,
+  "latency": {
+    "p50": "5.190238946s",
+    "p90": "10.00104905s",
+    "p95": "10.00160538s",
+    "p99": "10.005606017s"
+  },
+  "operationDistribution": {
+    "categories": 33.26855123674912,
+    "products": 33.438162544169614,
+    "specific_product": 33.29328621908127
+  },
+  "statusCodes": {
+    "0": 13530,
+    "200": 14770
+  },
+  "successRate": "52.19%",
+  "successfulRequests": 14770,
+  "targetRPS": 91,
+  "testDuration": "5m20.005497819s",
+  "totalRequests": 28300
+}
+{
+  "actualRPS": "88.71",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 14060,
+  "latency": {
+    "p50": "5.656711574s",
+    "p90": "10.00104905s",
+    "p95": "10.001603637s",
+    "p99": "10.005606017s"
+  },
+  "operationDistribution": {
+    "categories": 33.302115851543526,
+    "products": 33.447797433229276,
+    "specific_product": 33.2500867152272
+  },
+  "statusCodes": {
+    "0": 14060,
+    "200": 14770
+  },
+  "successRate": "51.23%",
+  "successfulRequests": 14770,
+  "targetRPS": 91,
+  "testDuration": "5m25.005881339s",
+  "totalRequests": 28830
+}
+{
+  "actualRPS": "88.74",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 14515,
+  "latency": {
+    "p50": "6.08648449s",
+    "p90": "10.00104905s",
+    "p95": "10.0015862s",
+    "p99": "10.005594544s"
+  },
+  "operationDistribution": {
+    "categories": 33.378862899095104,
+    "products": 33.43691309544135,
+    "specific_product": 33.18422400546355
+  },
+  "statusCodes": {
+    "0": 14515,
+    "200": 14770
+  },
+  "successRate": "50.44%",
+  "successfulRequests": 14770,
+  "targetRPS": 91,
+  "testDuration": "5m30.005704179s",
+  "totalRequests": 29285
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 91 to 78
+{
+  "actualRPS": "88.77",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 14970,
+  "latency": {
+    "p50": "6.786602871s",
+    "p90": "10.001054808s",
+    "p95": "10.001589171s",
+    "p99": "10.005552648s"
+  },
+  "operationDistribution": {
+    "categories": 33.37592468056489,
+    "products": 33.45998655010087,
+    "specific_product": 33.164088769334235
+  },
+  "statusCodes": {
+    "0": 14970,
+    "200": 14770
+  },
+  "successRate": "49.66%",
+  "successfulRequests": 14770,
+  "targetRPS": 78,
+  "testDuration": "5m35.006095191s",
+  "totalRequests": 29740
+}
+{
+  "actualRPS": "88.81",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15425,
+  "latency": {
+    "p50": "7.115767718s",
+    "p90": "10.001057867s",
+    "p95": "10.001589171s",
+    "p99": "10.005552648s"
+  },
+  "operationDistribution": {
+    "categories": 33.33002152674284,
+    "products": 33.48236462990562,
+    "specific_product": 33.18761384335155
+  },
+  "statusCodes": {
+    "0": 15425,
+    "200": 14770
+  },
+  "successRate": "48.92%",
+  "successfulRequests": 14770,
+  "targetRPS": 78,
+  "testDuration": "5m40.005647509s",
+  "totalRequests": 30195
+}
+{
+  "actualRPS": "89.02",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15739,
+  "latency": {
+    "p50": "7.969223858s",
+    "p90": "10.001063794s",
+    "p95": "10.0015862s",
+    "p99": "10.005552648s"
+  },
+  "operationDistribution": {
+    "categories": 33.36263879391749,
+    "products": 33.447299013382825,
+    "specific_product": 33.190062192699685
+  },
+  "statusCodes": {
+    "0": 15739,
+    "200": 14972
+  },
+  "successRate": "48.75%",
+  "successfulRequests": 14972,
+  "targetRPS": 78,
+  "testDuration": "5m45.005894142s",
+  "totalRequests": 30712
+}
+Error rate 59.47% exceeds threshold. Decreasing RPS from 78 to 67
+{
+  "actualRPS": "89.32",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15739,
+  "latency": {
+    "p50": "7.771174836s",
+    "p90": "10.001056892s",
+    "p95": "10.001574581s",
+    "p99": "10.005469697s"
+  },
+  "operationDistribution": {
+    "categories": 33.34612801074753,
+    "products": 33.45808143812174,
+    "specific_product": 33.19579055113073
+  },
+  "statusCodes": {
+    "0": 15739,
+    "200": 15524
+  },
+  "successRate": "49.66%",
+  "successfulRequests": 15524,
+  "targetRPS": 67,
+  "testDuration": "5m50.005641146s",
+  "totalRequests": 31263
+}
+{
+  "actualRPS": "89.93",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "7.115767718s",
+    "p90": "10.001044262s",
+    "p95": "10.001555623s",
+    "p99": "10.005282893s"
+  },
+  "operationDistribution": {
+    "categories": 33.31662855889999,
+    "products": 33.46070723838757,
+    "specific_product": 33.22266420271244
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 16184
+  },
+  "successRate": "50.69%",
+  "successfulRequests": 16184,
+  "targetRPS": 67,
+  "testDuration": "5m55.013723296s",
+  "totalRequests": 31927
+}
+{
+  "actualRPS": "89.92",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "6.917599466s",
+    "p90": "10.001039545s",
+    "p95": "10.001508164s",
+    "p99": "10.005282893s"
+  },
+  "operationDistribution": {
+    "categories": 33.296261970960764,
+    "products": 33.4816187828236,
+    "specific_product": 33.222119246215634
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 16627
+  },
+  "successRate": "51.37%",
+  "successfulRequests": 16627,
+  "targetRPS": 67,
+  "testDuration": "6m0.006592267s",
+  "totalRequests": 32370
+}
+Error rate 0.00% below threshold. Increasing RPS from 67 to 83
+{
+  "actualRPS": "89.86",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "6.284601671s",
+    "p90": "10.001034063s",
+    "p95": "10.00148713s",
+    "p99": "10.005273481s"
+  },
+  "operationDistribution": {
+    "categories": 33.27032712417304,
+    "products": 33.46239443919393,
+    "specific_product": 33.26727843663303
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 17058
+  },
+  "successRate": "52.00%",
+  "successfulRequests": 17058,
+  "targetRPS": 83,
+  "testDuration": "6m5.00631511s",
+  "totalRequests": 32801
+}
+{
+  "actualRPS": "89.77",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "6.055936961s",
+    "p90": "10.001025964s",
+    "p95": "10.00147084s",
+    "p99": "10.005273481s"
+  },
+  "operationDistribution": {
+    "categories": 33.26710019267823,
+    "products": 33.447736030828516,
+    "specific_product": 33.285163776493256
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 17473
+  },
+  "successRate": "52.60%",
+  "successfulRequests": 17473,
+  "targetRPS": 83,
+  "testDuration": "6m10.006250563s",
+  "totalRequests": 33216
+}
+{
+  "actualRPS": "89.68",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "5.682808733s",
+    "p90": "10.001021825s",
+    "p95": "10.001458975s",
+    "p99": "10.005267689s"
+  },
+  "operationDistribution": {
+    "categories": 33.34126252564598,
+    "products": 33.42749249204603,
+    "specific_product": 33.23124498230799
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 17888
+  },
+  "successRate": "53.19%",
+  "successfulRequests": 17888,
+  "targetRPS": 83,
+  "testDuration": "6m15.006040339s",
+  "totalRequests": 33631
+}
+Error rate 0.00% below threshold. Increasing RPS from 83 to 103
+{
+  "actualRPS": "89.91",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "5.356820184s",
+    "p90": "10.001017267s",
+    "p95": "10.001440694s",
+    "p99": "10.005267689s"
+  },
+  "operationDistribution": {
+    "categories": 33.35772405315225,
+    "products": 33.37235848504361,
+    "specific_product": 33.269917461804134
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 18423
+  },
+  "successRate": "53.92%",
+  "successfulRequests": 18423,
+  "targetRPS": 103,
+  "testDuration": "6m20.006368499s",
+  "totalRequests": 34166
+}
+{
+  "actualRPS": "90.03",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "5.077711617s",
+    "p90": "10.001009875s",
+    "p95": "10.001422421s",
+    "p99": "10.005239697s"
+  },
+  "operationDistribution": {
+    "categories": 33.366990739405125,
+    "products": 33.32371693159853,
+    "specific_product": 33.309292328996335
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 18920
+  },
+  "successRate": "54.58%",
+  "successfulRequests": 18920,
+  "targetRPS": 103,
+  "testDuration": "6m25.005896105s",
+  "totalRequests": 34663
+}
+{
+  "actualRPS": "90.24",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "4.760468545s",
+    "p90": "10.001004761s",
+    "p95": "10.001396165s",
+    "p99": "10.005239697s"
+  },
+  "operationDistribution": {
+    "categories": 33.32765086941698,
+    "products": 33.3986816683714,
+    "specific_product": 33.27366746221161
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 19453
+  },
+  "successRate": "55.27%",
+  "successfulRequests": 19453,
+  "targetRPS": 103,
+  "testDuration": "6m30.008354202s",
+  "totalRequests": 35196
+}
+Error rate 0.00% below threshold. Increasing RPS from 103 to 128
+{
+  "actualRPS": "90.66",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "4.24395231s",
+    "p90": "10.000992233s",
+    "p95": "10.001390371s",
+    "p99": "10.005126576s"
+  },
+  "operationDistribution": {
+    "categories": 33.371495588071035,
+    "products": 33.41338098961242,
+    "specific_product": 33.21512342231654
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 20069
+  },
+  "successRate": "56.04%",
+  "successfulRequests": 20069,
+  "targetRPS": 128,
+  "testDuration": "6m35.006241255s",
+  "totalRequests": 35812
+}
+{
+  "actualRPS": "91.04",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "3.973671842s",
+    "p90": "10.000983301s",
+    "p95": "10.00137603s",
+    "p99": "10.004987028s"
+  },
+  "operationDistribution": {
+    "categories": 33.359876983909054,
+    "products": 33.44225383052336,
+    "specific_product": 33.197869185567576
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 20675
+  },
+  "successRate": "56.77%",
+  "successfulRequests": 20675,
+  "targetRPS": 128,
+  "testDuration": "6m40.006579418s",
+  "totalRequests": 36418
+}
+{
+  "actualRPS": "91.56",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "3.594651135s",
+    "p90": "10.000979333s",
+    "p95": "10.001360864s",
+    "p99": "10.004987028s"
+  },
+  "operationDistribution": {
+    "categories": 33.40614297656608,
+    "products": 33.43041285764367,
+    "specific_product": 33.16344416579026
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 21340
+  },
+  "successRate": "57.55%",
+  "successfulRequests": 21340,
+  "targetRPS": 128,
+  "testDuration": "6m45.00637562s",
+  "totalRequests": 37083
+}
+Error rate 0.00% below threshold. Increasing RPS from 128 to 160
+{
+  "actualRPS": "91.95",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15743,
+  "latency": {
+    "p50": "3.22464393s",
+    "p90": "10.000966423s",
+    "p95": "10.001346555s",
+    "p99": "10.004930502s"
+  },
+  "operationDistribution": {
+    "categories": 33.382848351415156,
+    "products": 33.44651051752036,
+    "specific_product": 33.170641131064485
+  },
+  "statusCodes": {
+    "0": 15743,
+    "200": 21956
+  },
+  "successRate": "58.24%",
+  "successfulRequests": 21956,
+  "targetRPS": 160,
+  "testDuration": "6m50.005598396s",
+  "totalRequests": 37699
+}
+{
+  "actualRPS": "92.20",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15747,
+  "latency": {
+    "p50": "3.153153091s",
+    "p90": "10.000956991s",
+    "p95": "10.001327059s",
+    "p99": "10.004852377s"
+  },
+  "operationDistribution": {
+    "categories": 33.37863265732804,
+    "products": 33.49885009408321,
+    "specific_product": 33.12251724858875
+  },
+  "statusCodes": {
+    "0": 15747,
+    "200": 22517
+  },
+  "successRate": "58.85%",
+  "successfulRequests": 22517,
+  "targetRPS": 160,
+  "testDuration": "6m55.005854227s",
+  "totalRequests": 38264
+}
+{
+  "actualRPS": "92.83",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15747,
+  "latency": {
+    "p50": "3.320885s",
+    "p90": "10.000949396s",
+    "p95": "10.001305718s",
+    "p99": "10.004852377s"
+  },
+  "operationDistribution": {
+    "categories": 33.3341882533983,
+    "products": 33.50602718645806,
+    "specific_product": 33.15978456014363
+  },
+  "statusCodes": {
+    "0": 15747,
+    "200": 23243
+  },
+  "successRate": "59.61%",
+  "successfulRequests": 23243,
+  "targetRPS": 160,
+  "testDuration": "7m0.005922626s",
+  "totalRequests": 38990
+}
+Error rate 0.00% below threshold. Increasing RPS from 160 to 200
+{
+  "actualRPS": "93.28",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15747,
+  "latency": {
+    "p50": "3.495722759s",
+    "p90": "10.000941985s",
+    "p95": "10.001288515s",
+    "p99": "10.004798506s"
+  },
+  "operationDistribution": {
+    "categories": 33.277001462947084,
+    "products": 33.51157746052566,
+    "specific_product": 33.211421076527266
+  },
+  "statusCodes": {
+    "0": 15747,
+    "200": 23899
+  },
+  "successRate": "60.28%",
+  "successfulRequests": 23899,
+  "targetRPS": 200,
+  "testDuration": "7m5.006442078s",
+  "totalRequests": 39646
+}
+{
+  "actualRPS": "93.88",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15747,
+  "latency": {
+    "p50": "3.707454559s",
+    "p90": "10.000925482s",
+    "p95": "10.001265825s",
+    "p99": "10.004788078s"
+  },
+  "operationDistribution": {
+    "categories": 33.22434420747567,
+    "products": 33.55131158504867,
+    "specific_product": 33.22434420747567
+  },
+  "statusCodes": {
+    "0": 15747,
+    "200": 24624
+  },
+  "successRate": "60.99%",
+  "successfulRequests": 24624,
+  "targetRPS": 200,
+  "testDuration": "7m10.006539596s",
+  "totalRequests": 40371
+}
+{
+  "actualRPS": "94.32",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15747,
+  "latency": {
+    "p50": "3.877207225s",
+    "p90": "10.000918834s",
+    "p95": "10.001249925s",
+    "p99": "10.004788078s"
+  },
+  "operationDistribution": {
+    "categories": 33.24396782841823,
+    "products": 33.541311235681206,
+    "specific_product": 33.21472093590056
+  },
+  "statusCodes": {
+    "0": 15747,
+    "200": 25283
+  },
+  "successRate": "61.62%",
+  "successfulRequests": 25283,
+  "targetRPS": 200,
+  "testDuration": "7m15.005603851s",
+  "totalRequests": 41030
+}
+Error rate 0.00% below threshold. Increasing RPS from 200 to 250
+{
+  "actualRPS": "95.41",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 15949,
+  "latency": {
+    "p50": "4.011771284s",
+    "p90": "10.000908688s",
+    "p95": "10.00123761s",
+    "p99": "10.004730049s"
+  },
+  "operationDistribution": {
+    "categories": 33.25869461648404,
+    "products": 33.542162934730825,
+    "specific_product": 33.19914244878513
+  },
+  "statusCodes": {
+    "0": 15948,
+    "200": 26031,
+    "500": 1
+  },
+  "successRate": "62.01%",
+  "successfulRequests": 26031,
+  "targetRPS": 250,
+  "testDuration": "7m20.005574505s",
+  "totalRequests": 41980
+}
+{
+  "actualRPS": "97.22",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 16953,
+  "latency": {
+    "p50": "4.048130492s",
+    "p90": "10.000907325s",
+    "p95": "10.001217071s",
+    "p99": "10.004454509s"
+  },
+  "operationDistribution": {
+    "categories": 33.250121350807845,
+    "products": 33.51362596213855,
+    "specific_product": 33.2362526870536
+  },
+  "statusCodes": {
+    "0": 16946,
+    "200": 26310,
+    "500": 7
+  },
+  "successRate": "60.81%",
+  "successfulRequests": 26310,
+  "targetRPS": 250,
+  "testDuration": "7m25.005991438s",
+  "totalRequests": 43263
+}
+{
+  "actualRPS": "99.28",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 18366,
+  "latency": {
+    "p50": "4.214768918s",
+    "p90": "10.000921256s",
+    "p95": "10.001217375s",
+    "p99": "10.004364917s"
+  },
+  "operationDistribution": {
+    "categories": 33.2370847882532,
+    "products": 33.46315695227863,
+    "specific_product": 33.29975825946817
+  },
+  "statusCodes": {
+    "0": 18359,
+    "200": 26310,
+    "500": 7
+  },
+  "successRate": "58.89%",
+  "successfulRequests": 26310,
+  "targetRPS": 250,
+  "testDuration": "7m30.005737933s",
+  "totalRequests": 44676
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 250 to 213
+{
+  "actualRPS": "100.53",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 19431,
+  "latency": {
+    "p50": "4.392449483s",
+    "p90": "10.000931837s",
+    "p95": "10.001217375s",
+    "p99": "10.004348087s"
+  },
+  "operationDistribution": {
+    "categories": 33.20653243260969,
+    "products": 33.45576178920444,
+    "specific_product": 33.33770577818587
+  },
+  "statusCodes": {
+    "0": 19424,
+    "200": 26310,
+    "500": 7
+  },
+  "successRate": "57.52%",
+  "successfulRequests": 26310,
+  "targetRPS": 213,
+  "testDuration": "7m35.00615289s",
+  "totalRequests": 45741
+}
+{
+  "actualRPS": "101.71",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 20479,
+  "latency": {
+    "p50": "4.641680236s",
+    "p90": "10.000940853s",
+    "p95": "10.001237008s",
+    "p99": "10.004348087s"
+  },
+  "operationDistribution": {
+    "categories": 33.19797388275022,
+    "products": 33.477954220008975,
+    "specific_product": 33.324071897240806
+  },
+  "statusCodes": {
+    "0": 20472,
+    "200": 26310,
+    "500": 7
+  },
+  "successRate": "56.23%",
+  "successfulRequests": 26310,
+  "targetRPS": 213,
+  "testDuration": "7m40.005709253s",
+  "totalRequests": 46789
+}
+{
+  "actualRPS": "102.66",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 21427,
+  "latency": {
+    "p50": "4.902009475s",
+    "p90": "10.000947272s",
+    "p95": "10.001231726s",
+    "p99": "10.004322678s"
+  },
+  "operationDistribution": {
+    "categories": 33.227894505310346,
+    "products": 33.460418543268325,
+    "specific_product": 33.31168695142133
+  },
+  "statusCodes": {
+    "0": 21419,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "55.11%",
+  "successfulRequests": 26310,
+  "targetRPS": 213,
+  "testDuration": "7m45.00616966s",
+  "totalRequests": 47737
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 213 to 182
+{
+  "actualRPS": "103.67",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 22414,
+  "latency": {
+    "p50": "5.136934515s",
+    "p90": "10.000964202s",
+    "p95": "10.001265923s",
+    "p99": "10.004348087s"
+  },
+  "operationDistribution": {
+    "categories": 33.18898284213119,
+    "products": 33.41269189721698,
+    "specific_product": 33.39832526065184
+  },
+  "statusCodes": {
+    "0": 22406,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "54.00%",
+  "successfulRequests": 26310,
+  "targetRPS": 182,
+  "testDuration": "7m50.006374569s",
+  "totalRequests": 48724
+}
+{
+  "actualRPS": "104.70",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 23425,
+  "latency": {
+    "p50": "5.409336348s",
+    "p90": "10.000971112s",
+    "p95": "10.001265825s",
+    "p99": "10.004322678s"
+  },
+  "operationDistribution": {
+    "categories": 33.20197044334975,
+    "products": 33.42314265607721,
+    "specific_product": 33.37488690057304
+  },
+  "statusCodes": {
+    "0": 23417,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "52.90%",
+  "successfulRequests": 26310,
+  "targetRPS": 182,
+  "testDuration": "7m55.00565264s",
+  "totalRequests": 49735
+}
+{
+  "actualRPS": "105.44",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 24303,
+  "latency": {
+    "p50": "5.864205475s",
+    "p90": "10.000982897s",
+    "p95": "10.00128682s",
+    "p99": "10.004364917s"
+  },
+  "operationDistribution": {
+    "categories": 33.204907830004146,
+    "products": 33.44002528994527,
+    "specific_product": 33.35506688005058
+  },
+  "statusCodes": {
+    "0": 24295,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "51.98%",
+  "successfulRequests": 26310,
+  "targetRPS": 182,
+  "testDuration": "8m0.005753331s",
+  "totalRequests": 50613
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 182 to 155
+{
+  "actualRPS": "106.13",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 25164,
+  "latency": {
+    "p50": "6.136831402s",
+    "p90": "10.001000138s",
+    "p95": "10.00130738s",
+    "p99": "10.004348087s"
+  },
+  "operationDistribution": {
+    "categories": 33.210941446167,
+    "products": 33.42269883824844,
+    "specific_product": 33.366359715584565
+  },
+  "statusCodes": {
+    "0": 25156,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "51.11%",
+  "successfulRequests": 26310,
+  "targetRPS": 155,
+  "testDuration": "8m5.00596737s",
+  "totalRequests": 51474
+}
+{
+  "actualRPS": "106.90",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 26071,
+  "latency": {
+    "p50": "6.458872308s",
+    "p90": "10.001005169s",
+    "p95": "10.00132235s",
+    "p99": "10.004322678s"
+  },
+  "operationDistribution": {
+    "categories": 33.13796987457284,
+    "products": 33.4128787155648,
+    "specific_product": 33.44915140986235
+  },
+  "statusCodes": {
+    "0": 26063,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "50.23%",
+  "successfulRequests": 26310,
+  "targetRPS": 155,
+  "testDuration": "8m10.005509606s",
+  "totalRequests": 52381
+}
+{
+  "actualRPS": "107.30",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 26803,
+  "latency": {
+    "p50": "6.92967104s",
+    "p90": "10.001008493s",
+    "p95": "10.001343529s",
+    "p99": "10.004309035s"
+  },
+  "operationDistribution": {
+    "categories": 33.148193474290665,
+    "products": 33.43437576487865,
+    "specific_product": 33.41743076083068
+  },
+  "statusCodes": {
+    "0": 26795,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "49.54%",
+  "successfulRequests": 26310,
+  "targetRPS": 155,
+  "testDuration": "8m15.00637251s",
+  "totalRequests": 53113
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 155 to 132
+{
+  "actualRPS": "107.77",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 27578,
+  "latency": {
+    "p50": "7.090693732s",
+    "p90": "10.001012176s",
+    "p95": "10.001347361s",
+    "p99": "10.004348087s"
+  },
+  "operationDistribution": {
+    "categories": 33.17436163895487,
+    "products": 33.447149643705465,
+    "specific_product": 33.378488717339664
+  },
+  "statusCodes": {
+    "0": 27570,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "48.82%",
+  "successfulRequests": 26310,
+  "targetRPS": 132,
+  "testDuration": "8m20.006040871s",
+  "totalRequests": 53888
+}
+{
+  "actualRPS": "108.24",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 28353,
+  "latency": {
+    "p50": "7.724145091s",
+    "p90": "10.001013643s",
+    "p95": "10.001353831s",
+    "p99": "10.004322678s"
+  },
+  "operationDistribution": {
+    "categories": 33.157711797742536,
+    "products": 33.4485849660648,
+    "specific_product": 33.39370323619267
+  },
+  "statusCodes": {
+    "0": 28345,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "48.13%",
+  "successfulRequests": 26310,
+  "targetRPS": 132,
+  "testDuration": "8m25.006461968s",
+  "totalRequests": 54663
+}
+{
+  "actualRPS": "108.48",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 29013,
+  "latency": {
+    "p50": "8.035205367s",
+    "p90": "10.001015754s",
+    "p95": "10.001353831s",
+    "p99": "10.004309035s"
+  },
+  "operationDistribution": {
+    "categories": 33.17607505015997,
+    "products": 33.43094192288921,
+    "specific_product": 33.392983026950816
+  },
+  "statusCodes": {
+    "0": 29005,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "47.56%",
+  "successfulRequests": 26310,
+  "targetRPS": 132,
+  "testDuration": "8m30.006249195s",
+  "totalRequests": 55323
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 132 to 113
+{
+  "actualRPS": "108.70",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 29673,
+  "latency": {
+    "p50": "8.415868814s",
+    "p90": "10.001014279s",
+    "p95": "10.001353831s",
+    "p99": "10.004309035s"
+  },
+  "operationDistribution": {
+    "categories": 33.17435650108069,
+    "products": 33.426218673525895,
+    "specific_product": 33.399424825393424
+  },
+  "statusCodes": {
+    "0": 29665,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "47.00%",
+  "successfulRequests": 26310,
+  "targetRPS": 113,
+  "testDuration": "8m35.005499035s",
+  "totalRequests": 55983
+}
+{
+  "actualRPS": "108.93",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 30333,
+  "latency": {
+    "p50": "8.71879258s",
+    "p90": "10.001016108s",
+    "p95": "10.001347361s",
+    "p99": "10.004302554s"
+  },
+  "operationDistribution": {
+    "categories": 33.20269053545893,
+    "products": 33.41277827798669,
+    "specific_product": 33.38453118655438
+  },
+  "statusCodes": {
+    "0": 30325,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "46.45%",
+  "successfulRequests": 26310,
+  "targetRPS": 113,
+  "testDuration": "8m40.005448811s",
+  "totalRequests": 56643
+}
+{
+  "actualRPS": "108.97",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 30898,
+  "latency": {
+    "p50": "9.16353742s",
+    "p90": "10.001018419s",
+    "p95": "10.001346555s",
+    "p99": "10.004239967s"
+  },
+  "operationDistribution": {
+    "categories": 33.19640609704936,
+    "products": 33.41315899874143,
+    "specific_product": 33.3904349042092
+  },
+  "statusCodes": {
+    "0": 30890,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "45.99%",
+  "successfulRequests": 26310,
+  "targetRPS": 113,
+  "testDuration": "8m45.006253462s",
+  "totalRequests": 57208
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 113 to 97
+{
+  "actualRPS": "109.00",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 31463,
+  "latency": {
+    "p50": "9.388588975s",
+    "p90": "10.001021071s",
+    "p95": "10.001346555s",
+    "p99": "10.004239967s"
+  },
+  "operationDistribution": {
+    "categories": 33.17985910373358,
+    "products": 33.42391774704447,
+    "specific_product": 33.39622314922195
+  },
+  "statusCodes": {
+    "0": 31455,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "45.54%",
+  "successfulRequests": 26310,
+  "targetRPS": 97,
+  "testDuration": "8m50.005789968s",
+  "totalRequests": 57773
+}
+{
+  "actualRPS": "109.04",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 32028,
+  "latency": {
+    "p50": "9.739568027s",
+    "p90": "10.001019761s",
+    "p95": "10.001343529s",
+    "p99": "10.00422658s"
+  },
+  "operationDistribution": {
+    "categories": 33.187630703829406,
+    "products": 33.42075491103569,
+    "specific_product": 33.39161438513491
+  },
+  "statusCodes": {
+    "0": 32020,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "45.10%",
+  "successfulRequests": 26310,
+  "targetRPS": 97,
+  "testDuration": "8m55.006475546s",
+  "totalRequests": 58338
+}
+{
+  "actualRPS": "108.93",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 32513,
+  "latency": {
+    "p50": "10.000049408s",
+    "p90": "10.001019761s",
+    "p95": "10.001334189s",
+    "p99": "10.00422658s"
+  },
+  "operationDistribution": {
+    "categories": 33.19279873518862,
+    "products": 33.43420090780817,
+    "specific_product": 33.373000357003214
+  },
+  "statusCodes": {
+    "0": 32505,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "44.73%",
+  "successfulRequests": 26310,
+  "targetRPS": 97,
+  "testDuration": "9m0.005522932s",
+  "totalRequests": 58823
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 97 to 83
+{
+  "actualRPS": "108.82",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 32998,
+  "latency": {
+    "p50": "10.000074669s",
+    "p90": "10.001021071s",
+    "p95": "10.001334189s",
+    "p99": "10.004192051s"
+  },
+  "operationDistribution": {
+    "categories": 33.189451675996494,
+    "products": 33.42887974640858,
+    "specific_product": 33.38166857759493
+  },
+  "statusCodes": {
+    "0": 32990,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "44.36%",
+  "successfulRequests": 26310,
+  "targetRPS": 83,
+  "testDuration": "9m5.006485492s",
+  "totalRequests": 59308
+}
+{
+  "actualRPS": "108.71",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 33483,
+  "latency": {
+    "p50": "10.000081276s",
+    "p90": "10.001025182s",
+    "p95": "10.001331064s",
+    "p99": "10.00422658s"
+  },
+  "operationDistribution": {
+    "categories": 33.2112454635158,
+    "products": 33.43200709113107,
+    "specific_product": 33.356747445353136
+  },
+  "statusCodes": {
+    "0": 33475,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "44.00%",
+  "successfulRequests": 26310,
+  "targetRPS": 83,
+  "testDuration": "9m10.005976592s",
+  "totalRequests": 59793
+}
+{
+  "actualRPS": "108.48",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 33898,
+  "latency": {
+    "p50": "10.000085614s",
+    "p90": "10.001024748s",
+    "p95": "10.001331064s",
+    "p99": "10.00422658s"
+  },
+  "operationDistribution": {
+    "categories": 33.189941536008504,
+    "products": 33.462330587297366,
+    "specific_product": 33.34772787669413
+  },
+  "statusCodes": {
+    "0": 33890,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "43.70%",
+  "successfulRequests": 26310,
+  "targetRPS": 83,
+  "testDuration": "9m15.005856881s",
+  "totalRequests": 60208
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 83 to 71
+{
+  "actualRPS": "108.25",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 34313,
+  "latency": {
+    "p50": "10.00009191s",
+    "p90": "10.001025964s",
+    "p95": "10.001334189s",
+    "p99": "10.004192051s"
+  },
+  "operationDistribution": {
+    "categories": 33.19697144648071,
+    "products": 33.47409399072959,
+    "specific_product": 33.328934562789705
+  },
+  "statusCodes": {
+    "0": 34305,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "43.40%",
+  "successfulRequests": 26310,
+  "targetRPS": 71,
+  "testDuration": "9m20.005533818s",
+  "totalRequests": 60623
+}
+{
+  "actualRPS": "108.03",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 34728,
+  "latency": {
+    "p50": "10.000096708s",
+    "p90": "10.001025182s",
+    "p95": "10.001327059s",
+    "p99": "10.004192051s"
+  },
+  "operationDistribution": {
+    "categories": 33.18260755594875,
+    "products": 33.49552737638848,
+    "specific_product": 33.32186506766276
+  },
+  "statusCodes": {
+    "0": 34720,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "43.10%",
+  "successfulRequests": 26310,
+  "targetRPS": 71,
+  "testDuration": "9m25.006167682s",
+  "totalRequests": 61038
+}
+{
+  "actualRPS": "107.71",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 35083,
+  "latency": {
+    "p50": "10.000102409s",
+    "p90": "10.001028946s",
+    "p95": "10.001334189s",
+    "p99": "10.004187663s"
+  },
+  "operationDistribution": {
+    "categories": 33.18945156613946,
+    "products": 33.47775805059209,
+    "specific_product": 33.33279038326845
+  },
+  "statusCodes": {
+    "0": 35075,
+    "200": 26310,
+    "500": 8
+  },
+  "successRate": "42.86%",
+  "successfulRequests": 26310,
+  "targetRPS": 71,
+  "testDuration": "9m30.005565443s",
+  "totalRequests": 61393
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 71 to 61
+{
+  "actualRPS": "107.88",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 35236,
+  "latency": {
+    "p50": "10.000097283s",
+    "p90": "10.001025182s",
+    "p95": "10.00132235s",
+    "p99": "10.004187663s"
+  },
+  "operationDistribution": {
+    "categories": 33.223710725282515,
+    "products": 33.46230110751076,
+    "specific_product": 33.31398816720672
+  },
+  "statusCodes": {
+    "0": 35228,
+    "200": 26795,
+    "500": 8
+  },
+  "successRate": "43.20%",
+  "successfulRequests": 26795,
+  "targetRPS": 61,
+  "testDuration": "9m35.005661679s",
+  "totalRequests": 62031
+}
+{
+  "actualRPS": "108.12",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 35236,
+  "latency": {
+    "p50": "10.000089939s",
+    "p90": "10.001021186s",
+    "p95": "10.001308634s",
+    "p99": "10.004187558s"
+  },
+  "operationDistribution": {
+    "categories": 33.224371342464885,
+    "products": 33.46833989762888,
+    "specific_product": 33.30728875990624
+  },
+  "statusCodes": {
+    "0": 35228,
+    "200": 27477,
+    "500": 8
+  },
+  "successRate": "43.81%",
+  "successfulRequests": 27477,
+  "targetRPS": 61,
+  "testDuration": "9m40.006499704s",
+  "totalRequests": 62713
+}
+{
+  "actualRPS": "107.72",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 35236,
+  "latency": {
+    "p50": "10.000086758s",
+    "p90": "10.001019761s",
+    "p95": "10.00130738s",
+    "p99": "10.004187558s"
+  },
+  "operationDistribution": {
+    "categories": 33.24923037862198,
+    "products": 33.45552064489511,
+    "specific_product": 33.29524897648291
+  },
+  "statusCodes": {
+    "0": 35228,
+    "200": 27782,
+    "500": 8
+  },
+  "successRate": "44.09%",
+  "successfulRequests": 27782,
+  "targetRPS": 61,
+  "testDuration": "9m45.006102783s",
+  "totalRequests": 63018
+}
+Error rate 0.00% below threshold. Increasing RPS from 61 to 76
+{
+  "actualRPS": "107.48",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 35236,
+  "latency": {
+    "p50": "10.00008328s",
+    "p90": "10.001017717s",
+    "p95": "10.001305718s",
+    "p99": "10.004187558s"
+  },
+  "operationDistribution": {
+    "categories": 33.24870294734518,
+    "products": 33.44897733903143,
+    "specific_product": 33.30231971362339
+  },
+  "statusCodes": {
+    "0": 35228,
+    "200": 28177,
+    "500": 8
+  },
+  "successRate": "44.43%",
+  "successfulRequests": 28177,
+  "targetRPS": 76,
+  "testDuration": "9m50.005499306s",
+  "totalRequests": 63413
+}
+{
+  "actualRPS": "107.21",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 35236,
+  "latency": {
+    "p50": "10.000075416s",
+    "p90": "10.001015754s",
+    "p95": "10.001298365s",
+    "p99": "10.004164155s"
+  },
+  "operationDistribution": {
+    "categories": 33.24345931371781,
+    "products": 33.43940557741445,
+    "specific_product": 33.317135108867745
+  },
+  "statusCodes": {
+    "0": 35228,
+    "200": 28557,
+    "500": 8
+  },
+  "successRate": "44.77%",
+  "successfulRequests": 28557,
+  "targetRPS": 76,
+  "testDuration": "9m55.00634916s",
+  "totalRequests": 63793
+}
+Test duration completed.
+{
+  "actualRPS": "106.95",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": EOF",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-10T13:02:14Z"
+    }
+  ],
+  "failedRequests": 35236,
+  "latency": {
+    "p50": "10.000062217s",
+    "p90": "10.001013505s",
+    "p95": "10.001289773s",
+    "p99": "10.004164155s"
+  },
+  "operationDistribution": {
+    "categories": 33.21646175182709,
+    "products": 33.45799635360665,
+    "specific_product": 33.32554189456625
+  },
+  "statusCodes": {
+    "0": 35228,
+    "200": 28937,
+    "500": 8
+  },
+  "successRate": "45.09%",
+  "successfulRequests": 28937,
+  "targetRPS": 76,
+  "testDuration": "10m0.005650837s",
+  "totalRequests": 64173
+}
+
+Received interrupt signal, shutting down...
+
+Final Test Results:
+{
+  "actualRPS": "6.40",
+  "failedRequests": 35236,
+  "latency": {
+    "max": "10.01358793s",
+    "mean": "6.118435287s",
+    "min": "2.587076ms",
+    "p50": "10.000062217s",
+    "p90": "10.001013505s",
+    "p95": "10.001289773s",
+    "p99": "10.004164155s"
+  },
+  "operationDistribution": {
+    "categories": 33.21646175182709,
+    "products": 33.45799635360665,
+    "specific_product": 33.32554189456625
+  },
+  "platform": "Saleor",
+  "statusDistribution": {
+    "2xx": 28937,
+    "5xx": 8,
+    "network_error": 35228
+  },
+  "successRate": "45.09%",
+  "successfulRequests": 28937,
+  "testDuration": "2h47m3.39156769s",
+  "testEndTime": "2025-03-10T15:45:23Z",
+  "testStartTime": "2025-03-10T12:58:20Z",
+  "totalRequests": 64173
+}
+
+Detailed results saved to saleor_results.json
