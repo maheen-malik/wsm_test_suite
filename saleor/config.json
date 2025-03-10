@@ -27,7 +27,7 @@
       "SamplingWindow": 5000000000,
       "StabilizationWindow": 15000000000
     },
-    "Duration": 600000000000,
+    "Duration": 420000000000,
     "RampupStages": []
   }
 }
