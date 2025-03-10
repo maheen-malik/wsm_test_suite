@@ -47,7 +47,7 @@ run_benchmark() {
   if [ $? -eq 0 ]; then
     echo -e "${GREEN}$platform benchmark completed.${NC}"
     # Copy the results file to the results directory
-    cp ${platform}_results.json "$RESULTS_DIR/"
+    cp ${platform}_results.json "$RESULTS_DIR/" || echo "Warning: Couldn't find ${platform}_results.json"
   else
     echo -e "${YELLOW}$platform benchmark failed. Check logs for details.${NC}"
   fi
