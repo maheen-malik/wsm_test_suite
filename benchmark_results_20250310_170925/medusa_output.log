@@ -1,0 +1,1277 @@
+Starting adaptive load testing...
+Using adaptive load testing with initial RPS: 10, error threshold: 2.00%
+2025/03/10 17:09:27 Starting adaptive testing with initial RPS: 10
+2025/03/10 17:09:27 Error threshold: 2.00%
+{
+  "actualRPS": "9.99",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "0s",
+    "p90": "0s",
+    "p95": "0s",
+    "p99": "0s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 50,
+  "targetRPS": 10,
+  "testDuration": "5.005851891s",
+  "totalRequests": 50
+}
+{
+  "actualRPS": "9.99",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "120.356672ms",
+    "p95": "120.356672ms",
+    "p99": "120.356672ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 100,
+  "targetRPS": 10,
+  "testDuration": "10.005479862s",
+  "totalRequests": 100
+}
+{
+  "actualRPS": "10.00",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "120.356672ms",
+    "p95": "120.356672ms",
+    "p99": "120.356672ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 150,
+  "targetRPS": 10,
+  "testDuration": "15.006074982s",
+  "totalRequests": 150
+}
+Error rate 0.00% below threshold. Increasing RPS from 10 to 12
+{
+  "actualRPS": "10.60",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "120.356672ms",
+    "p95": "120.356672ms",
+    "p99": "120.356672ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 212,
+  "targetRPS": 12,
+  "testDuration": "20.00594372s",
+  "totalRequests": 212
+}
+{
+  "actualRPS": "10.88",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "120.356672ms",
+    "p95": "120.356672ms",
+    "p99": "120.356672ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 272,
+  "targetRPS": 12,
+  "testDuration": "25.006005006s",
+  "totalRequests": 272
+}
+{
+  "actualRPS": "11.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "120.356672ms",
+    "p95": "120.356672ms",
+    "p99": "120.356672ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 332,
+  "targetRPS": 12,
+  "testDuration": "30.005633085s",
+  "totalRequests": 332
+}
+Error rate 0.00% below threshold. Increasing RPS from 12 to 15
+{
+  "actualRPS": "11.71",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "120.356672ms",
+    "p95": "120.356672ms",
+    "p99": "120.356672ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 410,
+  "targetRPS": 15,
+  "testDuration": "35.005433373s",
+  "totalRequests": 410
+}
+{
+  "actualRPS": "12.12",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "120.356672ms",
+    "p95": "120.356672ms",
+    "p99": "120.356672ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 485,
+  "targetRPS": 15,
+  "testDuration": "40.005997743s",
+  "totalRequests": 485
+}
+{
+  "actualRPS": "12.44",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "185.940432ms",
+    "p95": "185.940432ms",
+    "p99": "185.940432ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 560,
+  "targetRPS": 15,
+  "testDuration": "45.005364687s",
+  "totalRequests": 560
+}
+Error rate 0.00% below threshold. Increasing RPS from 15 to 18
+{
+  "actualRPS": "13.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "90.223363ms",
+    "p90": "185.940432ms",
+    "p95": "185.940432ms",
+    "p99": "185.940432ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 653,
+  "targetRPS": 18,
+  "testDuration": "50.00567855s",
+  "totalRequests": 653
+}
+{
+  "actualRPS": "13.51",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "90.223363ms",
+    "p90": "185.940432ms",
+    "p95": "185.940432ms",
+    "p99": "185.940432ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 743,
+  "targetRPS": 18,
+  "testDuration": "55.005301518s",
+  "totalRequests": 743
+}
+{
+  "actualRPS": "13.88",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "236.617689ms",
+    "p95": "236.617689ms",
+    "p99": "236.617689ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 833,
+  "targetRPS": 18,
+  "testDuration": "1m0.006134403s",
+  "totalRequests": 833
+}
+Error rate 0.00% below threshold. Increasing RPS from 18 to 22
+{
+  "actualRPS": "14.57",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "236.617689ms",
+    "p95": "236.617689ms",
+    "p99": "236.617689ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 947,
+  "targetRPS": 22,
+  "testDuration": "1m5.005801278s",
+  "totalRequests": 947
+}
+{
+  "actualRPS": "15.10",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "120.356672ms",
+    "p90": "236.617689ms",
+    "p95": "236.617689ms",
+    "p99": "236.617689ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1057,
+  "targetRPS": 22,
+  "testDuration": "1m10.005907352s",
+  "totalRequests": 1057
+}
+{
+  "actualRPS": "15.56",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "153.033576ms",
+    "p90": "236.617689ms",
+    "p95": "236.617689ms",
+    "p99": "236.617689ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1167,
+  "targetRPS": 22,
+  "testDuration": "1m15.006164146s",
+  "totalRequests": 1167
+}
+Error rate 0.00% below threshold. Increasing RPS from 22 to 27
+{
+  "actualRPS": "16.34",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "153.033576ms",
+    "p90": "236.617689ms",
+    "p95": "394.104253ms",
+    "p99": "394.104253ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1307,
+  "targetRPS": 27,
+  "testDuration": "1m20.005808248s",
+  "totalRequests": 1307
+}
+{
+  "actualRPS": "16.96",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "174.206964ms",
+    "p90": "292.465381ms",
+    "p95": "394.104253ms",
+    "p99": "394.104253ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1442,
+  "targetRPS": 27,
+  "testDuration": "1m25.005392181s",
+  "totalRequests": 1442
+}
+{
+  "actualRPS": "17.52",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "174.206964ms",
+    "p90": "292.465381ms",
+    "p95": "394.104253ms",
+    "p99": "394.104253ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1577,
+  "targetRPS": 27,
+  "testDuration": "1m30.005384068s",
+  "totalRequests": 1577
+}
+Error rate 0.00% below threshold. Increasing RPS from 27 to 33
+{
+  "actualRPS": "18.40",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "181.476843ms",
+    "p90": "356.662776ms",
+    "p95": "394.104253ms",
+    "p99": "394.104253ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1748,
+  "targetRPS": 33,
+  "testDuration": "1m35.005502909s",
+  "totalRequests": 1748
+}
+{
+  "actualRPS": "19.13",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "185.940432ms",
+    "p90": "356.662776ms",
+    "p95": "394.104253ms",
+    "p99": "394.104253ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1913,
+  "targetRPS": 33,
+  "testDuration": "1m40.005766416s",
+  "totalRequests": 1913
+}
+{
+  "actualRPS": "19.79",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "189.403283ms",
+    "p90": "379.072848ms",
+    "p95": "394.104253ms",
+    "p99": "473.772271ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2078,
+  "targetRPS": 33,
+  "testDuration": "1m45.005523103s",
+  "totalRequests": 2078
+}
+Error rate 0.00% below threshold. Increasing RPS from 33 to 41
+{
+  "actualRPS": "20.83",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "210.555016ms",
+    "p90": "379.072848ms",
+    "p95": "394.104253ms",
+    "p99": "473.772271ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2291,
+  "targetRPS": 41,
+  "testDuration": "1m50.005399465s",
+  "totalRequests": 2291
+}
+{
+  "actualRPS": "21.70",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "210.555016ms",
+    "p90": "379.072848ms",
+    "p95": "394.104253ms",
+    "p99": "473.772271ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2496,
+  "targetRPS": 41,
+  "testDuration": "1m55.005765677s",
+  "totalRequests": 2496
+}
+{
+  "actualRPS": "22.51",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "236.617689ms",
+    "p90": "394.104253ms",
+    "p95": "442.121663ms",
+    "p99": "473.772271ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2701,
+  "targetRPS": 41,
+  "testDuration": "2m0.0054699s",
+  "totalRequests": 2701
+}
+Error rate 0.00% below threshold. Increasing RPS from 41 to 51
+{
+  "actualRPS": "23.73",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "236.617689ms",
+    "p90": "394.104253ms",
+    "p95": "442.121663ms",
+    "p99": "473.772271ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2966,
+  "targetRPS": 51,
+  "testDuration": "2m5.005592147s",
+  "totalRequests": 2966
+}
+{
+  "actualRPS": "24.78",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "247.029161ms",
+    "p90": "394.104253ms",
+    "p95": "473.772271ms",
+    "p99": "481.416931ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 3221,
+  "targetRPS": 51,
+  "testDuration": "2m10.005844122s",
+  "totalRequests": 3221
+}
+{
+  "actualRPS": "25.75",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "259.56305ms",
+    "p90": "443.6979ms",
+    "p95": "462.831112ms",
+    "p99": "481.416931ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 3476,
+  "targetRPS": 51,
+  "testDuration": "2m15.006244816s",
+  "totalRequests": 3476
+}
+Error rate 0.00% below threshold. Increasing RPS from 51 to 63
+{
+  "actualRPS": "27.16",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "259.56305ms",
+    "p90": "443.6979ms",
+    "p95": "462.831112ms",
+    "p99": "481.416931ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 3803,
+  "targetRPS": 63,
+  "testDuration": "2m20.00592504s",
+  "totalRequests": 3803
+}
+{
+  "actualRPS": "28.40",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "272.958408ms",
+    "p90": "627.014547ms",
+    "p95": "757.14043ms",
+    "p99": "840.491994ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 4118,
+  "targetRPS": 63,
+  "testDuration": "2m25.005710795s",
+  "totalRequests": 4118
+}
+{
+  "actualRPS": "29.55",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "277.817146ms",
+    "p90": "651.114755ms",
+    "p95": "757.14043ms",
+    "p99": "840.491994ms"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 4433,
+  "targetRPS": 63,
+  "testDuration": "2m30.006477616s",
+  "totalRequests": 4433
+}
+Error rate 0.00% below threshold. Increasing RPS from 63 to 78
+{
+  "actualRPS": "31.08",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "283.737164ms",
+    "p90": "715.658732ms",
+    "p95": "840.491994ms",
+    "p99": "1.235486079s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 4817,
+  "targetRPS": 78,
+  "testDuration": "2m35.005950091s",
+  "totalRequests": 4817
+}
+{
+  "actualRPS": "32.58",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "341.287775ms",
+    "p90": "808.859708ms",
+    "p95": "904.922878ms",
+    "p99": "1.235486079s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 5213,
+  "targetRPS": 78,
+  "testDuration": "2m40.006181602s",
+  "totalRequests": 5213
+}
+{
+  "actualRPS": "33.98",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "344.843718ms",
+    "p90": "808.859708ms",
+    "p95": "904.922878ms",
+    "p99": "1.235486079s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 5607,
+  "targetRPS": 78,
+  "testDuration": "2m45.005445935s",
+  "totalRequests": 5607
+}
+Error rate 0.00% below threshold. Increasing RPS from 78 to 97
+{
+  "actualRPS": "35.45",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "350.967909ms",
+    "p90": "904.922878ms",
+    "p95": "1.049284277s",
+    "p99": "1.797746466s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 6027,
+  "targetRPS": 97,
+  "testDuration": "2m50.005623509s",
+  "totalRequests": 6027
+}
+{
+  "actualRPS": "36.62",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "394.104253ms",
+    "p90": "1.053016765s",
+    "p95": "1.790254106s",
+    "p99": "2.797590672s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 6409,
+  "targetRPS": 97,
+  "testDuration": "2m55.006237985s",
+  "totalRequests": 6409
+}
+{
+  "actualRPS": "38.03",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "442.121663ms",
+    "p90": "1.790254106s",
+    "p95": "2.375875126s",
+    "p99": "2.967416893s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 6846,
+  "targetRPS": 97,
+  "testDuration": "3m0.005962275s",
+  "totalRequests": 6846
+}
+Error rate 0.00% below threshold. Increasing RPS from 97 to 121
+{
+  "actualRPS": "38.97",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "453.112096ms",
+    "p90": "2.375875126s",
+    "p95": "2.967416893s",
+    "p99": "4.24161357s"
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 7210,
+  "targetRPS": 121,
+  "testDuration": "3m5.005299581s",
+  "totalRequests": 7210
+}
+{
+  "actualRPS": "40.64",
+  "failedRequests": 383,
+  "latency": {
+    "p50": "481.416931ms",
+    "p90": "3.629891269s",
+    "p95": "4.24161357s",
+    "p99": "5.00106544s"
+  },
+  "successRate": "95.04%",
+  "successfulRequests": 7338,
+  "targetRPS": 121,
+  "testDuration": "3m10.005501428s",
+  "totalRequests": 7721
+}
+{
+  "actualRPS": "42.70",
+  "failedRequests": 988,
+  "latency": {
+    "p50": "521.828514ms",
+    "p90": "4.24161357s",
+    "p95": "5.000361471s",
+    "p99": "5.00106544s"
+  },
+  "successRate": "88.13%",
+  "successfulRequests": 7338,
+  "targetRPS": 121,
+  "testDuration": "3m15.005749899s",
+  "totalRequests": 8326
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 121 to 103
+{
+  "actualRPS": "44.65",
+  "failedRequests": 1593,
+  "latency": {
+    "p50": "627.014547ms",
+    "p90": "5.000290383s",
+    "p95": "5.000564621s",
+    "p99": "5.00106544s"
+  },
+  "successRate": "82.16%",
+  "successfulRequests": 7338,
+  "targetRPS": 103,
+  "testDuration": "3m20.006196019s",
+  "totalRequests": 8931
+}
+{
+  "actualRPS": "46.08",
+  "failedRequests": 2108,
+  "latency": {
+    "p50": "653.10445ms",
+    "p90": "5.000350133s",
+    "p95": "5.00061157s",
+    "p99": "5.00106544s"
+  },
+  "successRate": "77.68%",
+  "successfulRequests": 7338,
+  "targetRPS": 103,
+  "testDuration": "3m25.00609812s",
+  "totalRequests": 9446
+}
+{
+  "actualRPS": "47.43",
+  "failedRequests": 2623,
+  "latency": {
+    "p50": "664.766616ms",
+    "p90": "5.000361471s",
+    "p95": "5.000629907s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "73.67%",
+  "successfulRequests": 7338,
+  "targetRPS": 103,
+  "testDuration": "3m30.005681544s",
+  "totalRequests": 9961
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 103 to 88
+{
+  "actualRPS": "48.72",
+  "failedRequests": 3138,
+  "latency": {
+    "p50": "738.277824ms",
+    "p90": "5.000448712s",
+    "p95": "5.000775274s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "70.05%",
+  "successfulRequests": 7338,
+  "targetRPS": 88,
+  "testDuration": "3m35.005990083s",
+  "totalRequests": 10476
+}
+{
+  "actualRPS": "49.62",
+  "failedRequests": 3578,
+  "latency": {
+    "p50": "757.14043ms",
+    "p90": "5.000594621s",
+    "p95": "5.000843467s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "67.22%",
+  "successfulRequests": 7338,
+  "targetRPS": 88,
+  "testDuration": "3m40.006350652s",
+  "totalRequests": 10916
+}
+{
+  "actualRPS": "50.47",
+  "failedRequests": 4018,
+  "latency": {
+    "p50": "904.922878ms",
+    "p90": "5.000629907s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "64.62%",
+  "successfulRequests": 7338,
+  "targetRPS": 88,
+  "testDuration": "3m45.005748206s",
+  "totalRequests": 11356
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 88 to 75
+{
+  "actualRPS": "51.29",
+  "failedRequests": 4458,
+  "latency": {
+    "p50": "975.182303ms",
+    "p90": "5.000629907s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "62.21%",
+  "successfulRequests": 7338,
+  "targetRPS": 75,
+  "testDuration": "3m50.005936383s",
+  "totalRequests": 11796
+}
+{
+  "actualRPS": "51.79",
+  "failedRequests": 4833,
+  "latency": {
+    "p50": "1.049284277s",
+    "p90": "5.000638906s",
+    "p95": "5.000944389s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "60.29%",
+  "successfulRequests": 7338,
+  "targetRPS": 75,
+  "testDuration": "3m55.005311559s",
+  "totalRequests": 12171
+}
+{
+  "actualRPS": "52.27",
+  "failedRequests": 5208,
+  "latency": {
+    "p50": "1.616490809s",
+    "p90": "5.000783931s",
+    "p95": "5.000944389s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "58.49%",
+  "successfulRequests": 7338,
+  "targetRPS": 75,
+  "testDuration": "4m0.006099194s",
+  "totalRequests": 12546
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 75 to 64
+{
+  "actualRPS": "52.74",
+  "failedRequests": 5583,
+  "latency": {
+    "p50": "1.631537515s",
+    "p90": "5.0008111s",
+    "p95": "5.000944389s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "56.79%",
+  "successfulRequests": 7338,
+  "targetRPS": 64,
+  "testDuration": "4m5.00566514s",
+  "totalRequests": 12921
+}
+{
+  "actualRPS": "52.96",
+  "failedRequests": 5903,
+  "latency": {
+    "p50": "1.631537515s",
+    "p90": "5.0008111s",
+    "p95": "5.000944389s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "55.42%",
+  "successfulRequests": 7338,
+  "targetRPS": 64,
+  "testDuration": "4m10.005446083s",
+  "totalRequests": 13241
+}
+{
+  "actualRPS": "53.18",
+  "failedRequests": 6223,
+  "latency": {
+    "p50": "1.790254106s",
+    "p90": "5.0008111s",
+    "p95": "5.000944389s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "54.11%",
+  "successfulRequests": 7338,
+  "targetRPS": 64,
+  "testDuration": "4m15.005973437s",
+  "totalRequests": 13561
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 64 to 55
+{
+  "actualRPS": "53.64",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "2.158955999s",
+    "p90": "5.000783931s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "53.88%",
+  "successfulRequests": 7514,
+  "targetRPS": 55,
+  "testDuration": "4m20.006282403s",
+  "totalRequests": 13946
+}
+{
+  "actualRPS": "54.11",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "2.267715501s",
+    "p90": "5.000783931s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "55.14%",
+  "successfulRequests": 7907,
+  "targetRPS": 55,
+  "testDuration": "4m25.005728855s",
+  "totalRequests": 14339
+}
+{
+  "actualRPS": "54.47",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "2.158955999s",
+    "p90": "5.000783931s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "56.26%",
+  "successfulRequests": 8274,
+  "targetRPS": 55,
+  "testDuration": "4m30.005724198s",
+  "totalRequests": 14706
+}
+Error rate 0.00% below threshold. Increasing RPS from 55 to 68
+{
+  "actualRPS": "54.74",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.790254106s",
+    "p90": "5.000775274s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "57.28%",
+  "successfulRequests": 8623,
+  "targetRPS": 68,
+  "testDuration": "4m35.005944765s",
+  "totalRequests": 15055
+}
+{
+  "actualRPS": "54.94",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.616490809s",
+    "p90": "5.000775274s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "58.19%",
+  "successfulRequests": 8951,
+  "targetRPS": 68,
+  "testDuration": "4m40.00563217s",
+  "totalRequests": 15383
+}
+{
+  "actualRPS": "55.21",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.616490809s",
+    "p90": "5.000775274s",
+    "p95": "5.000906106s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "59.12%",
+  "successfulRequests": 9303,
+  "targetRPS": 68,
+  "testDuration": "4m45.005414851s",
+  "totalRequests": 15735
+}
+Error rate 0.00% below threshold. Increasing RPS from 68 to 85
+{
+  "actualRPS": "55.64",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.053016765s",
+    "p90": "5.000687173s",
+    "p95": "5.000894764s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "60.14%",
+  "successfulRequests": 9703,
+  "targetRPS": 85,
+  "testDuration": "4m50.00564983s",
+  "totalRequests": 16135
+}
+{
+  "actualRPS": "56.05",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.053016765s",
+    "p90": "5.000687173s",
+    "p95": "5.000894764s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "61.10%",
+  "successfulRequests": 10104,
+  "targetRPS": 85,
+  "testDuration": "4m55.005759376s",
+  "totalRequests": 16536
+}
+{
+  "actualRPS": "56.50",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.049284277s",
+    "p90": "5.000638906s",
+    "p95": "5.000894764s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "62.05%",
+  "successfulRequests": 10518,
+  "targetRPS": 85,
+  "testDuration": "5m0.006119232s",
+  "totalRequests": 16950
+}
+Error rate 0.00% below threshold. Increasing RPS from 85 to 106
+{
+  "actualRPS": "56.81",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.053016765s",
+    "p90": "5.000638906s",
+    "p95": "5.000894764s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "62.88%",
+  "successfulRequests": 10896,
+  "targetRPS": 106,
+  "testDuration": "5m5.005392471s",
+  "totalRequests": 17328
+}
+{
+  "actualRPS": "57.11",
+  "failedRequests": 6432,
+  "latency": {
+    "p50": "1.244449637s",
+    "p90": "5.000629907s",
+    "p95": "5.000882028s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "63.67%",
+  "successfulRequests": 11273,
+  "targetRPS": 106,
+  "testDuration": "5m10.005807188s",
+  "totalRequests": 17705
+}
+{
+  "actualRPS": "57.52",
+  "failedRequests": 6596,
+  "latency": {
+    "p50": "1.601619926s",
+    "p90": "5.000629907s",
+    "p95": "5.000882028s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "63.59%",
+  "successfulRequests": 11522,
+  "targetRPS": 106,
+  "testDuration": "5m15.006264423s",
+  "totalRequests": 18118
+}
+Error rate 40.00% exceeds threshold. Decreasing RPS from 106 to 91
+{
+  "actualRPS": "58.26",
+  "failedRequests": 7109,
+  "latency": {
+    "p50": "1.639855212s",
+    "p90": "5.000687062s",
+    "p95": "5.000894764s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "61.87%",
+  "successfulRequests": 11533,
+  "targetRPS": 91,
+  "testDuration": "5m20.005589267s",
+  "totalRequests": 18642
+}
+{
+  "actualRPS": "58.76",
+  "failedRequests": 7564,
+  "latency": {
+    "p50": "1.790254106s",
+    "p90": "5.000687173s",
+    "p95": "5.000897558s",
+    "p99": "5.001293361s"
+  },
+  "successRate": "60.39%",
+  "successfulRequests": 11533,
+  "targetRPS": 91,
+  "testDuration": "5m25.005335698s",
+  "totalRequests": 19097
+}
+{
+  "actualRPS": "59.25",
+  "failedRequests": 8019,
+  "latency": {
+    "p50": "2.267715501s",
+    "p90": "5.00074077s",
+    "p95": "5.000906106s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "58.99%",
+  "successfulRequests": 11533,
+  "targetRPS": 91,
+  "testDuration": "5m30.005628595s",
+  "totalRequests": 19552
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 91 to 78
+{
+  "actualRPS": "59.72",
+  "failedRequests": 8474,
+  "latency": {
+    "p50": "2.375875126s",
+    "p90": "5.000775274s",
+    "p95": "5.000944389s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "57.64%",
+  "successfulRequests": 11533,
+  "targetRPS": 78,
+  "testDuration": "5m35.005695233s",
+  "totalRequests": 20007
+}
+{
+  "actualRPS": "59.99",
+  "failedRequests": 8864,
+  "latency": {
+    "p50": "2.575065438s",
+    "p90": "5.000783931s",
+    "p95": "5.000944389s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "56.54%",
+  "successfulRequests": 11533,
+  "targetRPS": 78,
+  "testDuration": "5m40.005376139s",
+  "totalRequests": 20397
+}
+{
+  "actualRPS": "60.25",
+  "failedRequests": 9254,
+  "latency": {
+    "p50": "2.787787454s",
+    "p90": "5.0008111s",
+    "p95": "5.000944389s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "55.48%",
+  "successfulRequests": 11533,
+  "targetRPS": 78,
+  "testDuration": "5m45.005426045s",
+  "totalRequests": 20787
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 78 to 67
+{
+  "actualRPS": "60.50",
+  "failedRequests": 9644,
+  "latency": {
+    "p50": "2.967416893s",
+    "p90": "5.000783931s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "54.46%",
+  "successfulRequests": 11533,
+  "targetRPS": 67,
+  "testDuration": "5m50.006323046s",
+  "totalRequests": 21177
+}
+{
+  "actualRPS": "60.60",
+  "failedRequests": 9979,
+  "latency": {
+    "p50": "3.073107333s",
+    "p90": "5.0008111s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "53.61%",
+  "successfulRequests": 11533,
+  "targetRPS": 67,
+  "testDuration": "5m55.006100485s",
+  "totalRequests": 21512
+}
+{
+  "actualRPS": "60.69",
+  "failedRequests": 10314,
+  "latency": {
+    "p50": "3.481394938s",
+    "p90": "5.0008111s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "52.79%",
+  "successfulRequests": 11533,
+  "targetRPS": 67,
+  "testDuration": "6m0.005297956s",
+  "totalRequests": 21847
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 67 to 57
+{
+  "actualRPS": "60.89",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "3.630911145s",
+    "p90": "5.00083517s",
+    "p95": "5.000944389s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "52.59%",
+  "successfulRequests": 11690,
+  "targetRPS": 57,
+  "testDuration": "6m5.00600765s",
+  "totalRequests": 22227
+}
+{
+  "actualRPS": "61.13",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "3.630911145s",
+    "p90": "5.0008111s",
+    "p95": "5.000944389s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "53.41%",
+  "successfulRequests": 12081,
+  "targetRPS": 57,
+  "testDuration": "6m10.006296886s",
+  "totalRequests": 22618
+}
+{
+  "actualRPS": "61.42",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "3.481394938s",
+    "p90": "5.0008111s",
+    "p95": "5.000944389s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "54.25%",
+  "successfulRequests": 12495,
+  "targetRPS": 57,
+  "testDuration": "6m15.005982442s",
+  "totalRequests": 23032
+}
+Error rate 0.00% below threshold. Increasing RPS from 57 to 71
+{
+  "actualRPS": "61.55",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "3.074353442s",
+    "p90": "5.000783931s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "54.95%",
+  "successfulRequests": 12851,
+  "targetRPS": 71,
+  "testDuration": "6m20.005649889s",
+  "totalRequests": 23388
+}
+{
+  "actualRPS": "61.67",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "3.004286412s",
+    "p90": "5.000783931s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "55.62%",
+  "successfulRequests": 13208,
+  "targetRPS": 71,
+  "testDuration": "6m25.006352255s",
+  "totalRequests": 23745
+}
+{
+  "actualRPS": "61.79",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "2.798702949s",
+    "p90": "5.000775274s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "56.28%",
+  "successfulRequests": 13562,
+  "targetRPS": 71,
+  "testDuration": "6m30.006126097s",
+  "totalRequests": 24099
+}
+Error rate 0.00% below threshold. Increasing RPS from 71 to 88
+{
+  "actualRPS": "62.04",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "2.787787454s",
+    "p90": "5.000775274s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "57.01%",
+  "successfulRequests": 13971,
+  "targetRPS": 88,
+  "testDuration": "6m35.005675921s",
+  "totalRequests": 24508
+}
+{
+  "actualRPS": "62.19",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "2.673363871s",
+    "p90": "5.000775274s",
+    "p95": "5.000937683s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "57.64%",
+  "successfulRequests": 14340,
+  "targetRPS": 88,
+  "testDuration": "6m40.005667605s",
+  "totalRequests": 24877
+}
+{
+  "actualRPS": "62.39",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "2.562004264s",
+    "p90": "5.00074077s",
+    "p95": "5.000926746s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "58.30%",
+  "successfulRequests": 14730,
+  "targetRPS": 88,
+  "testDuration": "6m45.005610547s",
+  "totalRequests": 25267
+}
+Error rate 0.00% below threshold. Increasing RPS from 88 to 110
+{
+  "actualRPS": "62.54",
+  "failedRequests": 10537,
+  "latency": {
+    "p50": "2.575065438s",
+    "p90": "5.00074077s",
+    "p95": "5.000926746s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "58.91%",
+  "successfulRequests": 15105,
+  "targetRPS": 110,
+  "testDuration": "6m50.006402195s",
+  "totalRequests": 25642
+}
+{
+  "actualRPS": "62.79",
+  "failedRequests": 10615,
+  "latency": {
+    "p50": "2.673363871s",
+    "p90": "5.000775274s",
+    "p95": "5.000926746s",
+    "p99": "5.001160243s"
+  },
+  "successRate": "59.27%",
+  "successfulRequests": 15444,
+  "targetRPS": 110,
+  "testDuration": "6m55.005364045s",
+  "totalRequests": 26059
+}
+Test duration completed.
