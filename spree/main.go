@@ -42,6 +42,20 @@ type Config struct {
 			Products   int
 			SpecificProduct int
 		}
+		
+		// Adaptive testing configuration
+		AdaptiveRPS bool
+		AdaptiveConfig struct {
+			InitialRPS               int64
+			ErrorThresholdPercentage float64
+			RPSIncreasePercentage    float64
+			RPSDecreasePercentage    float64
+			MinimumRPS               int64
+			MaximumRPS               int64
+			SamplingWindow           time.Duration
+			StabilizationWindow      time.Duration
+		}
+		Duration time.Duration
 	}
 }
 
@@ -73,15 +87,21 @@ type Metrics struct {
 	EndpointCounts     map[string]int64
 	ErrorSamples       []ErrorResponse
 	mutex              sync.RWMutex
+	
+	// For adaptive testing
+	recentSuccessfulRequests int64
+	recentFailedRequests     int64
+	lastSamplingTime         time.Time
 }
 
 // NewMetrics creates a new metrics instance
 func NewMetrics() *Metrics {
 	return &Metrics{
-		StartTime:      time.Now(),
-		StatusCodes:    make(map[int]int64),
-		EndpointCounts: make(map[string]int64),
-		ErrorSamples:   make([]ErrorResponse, 0, 100),
+		StartTime:       time.Now(),
+		StatusCodes:     make(map[int]int64),
+		EndpointCounts:  make(map[string]int64),
+		ErrorSamples:    make([]ErrorResponse, 0, 100),
+		lastSamplingTime: time.Now(),
 	}
 }
 
@@ -96,8 +116,10 @@ func (m *Metrics) AddResult(duration time.Duration, endpoint string, statusCode 
 	
 	if statusCode >= 200 && statusCode < 300 {
 		atomic.AddInt64(&m.SuccessfulRequests, 1)
+		atomic.AddInt64(&m.recentSuccessfulRequests, 1)
 	} else {
 		atomic.AddInt64(&m.FailedRequests, 1)
+		atomic.AddInt64(&m.recentFailedRequests, 1)
 		
 		// Store error sample if provided
 		if errResp != nil {
@@ -115,6 +137,26 @@ func (m *Metrics) AddResult(duration time.Duration, endpoint string, statusCode 
 		m.RequestDurations = append(m.RequestDurations, duration)
 		m.mutex.Unlock()
 	}
+}
+
+// ResetRecentCounters for adaptive testing
+func (m *Metrics) ResetRecentCounters() {
+	atomic.StoreInt64(&m.recentSuccessfulRequests, 0)
+	atomic.StoreInt64(&m.recentFailedRequests, 0)
+	m.lastSamplingTime = time.Now()
+}
+
+// GetRecentErrorRate calculates the error rate in the recent sample window
+func (m *Metrics) GetRecentErrorRate() float64 {
+	recentSuccess := atomic.LoadInt64(&m.recentSuccessfulRequests)
+	recentFailed := atomic.LoadInt64(&m.recentFailedRequests)
+	totalRecent := recentSuccess + recentFailed
+	
+	if totalRecent == 0 {
+		return 0.0
+	}
+	
+	return float64(recentFailed) / float64(totalRecent) * 100.0
 }
 
 // Task represents a single request to be executed
@@ -302,7 +344,7 @@ func (g *LoadGenerator) selectEndpoint() (string, string) {
 	
 	categoriesWeight := g.Config.Test.TrafficDistribution.SpecificProduct
 	if categoriesWeight == 0 {
-		categoriesWeight = 20 // Default from K6 script
+		categoriesWeight = 40 // Default from K6 script
 	}
 	
 	// Calculate thresholds
@@ -335,19 +377,32 @@ func (g *LoadGenerator) generateLoad() {
 	defer g.WaitGroup.Done()
 	
 	stageStart := time.Now()
+	testStart := time.Now()
 	currentStage := 0
 	
 	ticker := time.NewTicker(1 * time.Millisecond)
 	defer ticker.Stop()
 	
 	// Initialize variables for rate limiting
-	startRPS := int64(0)
-	if len(g.Config.Test.RampupStages) > 0 {
-		startRPS = g.Config.Test.RampupStages[0].TargetRPS
+	var currentTargetRPS int64
+	
+	if g.Config.Test.AdaptiveRPS {
+		// For adaptive testing, start with the initial RPS
+		currentTargetRPS = g.Config.Test.AdaptiveConfig.InitialRPS
+		log.Printf("Starting adaptive testing with initial RPS: %d", currentTargetRPS)
+		log.Printf("Error threshold: %.2f%%", g.Config.Test.AdaptiveConfig.ErrorThresholdPercentage)
+	} else if len(g.Config.Test.RampupStages) > 0 {
+		// For staged testing, start with first stage
+		currentTargetRPS = g.Config.Test.RampupStages[0].TargetRPS
+		log.Printf("Starting staged testing with initial RPS: %d", currentTargetRPS)
 	}
 	
-	currentTargetRPS := startRPS
+	startRPS := currentTargetRPS
 	g.Pool.CurrentRate.Store(currentTargetRPS)
+	
+	// Initialize metrics for adaptive testing
+	g.Pool.Metrics.ResetRecentCounters()
+	lastAdaptiveChange := time.Now()
 	
 	// Launch the reporting goroutine
 	reportTicker := time.NewTicker(time.Duration(g.Config.Test.ReportingSeconds) * time.Second)
@@ -373,32 +428,86 @@ func (g *LoadGenerator) generateLoad() {
 		case <-g.StopChan:
 			return
 		case now := <-ticker.C:
-			// Check if we need to move to the next stage
-			if currentStage < len(g.Config.Test.RampupStages) {
-				stage := g.Config.Test.RampupStages[currentStage]
-				elapsed := now.Sub(stageStart)
+			// Check if test duration exceeded (for adaptive testing)
+			if g.Config.Test.Duration > 0 && time.Since(testStart) >= g.Config.Test.Duration {
+				fmt.Println("Test duration completed.")
+				return
+			}
+			
+			if g.Config.Test.AdaptiveRPS {
+				// Adaptive RPS logic
+				elapsedSinceSampling := now.Sub(g.Pool.Metrics.lastSamplingTime)
 				
-				if elapsed >= stage.Duration {
-					// Move to next stage
-					stageStart = now
-					currentStage++
-					if currentStage < len(g.Config.Test.RampupStages) {
-						startRPS = currentTargetRPS
-						fmt.Printf("Moving to stage %d: %s\n", currentStage+1, g.Config.Test.RampupStages[currentStage].Description)
-					} else {
-						fmt.Println("Load test completed all stages.")
-						return
-					}
-				}
-				
-				// Calculate current target RPS based on linear interpolation
-				if currentStage < len(g.Config.Test.RampupStages) {
-					stage = g.Config.Test.RampupStages[currentStage]
-					progress := float64(elapsed) / float64(stage.Duration)
+				// Calculate error rate over sampling window
+				if elapsedSinceSampling >= g.Config.Test.AdaptiveConfig.SamplingWindow {
+					recentErrorRate := g.Pool.Metrics.GetRecentErrorRate()
 					
-					// Linear interpolation between start RPS and target RPS
-					currentTargetRPS = startRPS + int64(float64(stage.TargetRPS-startRPS)*progress)
-					g.Pool.CurrentRate.Store(currentTargetRPS)
+					// Only adjust RPS after stabilization window
+					if now.Sub(lastAdaptiveChange) >= g.Config.Test.AdaptiveConfig.StabilizationWindow {
+						previousRPS := currentTargetRPS
+						
+						// Adjust RPS based on error rate
+						if recentErrorRate > g.Config.Test.AdaptiveConfig.ErrorThresholdPercentage {
+							// Too many errors, decrease RPS
+							decreaseAmount := float64(currentTargetRPS) * (g.Config.Test.AdaptiveConfig.RPSDecreasePercentage / 100.0)
+							currentTargetRPS = currentTargetRPS - int64(decreaseAmount)
+							
+							// Ensure we don't go below minimum
+							if currentTargetRPS < g.Config.Test.AdaptiveConfig.MinimumRPS {
+								currentTargetRPS = g.Config.Test.AdaptiveConfig.MinimumRPS
+							}
+							
+							fmt.Printf("Error rate %.2f%% exceeds threshold. Decreasing RPS from %d to %d\n", 
+								recentErrorRate, previousRPS, currentTargetRPS)
+						} else {
+							// Error rate is acceptable, increase RPS
+							increaseAmount := float64(currentTargetRPS) * (g.Config.Test.AdaptiveConfig.RPSIncreasePercentage / 100.0)
+							currentTargetRPS = currentTargetRPS + int64(increaseAmount)
+							
+							// Ensure we don't exceed maximum
+							if currentTargetRPS > g.Config.Test.AdaptiveConfig.MaximumRPS {
+								currentTargetRPS = g.Config.Test.AdaptiveConfig.MaximumRPS
+							}
+							
+							fmt.Printf("Error rate %.2f%% below threshold. Increasing RPS from %d to %d\n", 
+								recentErrorRate, previousRPS, currentTargetRPS)
+						}
+						
+						g.Pool.CurrentRate.Store(currentTargetRPS)
+						lastAdaptiveChange = now
+					}
+					
+					// Reset counters for next sampling window
+					g.Pool.Metrics.ResetRecentCounters()
+				}
+			} else {
+				// Original staged testing logic
+				if currentStage < len(g.Config.Test.RampupStages) {
+					stage := g.Config.Test.RampupStages[currentStage]
+					elapsed := now.Sub(stageStart)
+					
+					if elapsed >= stage.Duration {
+						// Move to next stage
+						stageStart = now
+						currentStage++
+						if currentStage < len(g.Config.Test.RampupStages) {
+							startRPS = currentTargetRPS
+							fmt.Printf("Moving to stage %d: %s\n", currentStage+1, g.Config.Test.RampupStages[currentStage].Description)
+						} else {
+							fmt.Println("Load test completed all stages.")
+							return
+						}
+					}
+					
+					// Calculate current target RPS based on linear interpolation
+					if currentStage < len(g.Config.Test.RampupStages) {
+						stage = g.Config.Test.RampupStages[currentStage]
+						progress := float64(elapsed) / float64(stage.Duration)
+						
+						// Linear interpolation between start RPS and target RPS
+						currentTargetRPS = startRPS + int64(float64(stage.TargetRPS-startRPS)*progress)
+						g.Pool.CurrentRate.Store(currentTargetRPS)
+					}
 				}
 			}
 			
@@ -567,7 +676,16 @@ func main() {
 	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
 	
 	// Start load test
-	fmt.Println("Starting Spree API load test...")
+	if config.Test.AdaptiveRPS {
+		fmt.Println("Starting Spree API adaptive load test...")
+		fmt.Printf("Using adaptive load testing with initial RPS: %d, error threshold: %.2f%%\n", 
+			config.Test.AdaptiveConfig.InitialRPS, 
+			config.Test.AdaptiveConfig.ErrorThresholdPercentage)
+	} else {
+		fmt.Println("Starting Spree API staged load test...")
+		fmt.Printf("Using staged load testing with %d stages\n", len(config.Test.RampupStages))
+	}
+	
 	pool.Start()
 	generator.Start()
 	
@@ -691,7 +809,7 @@ func createDefaultSpreeConfig(path string) {
 	}
 	
 	// Set default test configuration
-	config.Test.MaxWorkers = 200
+	config.Test.MaxWorkers = 2500
 	config.Test.MaxQueueSize = 5000
 	config.Test.ReportingSeconds = 5
 	config.Test.LogErrors = true
@@ -699,15 +817,27 @@ func createDefaultSpreeConfig(path string) {
 	
 	// Set traffic distribution
 	config.Test.TrafficDistribution.Products = 60   // 60%
-	config.Test.TrafficDistribution.SpecificProduct = 40 // 20%
+	config.Test.TrafficDistribution.SpecificProduct = 40 // 40%
 	
-	// Define realistic ramp-up stages
+	// Set default adaptive testing config
+	config.Test.AdaptiveRPS = true
+	config.Test.AdaptiveConfig.InitialRPS = 10
+	config.Test.AdaptiveConfig.ErrorThresholdPercentage = 2.0
+	config.Test.AdaptiveConfig.RPSIncreasePercentage = 25.0
+	config.Test.AdaptiveConfig.RPSDecreasePercentage = 15.0
+	config.Test.AdaptiveConfig.MinimumRPS = 5
+	config.Test.AdaptiveConfig.MaximumRPS = 500
+	config.Test.AdaptiveConfig.SamplingWindow = 5 * time.Second
+	config.Test.AdaptiveConfig.StabilizationWindow = 15 * time.Second
+	config.Test.Duration = 10 * time.Minute
+	
+	// Define ramp-up stages (only used if AdaptiveRPS is false)
 	config.Test.RampupStages = []Stage{
 		{Duration: 30 * time.Second, TargetRPS: 10, Description: "Warm-up at 10 RPS"},
+		{Duration: 30 * time.Second, TargetRPS: 25, Description: "Ramp up to 25 RPS"},
 		{Duration: 30 * time.Second, TargetRPS: 50, Description: "Ramp up to 50 RPS"},
-		{Duration: 30 * time.Second, TargetRPS: 50, Description: "Hold at 50 RPS"},
 		{Duration: 30 * time.Second, TargetRPS: 100, Description: "Ramp up to 100 RPS"},
-		{Duration: 30 * time.Second, TargetRPS: 100, Description: "Hold at 100 RPS"},
+		{Duration: 30 * time.Second, TargetRPS: 200, Description: "Ramp up to 200 RPS"},
 		{Duration: 30 * time.Second, TargetRPS: 0, Description: "Ramp down to 0"},
 	}
 	
