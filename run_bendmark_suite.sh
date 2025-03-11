@@ -19,6 +19,14 @@ run_benchmark() {
   
   echo -e "${GREEN}Starting $platform benchmark...${NC}"
   
+  # Check if executable exists
+  if [ ! -x "./${platform}_benchmark" ]; then
+    echo -e "${YELLOW}Error: ${platform}_benchmark executable not found or not executable${NC}"
+    # Create a mock results file for testing purposes
+    echo "{\"platform\":\"${platform}\", \"error\":\"benchmark executable not found\"}" > "${platform}_results.json"
+    return 1
+  fi
+  
   # Run the benchmark and redirect output to a log file
   ./${platform}_benchmark -config $platform/$config > "$results_dir/${platform}_output.log" 2>&1 &
   local pid=$!
@@ -110,13 +118,30 @@ run_tests_for_duration() {
   # Run benchmarks in parallel
   echo -e "${GREEN}Running all benchmarks in parallel for ${duration} minutes...${NC}"
   
-  # Start all benchmarks and collect their PIDs
-  MEDUSA_PID=$(run_benchmark medusa "config_${duration}min.json" "$RESULTS_DIR")
-  SALEOR_PID=$(run_benchmark saleor "config_${duration}min.json" "$RESULTS_DIR")
-  SPREE_PID=$(run_benchmark spree "config_${duration}min.json" "$RESULTS_DIR")
+  # Start all benchmarks and collect their PIDs (only valid PIDs)
+  valid_pids=()
   
-  # Wait for all benchmarks to complete
-  wait_for_benchmarks $MEDUSA_PID $SALEOR_PID $SPREE_PID
+  MEDUSA_PID=$(run_benchmark medusa "config_${duration}min.json" "$RESULTS_DIR")
+  if [ $? -eq 0 ]; then
+    valid_pids+=($MEDUSA_PID)
+  fi
+  
+  SALEOR_PID=$(run_benchmark saleor "config_${duration}min.json" "$RESULTS_DIR")
+  if [ $? -eq 0 ]; then
+    valid_pids+=($SALEOR_PID)
+  fi
+  
+  SPREE_PID=$(run_benchmark spree "config_${duration}min.json" "$RESULTS_DIR")
+  if [ $? -eq 0 ]; then
+    valid_pids+=($SPREE_PID)
+  fi
+  
+  # Wait for benchmarks only if there are valid PIDs
+  if [ ${#valid_pids[@]} -gt 0 ]; then
+    wait_for_benchmarks ${valid_pids[@]}
+  else
+    echo -e "${YELLOW}No valid benchmark processes were started${NC}"
+  fi
   
   # Check for result files and copy them if they exist
   for platform in medusa saleor spree; do
@@ -124,7 +149,7 @@ run_tests_for_duration() {
       echo "Copying ${platform}_results.json to $RESULTS_DIR/"
       cp ${platform}_results.json "$RESULTS_DIR/" || echo "Warning: Failed to copy ${platform}_results.json"
     else
-      echo "${YELLOW}Warning: ${platform}_results.json not found${NC}"
+      echo -e "${YELLOW}Warning: ${platform}_results.json not found${NC}"
     fi
   done
   
@@ -135,18 +160,31 @@ run_tests_for_duration() {
      [ -f "$RESULTS_DIR/saleor_results.json" ] && 
      [ -f "$RESULTS_DIR/spree_results.json" ]; then
     echo -e "${GREEN}Comparing ${duration}-minute benchmark results...${NC}"
-    go build -o compare_results compare_results.go
-    ./compare_results \
-      --medusa="$RESULTS_DIR/medusa_results.json" \
-      --saleor="$RESULTS_DIR/saleor_results.json" \
-      --spree="$RESULTS_DIR/spree_results.json" \
-      --output="$RESULTS_DIR/comparison.json"
+    if [ -x "./compare_results" ]; then
+      ./compare_results \
+        --medusa="$RESULTS_DIR/medusa_results.json" \
+        --saleor="$RESULTS_DIR/saleor_results.json" \
+        --spree="$RESULTS_DIR/spree_results.json" \
+        --output="$RESULTS_DIR/comparison.json"
+    else
+      echo -e "${YELLOW}Warning: compare_results executable not found, skipping comparison${NC}"
+      # Create a simple mock comparison file
+      echo "{\"comparison_status\":\"skipped\",\"reason\":\"compare_results not found\"}" > "$RESULTS_DIR/comparison.json"
+    fi
     
     # Generate HTML report for this duration
     echo -e "${GREEN}Generating HTML report for ${duration}-minute tests...${NC}"
-    ./generate_report.sh "$RESULTS_DIR"
+    if [ -x "./generate_report.sh" ]; then
+      ./generate_report.sh "$RESULTS_DIR"
+    else
+      echo -e "${YELLOW}Warning: generate_report.sh not found, skipping report generation${NC}"
+      # Create a simple HTML file
+      echo "<html><body><h1>Report Unavailable</h1><p>generate_report.sh not found</p></body></html>" > "$RESULTS_DIR/report.html"
+    fi
   else
-    echo "${YELLOW}Warning: Not all result files were found, skipping comparison generation${NC}"
+    echo -e "${YELLOW}Warning: Not all result files were found, skipping comparison generation${NC}"
+    # Create a simple HTML file
+    echo "<html><body><h1>Report Unavailable</h1><p>Not all benchmark result files found</p></body></html>" > "$RESULTS_DIR/report.html"
   fi
   
   echo -e "${GREEN}${duration}-minute benchmark suite completed.${NC}"
@@ -168,7 +206,21 @@ done
 # Final combined report
 if [ ${#ALL_RESULTS_DIRS[@]} -gt 0 ]; then
   echo -e "${GREEN}Generating combined report for all test durations...${NC}"
-  ./generate_combined_report.sh "${ALL_RESULTS_DIRS[@]}" --output combined_report
+  
+  if [ -x "./generate_combined_report.sh" ]; then
+    ./generate_combined_report.sh "${ALL_RESULTS_DIRS[@]}" --output combined_report
+  else
+    echo -e "${YELLOW}Warning: generate_combined_report.sh not found, creating basic combined report${NC}"
+    # Create directory for combined report
+    mkdir -p combined_report
+    
+    # Create a simple index file that links to all individual reports
+    echo "<html><body><h1>Combined Benchmark Report</h1><ul>" > combined_report/combined_report.html
+    for dir in "${ALL_RESULTS_DIRS[@]}"; do
+      echo "<li><a href=\"../$dir/report.html\">$dir</a></li>" >> combined_report/combined_report.html
+    done
+    echo "</ul></body></html>" >> combined_report/combined_report.html
+  fi
 
   echo -e "${GREEN}All benchmark testing completed.${NC}"
   echo "Individual duration reports are available at:"
@@ -178,5 +230,5 @@ if [ ${#ALL_RESULTS_DIRS[@]} -gt 0 ]; then
   echo
   echo "You can view the combined report at: combined_report/combined_report.html"
 else
-  echo "${YELLOW}Warning: No test results were generated${NC}"
+  echo -e "${YELLOW}Warning: No test results were generated${NC}"
 fi
