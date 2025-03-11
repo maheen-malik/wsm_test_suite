@@ -11,6 +11,24 @@ DURATIONS=(7 15 30)
 # Create variable to store all result directories
 ALL_RESULTS_DIRS=()
 
+build_benchmarks() {
+  echo -e "${GREEN}Building benchmark executables...${NC}"
+  
+  # Build Medusa benchmark
+  echo "Building Medusa benchmark..."
+  (cd medusa && go build -o ../medusa_benchmark main.go)
+  
+  # Build Saleor benchmark
+  echo "Building Saleor benchmark..."
+  (cd saleor && go build -o ../saleor_benchmark main.go)
+  
+  # Build Spree benchmark
+  echo "Building Spree benchmark..."
+  (cd spree && go build -o ../spree_benchmark main.go)
+  
+  echo "All benchmark executables built successfully."
+}
+
 # Function to run a benchmark with better error handling
 run_benchmark() {
   local platform=$1
@@ -18,14 +36,6 @@ run_benchmark() {
   local results_dir=$3
   
   echo -e "${GREEN}Starting $platform benchmark...${NC}"
-  
-  # Check if executable exists
-  if [ ! -x "./${platform}_benchmark" ]; then
-    echo -e "${YELLOW}Error: ${platform}_benchmark executable not found or not executable${NC}"
-    # Create a mock results file for testing purposes
-    echo "{\"platform\":\"${platform}\", \"error\":\"benchmark executable not found\"}" > "${platform}_results.json"
-    return 1
-  fi
   
   # Run the benchmark and redirect output to a log file
   ./${platform}_benchmark -config $platform/$config > "$results_dir/${platform}_output.log" 2>&1 &
