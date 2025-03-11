@@ -1,0 +1,33 @@
+{
+  "GraphQLURL": "https://wsm-saleor.alphasquadit.com/graphql/",
+  "Headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json"
+  },
+  "Queries": {
+    "Products": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+    "Categories": "{categories(first: 10) {edges {node {id name}}}}",
+    "SpecificProduct": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}"
+  },
+  "Test": {
+    "MaxWorkers": 2500,
+    "MaxQueueSize": 5000,
+    "ReportingSeconds": 5,
+    "LogErrors": true,
+    "ErrorSampleRate": 0.05,
+    "BackoffEnabled": true,
+    "AdaptiveRPS": true,
+    "AdaptiveConfig": {
+      "InitialRPS": 10,
+      "ErrorThresholdPercentage": 2.0,
+      "RPSIncreasePercentage": 25.0,
+      "RPSDecreasePercentage": 15.0,
+      "MinimumRPS": 5,
+      "MaximumRPS": 500,
+      "SamplingWindow": 5000000000,
+      "StabilizationWindow": 15000000000
+    },
+    "Duration": 1800000000000,
+    "RampupStages": []
+  }
+}
