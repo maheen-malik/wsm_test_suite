@@ -1,0 +1,3990 @@
+Starting Saleor GraphQL load test...
+Using adaptive load testing with initial RPS: 10, error threshold: 2.00%
+{
+  "actualRPS": "9.99",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "358.302516ms",
+    "p90": "470.78014ms",
+    "p95": "470.78014ms",
+    "p99": "470.78014ms"
+  },
+  "operationDistribution": {
+    "categories": 48,
+    "products": 30,
+    "specific_product": 22
+  },
+  "statusCodes": {
+    "200": 50
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 50,
+  "targetRPS": 10,
+  "testDuration": "5.005782951s",
+  "totalRequests": 50
+}
+{
+  "actualRPS": "9.99",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "357.511612ms",
+    "p90": "470.78014ms",
+    "p95": "470.78014ms",
+    "p99": "470.78014ms"
+  },
+  "operationDistribution": {
+    "categories": 41,
+    "products": 26,
+    "specific_product": 33
+  },
+  "statusCodes": {
+    "200": 100
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 100,
+  "targetRPS": 10,
+  "testDuration": "10.005487965s",
+  "totalRequests": 100
+}
+{
+  "actualRPS": "10.00",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "336.532925ms",
+    "p90": "368.013952ms",
+    "p95": "470.78014ms",
+    "p99": "470.78014ms"
+  },
+  "operationDistribution": {
+    "categories": 39.33333333333333,
+    "products": 30.666666666666664,
+    "specific_product": 30
+  },
+  "statusCodes": {
+    "200": 150
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 150,
+  "targetRPS": 10,
+  "testDuration": "15.005369194s",
+  "totalRequests": 150
+}
+Error rate 0.00% below threshold. Increasing RPS from 10 to 12
+{
+  "actualRPS": "10.60",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "343.726878ms",
+    "p90": "432.590059ms",
+    "p95": "458.221313ms",
+    "p99": "470.78014ms"
+  },
+  "operationDistribution": {
+    "categories": 38.67924528301887,
+    "products": 33.490566037735846,
+    "specific_product": 27.830188679245282
+  },
+  "statusCodes": {
+    "200": 212
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 212,
+  "targetRPS": 12,
+  "testDuration": "20.00570965s",
+  "totalRequests": 212
+}
+{
+  "actualRPS": "10.88",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "352.413111ms",
+    "p90": "458.221313ms",
+    "p95": "461.866884ms",
+    "p99": "470.78014ms"
+  },
+  "operationDistribution": {
+    "categories": 37.13235294117647,
+    "products": 35.661764705882355,
+    "specific_product": 27.205882352941174
+  },
+  "statusCodes": {
+    "200": 272
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 272,
+  "targetRPS": 12,
+  "testDuration": "25.006133047s",
+  "totalRequests": 272
+}
+{
+  "actualRPS": "11.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "357.511612ms",
+    "p90": "455.160812ms",
+    "p95": "461.866884ms",
+    "p99": "470.78014ms"
+  },
+  "operationDistribution": {
+    "categories": 37.95180722891566,
+    "products": 33.734939759036145,
+    "specific_product": 28.313253012048197
+  },
+  "statusCodes": {
+    "200": 332
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 332,
+  "targetRPS": 12,
+  "testDuration": "30.005832219s",
+  "totalRequests": 332
+}
+Error rate 0.00% below threshold. Increasing RPS from 12 to 15
+{
+  "actualRPS": "11.71",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "361.002413ms",
+    "p90": "468.46731ms",
+    "p95": "479.798989ms",
+    "p99": "631.615384ms"
+  },
+  "operationDistribution": {
+    "categories": 38.048780487804876,
+    "products": 33.90243902439025,
+    "specific_product": 28.04878048780488
+  },
+  "statusCodes": {
+    "200": 410
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 410,
+  "targetRPS": 15,
+  "testDuration": "35.005567537s",
+  "totalRequests": 410
+}
+{
+  "actualRPS": "12.12",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "363.282078ms",
+    "p90": "492.416836ms",
+    "p95": "551.410957ms",
+    "p99": "631.615384ms"
+  },
+  "operationDistribution": {
+    "categories": 36.907216494845365,
+    "products": 34.845360824742265,
+    "specific_product": 28.24742268041237
+  },
+  "statusCodes": {
+    "200": 485
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 485,
+  "targetRPS": 15,
+  "testDuration": "40.006097007s",
+  "totalRequests": 485
+}
+{
+  "actualRPS": "12.44",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "383.329841ms",
+    "p90": "514.332201ms",
+    "p95": "553.185158ms",
+    "p99": "631.615384ms"
+  },
+  "operationDistribution": {
+    "categories": 36.42857142857142,
+    "products": 34.64285714285714,
+    "specific_product": 28.92857142857143
+  },
+  "statusCodes": {
+    "200": 560
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 560,
+  "targetRPS": 15,
+  "testDuration": "45.005607643s",
+  "totalRequests": 560
+}
+Error rate 0.00% below threshold. Increasing RPS from 15 to 18
+{
+  "actualRPS": "13.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "406.509725ms",
+    "p90": "582.431714ms",
+    "p95": "631.615384ms",
+    "p99": "723.376687ms"
+  },
+  "operationDistribution": {
+    "categories": 35.83460949464013,
+    "products": 34.60949464012251,
+    "specific_product": 29.555895865237364
+  },
+  "statusCodes": {
+    "200": 653
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 653,
+  "targetRPS": 18,
+  "testDuration": "50.00585368s",
+  "totalRequests": 653
+}
+{
+  "actualRPS": "13.51",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "414.536962ms",
+    "p90": "566.647955ms",
+    "p95": "626.827606ms",
+    "p99": "723.376687ms"
+  },
+  "operationDistribution": {
+    "categories": 37.14670255720054,
+    "products": 33.10901749663526,
+    "specific_product": 29.7442799461642
+  },
+  "statusCodes": {
+    "200": 743
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 743,
+  "targetRPS": 18,
+  "testDuration": "55.005439099s",
+  "totalRequests": 743
+}
+{
+  "actualRPS": "13.88",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "446.378988ms",
+    "p90": "626.651756ms",
+    "p95": "652.773453ms",
+    "p99": "723.376687ms"
+  },
+  "operationDistribution": {
+    "categories": 36.8547418967587,
+    "products": 32.773109243697476,
+    "specific_product": 30.372148859543817
+  },
+  "statusCodes": {
+    "200": 833
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 833,
+  "targetRPS": 18,
+  "testDuration": "1m0.005422072s",
+  "totalRequests": 833
+}
+Error rate 0.00% below threshold. Increasing RPS from 18 to 22
+{
+  "actualRPS": "14.57",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "458.221313ms",
+    "p90": "644.35397ms",
+    "p95": "664.384447ms",
+    "p99": "755.476ms"
+  },
+  "operationDistribution": {
+    "categories": 36.95881731784583,
+    "products": 32.418162618796195,
+    "specific_product": 30.623020063357977
+  },
+  "statusCodes": {
+    "200": 947
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 947,
+  "targetRPS": 22,
+  "testDuration": "1m5.005787827s",
+  "totalRequests": 947
+}
+{
+  "actualRPS": "15.10",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "470.069651ms",
+    "p90": "663.400834ms",
+    "p95": "724.817317ms",
+    "p99": "768.072074ms"
+  },
+  "operationDistribution": {
+    "categories": 36.80227057710501,
+    "products": 32.07190160832545,
+    "specific_product": 31.125827814569533
+  },
+  "statusCodes": {
+    "200": 1057
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1057,
+  "targetRPS": 22,
+  "testDuration": "1m10.005111709s",
+  "totalRequests": 1057
+}
+{
+  "actualRPS": "15.56",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "491.005686ms",
+    "p90": "738.828066ms",
+    "p95": "768.072074ms",
+    "p99": "807.940394ms"
+  },
+  "operationDistribution": {
+    "categories": 36.3324764353042,
+    "products": 32.904884318766065,
+    "specific_product": 30.762639245929734
+  },
+  "statusCodes": {
+    "200": 1167
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1167,
+  "targetRPS": 22,
+  "testDuration": "1m15.005853163s",
+  "totalRequests": 1167
+}
+Error rate 0.00% below threshold. Increasing RPS from 22 to 27
+{
+  "actualRPS": "16.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "500.060198ms",
+    "p90": "800.719283ms",
+    "p95": "937.761218ms",
+    "p99": "1.522808094s"
+  },
+  "operationDistribution": {
+    "categories": 36.57587548638132,
+    "products": 32.91828793774319,
+    "specific_product": 30.505836575875488
+  },
+  "statusCodes": {
+    "200": 1285
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1285,
+  "targetRPS": 27,
+  "testDuration": "1m20.005201847s",
+  "totalRequests": 1285
+}
+{
+  "actualRPS": "16.68",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "510.92917ms",
+    "p90": "952.127927ms",
+    "p95": "1.392167219s",
+    "p99": "1.54115238s"
+  },
+  "operationDistribution": {
+    "categories": 36.741889985895625,
+    "products": 32.933709449929474,
+    "specific_product": 30.32440056417489
+  },
+  "statusCodes": {
+    "200": 1418
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1418,
+  "targetRPS": 27,
+  "testDuration": "1m25.005928413s",
+  "totalRequests": 1418
+}
+{
+  "actualRPS": "17.09",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "531.713269ms",
+    "p90": "1.392167219s",
+    "p95": "1.622150474s",
+    "p99": "1.904309947s"
+  },
+  "operationDistribution": {
+    "categories": 36.28088426527958,
+    "products": 33.02990897269181,
+    "specific_product": 30.689206762028608
+  },
+  "statusCodes": {
+    "200": 1538
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1538,
+  "targetRPS": 27,
+  "testDuration": "1m30.006205531s",
+  "totalRequests": 1538
+}
+Error rate 0.00% below threshold. Increasing RPS from 27 to 33
+{
+  "actualRPS": "17.30",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "566.647955ms",
+    "p90": "2.321574319s",
+    "p95": "2.914806462s",
+    "p99": "3.759094508s"
+  },
+  "operationDistribution": {
+    "categories": 35.70559610705596,
+    "products": 32.907542579075425,
+    "specific_product": 31.386861313868614
+  },
+  "statusCodes": {
+    "200": 1644
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1644,
+  "targetRPS": 33,
+  "testDuration": "1m35.005443896s",
+  "totalRequests": 1644
+}
+{
+  "actualRPS": "17.69",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "624.287577ms",
+    "p90": "3.348614756s",
+    "p95": "3.79417738s",
+    "p99": "4.478733574s"
+  },
+  "operationDistribution": {
+    "categories": 35.2176370830978,
+    "products": 33.521763708309784,
+    "specific_product": 31.260599208592428
+  },
+  "statusCodes": {
+    "200": 1769
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1769,
+  "targetRPS": 33,
+  "testDuration": "1m40.00577637s",
+  "totalRequests": 1769
+}
+{
+  "actualRPS": "18.06",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "659.849813ms",
+    "p90": "4.151729006s",
+    "p95": "4.784840934s",
+    "p99": "5.478278827s"
+  },
+  "operationDistribution": {
+    "categories": 35.28481012658228,
+    "products": 33.54430379746836,
+    "specific_product": 31.170886075949365
+  },
+  "statusCodes": {
+    "200": 1896
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 1896,
+  "targetRPS": 33,
+  "testDuration": "1m45.005781138s",
+  "totalRequests": 1896
+}
+Error rate 0.00% below threshold. Increasing RPS from 33 to 41
+{
+  "actualRPS": "18.37",
+  "failedRequests": 0,
+  "latency": {
+    "p50": "723.376687ms",
+    "p90": "5.023222084s",
+    "p95": "6.287214901s",
+    "p99": "7.284333318s"
+  },
+  "operationDistribution": {
+    "categories": 35.72488866897576,
+    "products": 33.10242454230579,
+    "specific_product": 31.172686788718458
+  },
+  "statusCodes": {
+    "200": 2021
+  },
+  "successRate": "100.00%",
+  "successfulRequests": 2021,
+  "targetRPS": 41,
+  "testDuration": "1m50.005186974s",
+  "totalRequests": 2021
+}
+{
+  "actualRPS": "18.62",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:36Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:36Z"
+    }
+  ],
+  "failedRequests": 2,
+  "latency": {
+    "p50": "738.828066ms",
+    "p90": "5.417477087s",
+    "p95": "6.778430141s",
+    "p99": "8.112451416s"
+  },
+  "operationDistribution": {
+    "categories": 35.7309668379262,
+    "products": 33.20878094348435,
+    "specific_product": 31.060252218589447
+  },
+  "statusCodes": {
+    "0": 2,
+    "200": 2139
+  },
+  "successRate": "99.91%",
+  "successfulRequests": 2139,
+  "targetRPS": 41,
+  "testDuration": "1m55.005430289s",
+  "totalRequests": 2141
+}
+{
+  "actualRPS": "19.09",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:44Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:44Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:44Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:44Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{product(id: \"UHJvZHVjdDo3Mg==\", channel: \"default-channel\") {id name description pricing {priceRange {start {gross {amount currency}}}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:44Z"
+    }
+  ],
+  "failedRequests": 71,
+  "latency": {
+    "p50": "800.719283ms",
+    "p90": "7.312188194s",
+    "p95": "9.505018997s",
+    "p99": "10.000660869s"
+  },
+  "operationDistribution": {
+    "categories": 35.44303797468354,
+    "products": 33.39153208206024,
+    "specific_product": 31.165429943256218
+  },
+  "statusCodes": {
+    "0": 71,
+    "200": 2220
+  },
+  "successRate": "96.90%",
+  "successfulRequests": 2220,
+  "targetRPS": 41,
+  "testDuration": "2m0.005432754s",
+  "totalRequests": 2291
+}
+Error rate 46.00% exceeds threshold. Decreasing RPS from 41 to 35
+{
+  "actualRPS": "19.97",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 276,
+  "latency": {
+    "p50": "952.127927ms",
+    "p90": "10.000169269s",
+    "p95": "10.000622861s",
+    "p99": "10.001074726s"
+  },
+  "operationDistribution": {
+    "categories": 34.77564102564102,
+    "products": 34.01442307692308,
+    "specific_product": 31.209935897435898
+  },
+  "statusCodes": {
+    "0": 276,
+    "200": 2220
+  },
+  "successRate": "88.94%",
+  "successfulRequests": 2220,
+  "targetRPS": 35,
+  "testDuration": "2m5.005560417s",
+  "totalRequests": 2496
+}
+{
+  "actualRPS": "20.78",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 481,
+  "latency": {
+    "p50": "1.34919662s",
+    "p90": "10.00030384s",
+    "p95": "10.000660869s",
+    "p99": "10.00133974s"
+  },
+  "operationDistribution": {
+    "categories": 34.801925212884115,
+    "products": 33.95038874490929,
+    "specific_product": 31.247686042206592
+  },
+  "statusCodes": {
+    "0": 481,
+    "200": 2220
+  },
+  "successRate": "82.19%",
+  "successfulRequests": 2220,
+  "targetRPS": 35,
+  "testDuration": "2m10.005951556s",
+  "totalRequests": 2701
+}
+{
+  "actualRPS": "21.30",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 656,
+  "latency": {
+    "p50": "1.631141946s",
+    "p90": "10.000501236s",
+    "p95": "10.00089651s",
+    "p99": "10.001536145s"
+  },
+  "operationDistribution": {
+    "categories": 34.87482614742698,
+    "products": 33.58831710709318,
+    "specific_product": 31.536856745479835
+  },
+  "statusCodes": {
+    "0": 656,
+    "200": 2220
+  },
+  "successRate": "77.19%",
+  "successfulRequests": 2220,
+  "targetRPS": 35,
+  "testDuration": "2m15.005340949s",
+  "totalRequests": 2876
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 35 to 30
+{
+  "actualRPS": "21.79",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 831,
+  "latency": {
+    "p50": "2.482238679s",
+    "p90": "10.000660869s",
+    "p95": "10.000942114s",
+    "p99": "10.00133974s"
+  },
+  "operationDistribution": {
+    "categories": 35.004916420845625,
+    "products": 33.595542445099966,
+    "specific_product": 31.39954113405441
+  },
+  "statusCodes": {
+    "0": 831,
+    "200": 2220
+  },
+  "successRate": "72.76%",
+  "successfulRequests": 2220,
+  "targetRPS": 30,
+  "testDuration": "2m20.005177086s",
+  "totalRequests": 3051
+}
+{
+  "actualRPS": "22.25",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1006,
+  "latency": {
+    "p50": "2.914806462s",
+    "p90": "10.00077264s",
+    "p95": "10.000979487s",
+    "p99": "10.00133974s"
+  },
+  "operationDistribution": {
+    "categories": 35.027898326100434,
+    "products": 33.539987600743956,
+    "specific_product": 31.43211407315561
+  },
+  "statusCodes": {
+    "0": 1006,
+    "200": 2220
+  },
+  "successRate": "68.82%",
+  "successfulRequests": 2220,
+  "targetRPS": 30,
+  "testDuration": "2m25.005098613s",
+  "totalRequests": 3226
+}
+{
+  "actualRPS": "22.51",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1156,
+  "latency": {
+    "p50": "3.573432984s",
+    "p90": "10.000785387s",
+    "p95": "10.001020825s",
+    "p99": "10.001370683s"
+  },
+  "operationDistribution": {
+    "categories": 34.77488151658768,
+    "products": 33.6196682464455,
+    "specific_product": 31.605450236966824
+  },
+  "statusCodes": {
+    "0": 1156,
+    "200": 2220
+  },
+  "successRate": "65.76%",
+  "successfulRequests": 2220,
+  "targetRPS": 30,
+  "testDuration": "2m30.005973656s",
+  "totalRequests": 3376
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 30 to 26
+{
+  "actualRPS": "22.75",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1306,
+  "latency": {
+    "p50": "3.759094508s",
+    "p90": "10.00078618s",
+    "p95": "10.001022223s",
+    "p99": "10.001370683s"
+  },
+  "operationDistribution": {
+    "categories": 34.85536018150879,
+    "products": 33.63584798638684,
+    "specific_product": 31.508791832104365
+  },
+  "statusCodes": {
+    "0": 1306,
+    "200": 2220
+  },
+  "successRate": "62.96%",
+  "successfulRequests": 2220,
+  "targetRPS": 26,
+  "testDuration": "2m35.005804464s",
+  "totalRequests": 3526
+}
+{
+  "actualRPS": "22.97",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1456,
+  "latency": {
+    "p50": "4.478733574s",
+    "p90": "10.000863622s",
+    "p95": "10.001050475s",
+    "p99": "10.001536145s"
+  },
+  "operationDistribution": {
+    "categories": 34.87486398258977,
+    "products": 33.70511425462459,
+    "specific_product": 31.420021762785638
+  },
+  "statusCodes": {
+    "0": 1456,
+    "200": 2220
+  },
+  "successRate": "60.39%",
+  "successfulRequests": 2220,
+  "targetRPS": 26,
+  "testDuration": "2m40.005261515s",
+  "totalRequests": 3676
+}
+{
+  "actualRPS": "23.07",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1586,
+  "latency": {
+    "p50": "4.817803271s",
+    "p90": "10.000863622s",
+    "p95": "10.001050475s",
+    "p99": "10.001536145s"
+  },
+  "operationDistribution": {
+    "categories": 34.81345244351024,
+    "products": 33.6048344718865,
+    "specific_product": 31.58171308460326
+  },
+  "statusCodes": {
+    "0": 1586,
+    "200": 2220
+  },
+  "successRate": "58.33%",
+  "successfulRequests": 2220,
+  "targetRPS": 26,
+  "testDuration": "2m45.005171677s",
+  "totalRequests": 3806
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 26 to 23
+{
+  "actualRPS": "23.15",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1716,
+  "latency": {
+    "p50": "5.262792087s",
+    "p90": "10.000854489s",
+    "p95": "10.001050475s",
+    "p99": "10.001536145s"
+  },
+  "operationDistribution": {
+    "categories": 34.578252032520325,
+    "products": 33.5619918699187,
+    "specific_product": 31.859756097560975
+  },
+  "statusCodes": {
+    "0": 1716,
+    "200": 2220
+  },
+  "successRate": "56.40%",
+  "successfulRequests": 2220,
+  "targetRPS": 23,
+  "testDuration": "2m50.005856238s",
+  "totalRequests": 3936
+}
+{
+  "actualRPS": "23.23",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1846,
+  "latency": {
+    "p50": "6.055147543s",
+    "p90": "10.000863622s",
+    "p95": "10.001061188s",
+    "p99": "10.001536145s"
+  },
+  "operationDistribution": {
+    "categories": 34.677816035415646,
+    "products": 33.42351205115593,
+    "specific_product": 31.898671913428434
+  },
+  "statusCodes": {
+    "0": 1846,
+    "200": 2220
+  },
+  "successRate": "54.60%",
+  "successfulRequests": 2220,
+  "targetRPS": 23,
+  "testDuration": "2m55.005445383s",
+  "totalRequests": 4066
+}
+{
+  "actualRPS": "23.23",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 1961,
+  "latency": {
+    "p50": "6.821605793s",
+    "p90": "10.00089651s",
+    "p95": "10.001061188s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 34.56110978234872,
+    "products": 33.365223630710354,
+    "specific_product": 32.073666586940924
+  },
+  "statusCodes": {
+    "0": 1961,
+    "200": 2220
+  },
+  "successRate": "53.10%",
+  "successfulRequests": 2220,
+  "targetRPS": 23,
+  "testDuration": "3m0.005764863s",
+  "totalRequests": 4181
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 23 to 20
+{
+  "actualRPS": "23.22",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2076,
+  "latency": {
+    "p50": "7.804672583s",
+    "p90": "10.000925726s",
+    "p95": "10.001063909s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 34.47392923649907,
+    "products": 33.589385474860336,
+    "specific_product": 31.936685288640597
+  },
+  "statusCodes": {
+    "0": 2076,
+    "200": 2220
+  },
+  "successRate": "51.68%",
+  "successfulRequests": 2220,
+  "targetRPS": 20,
+  "testDuration": "3m5.005087955s",
+  "totalRequests": 4296
+}
+{
+  "actualRPS": "23.22",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2191,
+  "latency": {
+    "p50": "8.668221267s",
+    "p90": "10.000933233s",
+    "p95": "10.001063909s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 34.48197687599184,
+    "products": 33.46180004534119,
+    "specific_product": 32.05622307866697
+  },
+  "statusCodes": {
+    "0": 2191,
+    "200": 2220
+  },
+  "successRate": "50.33%",
+  "successfulRequests": 2220,
+  "targetRPS": 20,
+  "testDuration": "3m10.005078243s",
+  "totalRequests": 4411
+}
+{
+  "actualRPS": "23.13",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2291,
+  "latency": {
+    "p50": "9.341505234s",
+    "p90": "10.000933233s",
+    "p95": "10.00107026s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 34.559964531146086,
+    "products": 33.36289071159388,
+    "specific_product": 32.07714475726003
+  },
+  "statusCodes": {
+    "0": 2291,
+    "200": 2220
+  },
+  "successRate": "49.21%",
+  "successfulRequests": 2220,
+  "targetRPS": 20,
+  "testDuration": "3m15.005889607s",
+  "totalRequests": 4511
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 20 to 17
+{
+  "actualRPS": "23.05",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2391,
+  "latency": {
+    "p50": "9.890561009s",
+    "p90": "10.000942114s",
+    "p95": "10.001063909s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 34.50444589026242,
+    "products": 33.463456950769896,
+    "specific_product": 32.03209715896769
+  },
+  "statusCodes": {
+    "0": 2391,
+    "200": 2220
+  },
+  "successRate": "48.15%",
+  "successfulRequests": 2220,
+  "targetRPS": 17,
+  "testDuration": "3m20.005202834s",
+  "totalRequests": 4611
+}
+{
+  "actualRPS": "22.98",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2491,
+  "latency": {
+    "p50": "10.000080011s",
+    "p90": "10.000942114s",
+    "p95": "10.001063909s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 34.6847803014222,
+    "products": 33.368711526215236,
+    "specific_product": 31.946508172362552
+  },
+  "statusCodes": {
+    "0": 2491,
+    "200": 2220
+  },
+  "successRate": "47.12%",
+  "successfulRequests": 2220,
+  "targetRPS": 17,
+  "testDuration": "3m25.005796503s",
+  "totalRequests": 4711
+}
+{
+  "actualRPS": "22.84",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2576,
+  "latency": {
+    "p50": "10.00008672s",
+    "p90": "10.000949986s",
+    "p95": "10.00107026s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.63302752293578,
+    "products": 33.381984987489574,
+    "specific_product": 31.984987489574646
+  },
+  "statusCodes": {
+    "0": 2576,
+    "200": 2220
+  },
+  "successRate": "46.29%",
+  "successfulRequests": 2220,
+  "targetRPS": 17,
+  "testDuration": "3m30.005165657s",
+  "totalRequests": 4796
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 17 to 15
+{
+  "actualRPS": "22.70",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2661,
+  "latency": {
+    "p50": "10.000093728s",
+    "p90": "10.00095201s",
+    "p95": "10.00107026s",
+    "p99": "10.001834805s"
+  },
+  "operationDistribution": {
+    "categories": 34.50112681827495,
+    "products": 33.55869698832207,
+    "specific_product": 31.94017619340299
+  },
+  "statusCodes": {
+    "0": 2661,
+    "200": 2220
+  },
+  "successRate": "45.48%",
+  "successfulRequests": 2220,
+  "targetRPS": 15,
+  "testDuration": "3m35.005742011s",
+  "totalRequests": 4881
+}
+{
+  "actualRPS": "22.57",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2746,
+  "latency": {
+    "p50": "10.000100793s",
+    "p90": "10.000955261s",
+    "p95": "10.00107026s",
+    "p99": "10.001834805s"
+  },
+  "operationDistribution": {
+    "categories": 34.434152235199356,
+    "products": 33.60853805879984,
+    "specific_product": 31.957309706000807
+  },
+  "statusCodes": {
+    "0": 2746,
+    "200": 2220
+  },
+  "successRate": "44.70%",
+  "successfulRequests": 2220,
+  "targetRPS": 15,
+  "testDuration": "3m40.005223514s",
+  "totalRequests": 4966
+}
+{
+  "actualRPS": "22.40",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2821,
+  "latency": {
+    "p50": "10.00012049s",
+    "p90": "10.000955261s",
+    "p95": "10.00107026s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.25907558024201,
+    "products": 33.74330489982146,
+    "specific_product": 31.99761951993652
+  },
+  "statusCodes": {
+    "0": 2821,
+    "200": 2220
+  },
+  "successRate": "44.04%",
+  "successfulRequests": 2220,
+  "targetRPS": 15,
+  "testDuration": "3m45.006168525s",
+  "totalRequests": 5041
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 15 to 13
+{
+  "actualRPS": "22.24",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2896,
+  "latency": {
+    "p50": "10.00013509s",
+    "p90": "10.000957734s",
+    "p95": "10.001072123s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.3236903831118,
+    "products": 33.737294761532446,
+    "specific_product": 31.939014855355747
+  },
+  "statusCodes": {
+    "0": 2896,
+    "200": 2220
+  },
+  "successRate": "43.39%",
+  "successfulRequests": 2220,
+  "targetRPS": 13,
+  "testDuration": "3m50.005390665s",
+  "totalRequests": 5116
+}
+{
+  "actualRPS": "22.09",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 2971,
+  "latency": {
+    "p50": "10.000137843s",
+    "p90": "10.000958317s",
+    "p95": "10.001072123s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.328645732999426,
+    "products": 33.750722404161046,
+    "specific_product": 31.92063186283953
+  },
+  "statusCodes": {
+    "0": 2971,
+    "200": 2220
+  },
+  "successRate": "42.77%",
+  "successfulRequests": 2220,
+  "targetRPS": 13,
+  "testDuration": "3m55.006066299s",
+  "totalRequests": 5191
+}
+{
+  "actualRPS": "21.96",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3026,
+  "latency": {
+    "p50": "10.000137843s",
+    "p90": "10.000958317s",
+    "p95": "10.001074726s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.3008916714096,
+    "products": 33.69379624359704,
+    "specific_product": 32.005312084993356
+  },
+  "statusCodes": {
+    "0": 3026,
+    "200": 2245
+  },
+  "successRate": "42.59%",
+  "successfulRequests": 2245,
+  "targetRPS": 13,
+  "testDuration": "4m0.005939321s",
+  "totalRequests": 5271
+}
+Error rate 68.75% exceeds threshold. Decreasing RPS from 13 to 12
+{
+  "actualRPS": "22.07",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "10.000134615s",
+    "p90": "10.000957734s",
+    "p95": "10.001072123s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.27039023488071,
+    "products": 33.493619382282226,
+    "specific_product": 32.235990382837066
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2376
+  },
+  "successRate": "43.94%",
+  "successfulRequests": 2376,
+  "targetRPS": 12,
+  "testDuration": "4m5.005905562s",
+  "totalRequests": 5407
+}
+{
+  "actualRPS": "22.02",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "10.00012049s",
+    "p90": "10.000955261s",
+    "p95": "10.001072123s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.10824555030875,
+    "products": 33.59970940791863,
+    "specific_product": 32.29204504177261
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2475
+  },
+  "successRate": "44.95%",
+  "successfulRequests": 2475,
+  "targetRPS": 12,
+  "testDuration": "4m10.005295137s",
+  "totalRequests": 5506
+}
+{
+  "actualRPS": "21.83",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "10.000110695s",
+    "p90": "10.000955261s",
+    "p95": "10.001072123s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.0100610851599,
+    "products": 33.70463528566295,
+    "specific_product": 32.28530362917715
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2535
+  },
+  "successRate": "45.54%",
+  "successfulRequests": 2535,
+  "targetRPS": 12,
+  "testDuration": "4m15.005120445s",
+  "totalRequests": 5566
+}
+Error rate 0.00% below threshold. Increasing RPS from 12 to 15
+{
+  "actualRPS": "21.71",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "10.000100218s",
+    "p90": "10.00095201s",
+    "p95": "10.00107026s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.000708717221826,
+    "products": 33.68178596739901,
+    "specific_product": 32.317505315379165
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2613
+  },
+  "successRate": "46.30%",
+  "successfulRequests": 2613,
+  "targetRPS": 15,
+  "testDuration": "4m20.005142607s",
+  "totalRequests": 5644
+}
+{
+  "actualRPS": "21.58",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "10.00008672s",
+    "p90": "10.000949986s",
+    "p95": "10.001063909s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 33.99195663577548,
+    "products": 33.74715859415982,
+    "specific_product": 32.2608847700647
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2688
+  },
+  "successRate": "47.00%",
+  "successfulRequests": 2688,
+  "targetRPS": 15,
+  "testDuration": "4m25.00590054s",
+  "totalRequests": 5719
+}
+{
+  "actualRPS": "21.46",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "10.000080011s",
+    "p90": "10.000949986s",
+    "p95": "10.001063909s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 33.983431135657575,
+    "products": 33.690024162927166,
+    "specific_product": 32.32654470141526
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2763
+  },
+  "successRate": "47.69%",
+  "successfulRequests": 2763,
+  "targetRPS": 15,
+  "testDuration": "4m30.006049136s",
+  "totalRequests": 5794
+}
+Error rate 0.00% below threshold. Increasing RPS from 15 to 18
+{
+  "actualRPS": "21.41",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "10.000055766s",
+    "p90": "10.00094956s",
+    "p95": "10.001063909s",
+    "p99": "10.001791283s"
+  },
+  "operationDistribution": {
+    "categories": 34.00713436385256,
+    "products": 33.61644301002208,
+    "specific_product": 32.37642262612536
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2856
+  },
+  "successRate": "48.51%",
+  "successfulRequests": 2856,
+  "targetRPS": 18,
+  "testDuration": "4m35.005297655s",
+  "totalRequests": 5887
+}
+{
+  "actualRPS": "21.35",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "9.777427483s",
+    "p90": "10.000946778s",
+    "p95": "10.001061188s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 34.147565668395515,
+    "products": 33.61218002342312,
+    "specific_product": 32.24025430818136
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 2946
+  },
+  "successRate": "49.29%",
+  "successfulRequests": 2946,
+  "targetRPS": 18,
+  "testDuration": "4m40.005648125s",
+  "totalRequests": 5977
+}
+{
+  "actualRPS": "21.29",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "9.271590961s",
+    "p90": "10.000942114s",
+    "p95": "10.001061188s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 34.086039228613814,
+    "products": 33.78935223339377,
+    "specific_product": 32.124608537992415
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3036
+  },
+  "successRate": "50.04%",
+  "successfulRequests": 3036,
+  "targetRPS": 18,
+  "testDuration": "4m45.005096067s",
+  "totalRequests": 6067
+}
+Error rate 0.00% below threshold. Increasing RPS from 18 to 22
+{
+  "actualRPS": "21.29",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "7.894413597s",
+    "p90": "10.000928213s",
+    "p95": "10.001051634s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.991902834008094,
+    "products": 33.716599190283404,
+    "specific_product": 32.2914979757085
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3144
+  },
+  "successRate": "50.91%",
+  "successfulRequests": 3144,
+  "targetRPS": 22,
+  "testDuration": "4m50.005730768s",
+  "totalRequests": 6175
+}
+{
+  "actualRPS": "21.28",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "7.250886352s",
+    "p90": "10.000925726s",
+    "p95": "10.001050475s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.85375179225745,
+    "products": 33.67850884180341,
+    "specific_product": 32.46773936593914
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3246
+  },
+  "successRate": "51.71%",
+  "successfulRequests": 3246,
+  "targetRPS": 22,
+  "testDuration": "4m55.005661064s",
+  "totalRequests": 6277
+}
+{
+  "actualRPS": "21.33",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "6.694490712s",
+    "p90": "10.000924611s",
+    "p95": "10.001050475s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.6875,
+    "products": 33.875,
+    "specific_product": 32.4375
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3369
+  },
+  "successRate": "52.64%",
+  "successfulRequests": 3369,
+  "targetRPS": 22,
+  "testDuration": "5m0.005487302s",
+  "totalRequests": 6400
+}
+Error rate 0.00% below threshold. Increasing RPS from 22 to 27
+{
+  "actualRPS": "21.36",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "6.38925638s",
+    "p90": "10.000924055s",
+    "p95": "10.001044326s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.59422958870473,
+    "products": 34.02394106813996,
+    "specific_product": 32.38182934315531
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3485
+  },
+  "successRate": "53.48%",
+  "successfulRequests": 3485,
+  "targetRPS": 27,
+  "testDuration": "5m5.005952484s",
+  "totalRequests": 6516
+}
+{
+  "actualRPS": "21.43",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "6.055147543s",
+    "p90": "10.00089651s",
+    "p95": "10.001044326s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.46379647749511,
+    "products": 34.02077374680114,
+    "specific_product": 32.515429775703744
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3612
+  },
+  "successRate": "54.37%",
+  "successfulRequests": 3612,
+  "targetRPS": 27,
+  "testDuration": "5m10.005104439s",
+  "totalRequests": 6643
+}
+{
+  "actualRPS": "21.38",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "5.478278827s",
+    "p90": "10.00089651s",
+    "p95": "10.001044326s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.45211581291759,
+    "products": 33.942093541202674,
+    "specific_product": 32.605790645879736
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3704
+  },
+  "successRate": "55.00%",
+  "successfulRequests": 3704,
+  "targetRPS": 27,
+  "testDuration": "5m15.005996278s",
+  "totalRequests": 6735
+}
+Error rate 0.00% below threshold. Increasing RPS from 27 to 33
+{
+  "actualRPS": "21.42",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "5.262792087s",
+    "p90": "10.000869665s",
+    "p95": "10.001037267s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.416022180067124,
+    "products": 33.92674740989348,
+    "specific_product": 32.6572304100394
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3822
+  },
+  "successRate": "55.77%",
+  "successfulRequests": 3822,
+  "targetRPS": 33,
+  "testDuration": "5m20.005112906s",
+  "totalRequests": 6853
+}
+{
+  "actualRPS": "21.48",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "5.133331115s",
+    "p90": "10.000863622s",
+    "p95": "10.001027512s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.414494414207965,
+    "products": 33.87281581208823,
+    "specific_product": 32.712689773703815
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 3951
+  },
+  "successRate": "56.59%",
+  "successfulRequests": 3951,
+  "targetRPS": 33,
+  "testDuration": "5m25.005108365s",
+  "totalRequests": 6982
+}
+{
+  "actualRPS": "21.54",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3031,
+  "latency": {
+    "p50": "5.417477087s",
+    "p90": "10.000854489s",
+    "p95": "10.001027512s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.445898410018295,
+    "products": 33.86801744758689,
+    "specific_product": 32.68608414239482
+  },
+  "statusCodes": {
+    "0": 3031,
+    "200": 4076
+  },
+  "successRate": "57.35%",
+  "successfulRequests": 4076,
+  "targetRPS": 33,
+  "testDuration": "5m30.006004519s",
+  "totalRequests": 7107
+}
+Error rate 0.00% below threshold. Increasing RPS from 33 to 41
+{
+  "actualRPS": "21.65",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3051,
+  "latency": {
+    "p50": "5.740042439s",
+    "p90": "10.000853985s",
+    "p95": "10.001027512s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.62746449744933,
+    "products": 33.779125878946644,
+    "specific_product": 32.593409623604025
+  },
+  "statusCodes": {
+    "0": 3051,
+    "200": 4202
+  },
+  "successRate": "57.93%",
+  "successfulRequests": 4202,
+  "targetRPS": 41,
+  "testDuration": "5m35.005412302s",
+  "totalRequests": 7253
+}
+{
+  "actualRPS": "21.65",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3107,
+  "latency": {
+    "p50": "5.889448676s",
+    "p90": "10.000845575s",
+    "p95": "10.001024687s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.56424884542244,
+    "products": 33.82233088834556,
+    "specific_product": 32.613420266232005
+  },
+  "statusCodes": {
+    "0": 3107,
+    "200": 4255
+  },
+  "successRate": "57.80%",
+  "successfulRequests": 4255,
+  "targetRPS": 41,
+  "testDuration": "5m40.005809903s",
+  "totalRequests": 7362
+}
+{
+  "actualRPS": "21.81",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3257,
+  "latency": {
+    "p50": "6.048244114s",
+    "p90": "10.000853985s",
+    "p95": "10.001037267s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.48837209302326,
+    "products": 33.83388704318937,
+    "specific_product": 32.67774086378738
+  },
+  "statusCodes": {
+    "0": 3257,
+    "200": 4268
+  },
+  "successRate": "56.72%",
+  "successfulRequests": 4268,
+  "targetRPS": 41,
+  "testDuration": "5m45.006116942s",
+  "totalRequests": 7525
+}
+Error rate 92.02% exceeds threshold. Decreasing RPS from 41 to 35
+{
+  "actualRPS": "22.09",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3462,
+  "latency": {
+    "p50": "6.219705207s",
+    "p90": "10.000863622s",
+    "p95": "10.001044326s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.58344113842173,
+    "products": 33.816300129366105,
+    "specific_product": 32.60025873221216
+  },
+  "statusCodes": {
+    "0": 3462,
+    "200": 4268
+  },
+  "successRate": "55.21%",
+  "successfulRequests": 4268,
+  "targetRPS": 35,
+  "testDuration": "5m50.005782953s",
+  "totalRequests": 7730
+}
+{
+  "actualRPS": "22.35",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3667,
+  "latency": {
+    "p50": "6.545016411s",
+    "p90": "10.00089651s",
+    "p95": "10.001044326s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.54757403906742,
+    "products": 33.68620037807183,
+    "specific_product": 32.76622558286074
+  },
+  "statusCodes": {
+    "0": 3667,
+    "200": 4268
+  },
+  "successRate": "53.79%",
+  "successfulRequests": 4268,
+  "targetRPS": 35,
+  "testDuration": "5m55.005245291s",
+  "totalRequests": 7935
+}
+{
+  "actualRPS": "22.53",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 3842,
+  "latency": {
+    "p50": "7.018870044s",
+    "p90": "10.000905559s",
+    "p95": "10.001050475s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.42786683107275,
+    "products": 33.73612823674476,
+    "specific_product": 32.83600493218249
+  },
+  "statusCodes": {
+    "0": 3842,
+    "200": 4268
+  },
+  "successRate": "52.63%",
+  "successfulRequests": 4268,
+  "targetRPS": 35,
+  "testDuration": "6m0.005431965s",
+  "totalRequests": 8110
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 35 to 30
+{
+  "actualRPS": "22.70",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 4017,
+  "latency": {
+    "p50": "7.284333318s",
+    "p90": "10.000898763s",
+    "p95": "10.001044326s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.43391671695836,
+    "products": 33.73566686783344,
+    "specific_product": 32.830416415208205
+  },
+  "statusCodes": {
+    "0": 4017,
+    "200": 4268
+  },
+  "successRate": "51.51%",
+  "successfulRequests": 4268,
+  "targetRPS": 30,
+  "testDuration": "6m5.006001756s",
+  "totalRequests": 8285
+}
+{
+  "actualRPS": "22.86",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 4192,
+  "latency": {
+    "p50": "8.575347889s",
+    "p90": "10.00091255s",
+    "p95": "10.001050475s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.3806146572104,
+    "products": 33.687943262411345,
+    "specific_product": 32.93144208037825
+  },
+  "statusCodes": {
+    "0": 4192,
+    "200": 4268
+  },
+  "successRate": "50.45%",
+  "successfulRequests": 4268,
+  "targetRPS": 30,
+  "testDuration": "6m10.005233743s",
+  "totalRequests": 8460
+}
+{
+  "actualRPS": "22.96",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 4342,
+  "latency": {
+    "p50": "9.341505234s",
+    "p90": "10.000924611s",
+    "p95": "10.001063909s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.437862950058076,
+    "products": 33.61207897793263,
+    "specific_product": 32.95005807200929
+  },
+  "statusCodes": {
+    "0": 4342,
+    "200": 4268
+  },
+  "successRate": "49.57%",
+  "successfulRequests": 4268,
+  "targetRPS": 30,
+  "testDuration": "6m15.005119527s",
+  "totalRequests": 8610
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 30 to 26
+{
+  "actualRPS": "23.05",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 4492,
+  "latency": {
+    "p50": "9.698129553s",
+    "p90": "10.000942114s",
+    "p95": "10.001074726s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.401826484018265,
+    "products": 33.60730593607306,
+    "specific_product": 32.99086757990868
+  },
+  "statusCodes": {
+    "0": 4492,
+    "200": 4268
+  },
+  "successRate": "48.72%",
+  "successfulRequests": 4268,
+  "targetRPS": 26,
+  "testDuration": "6m20.005213211s",
+  "totalRequests": 8760
+}
+{
+  "actualRPS": "23.14",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 4642,
+  "latency": {
+    "p50": "10.000061835s",
+    "p90": "10.000933233s",
+    "p95": "10.001074726s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.38945005611672,
+    "products": 33.512906846240185,
+    "specific_product": 33.0976430976431
+  },
+  "statusCodes": {
+    "0": 4642,
+    "200": 4268
+  },
+  "successRate": "47.90%",
+  "successfulRequests": 4268,
+  "targetRPS": 26,
+  "testDuration": "6m25.005961378s",
+  "totalRequests": 8910
+}
+{
+  "actualRPS": "23.18",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 4772,
+  "latency": {
+    "p50": "10.000077554s",
+    "p90": "10.000946778s",
+    "p95": "10.001076549s",
+    "p99": "10.001631193s"
+  },
+  "operationDistribution": {
+    "categories": 33.38495575221239,
+    "products": 33.46238938053097,
+    "specific_product": 33.152654867256636
+  },
+  "statusCodes": {
+    "0": 4772,
+    "200": 4268
+  },
+  "successRate": "47.21%",
+  "successfulRequests": 4268,
+  "targetRPS": 26,
+  "testDuration": "6m30.00589223s",
+  "totalRequests": 9040
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 26 to 23
+{
+  "actualRPS": "23.21",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 4902,
+  "latency": {
+    "p50": "10.00009274s",
+    "p90": "10.00094956s",
+    "p95": "10.001076549s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.41330425299891,
+    "products": 33.47873500545256,
+    "specific_product": 33.107960741548524
+  },
+  "statusCodes": {
+    "0": 4902,
+    "200": 4268
+  },
+  "successRate": "46.54%",
+  "successfulRequests": 4268,
+  "targetRPS": 23,
+  "testDuration": "6m35.005815089s",
+  "totalRequests": 9170
+}
+{
+  "actualRPS": "23.25",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 5032,
+  "latency": {
+    "p50": "10.000096992s",
+    "p90": "10.00094956s",
+    "p95": "10.001076549s",
+    "p99": "10.001600682s"
+  },
+  "operationDistribution": {
+    "categories": 33.46236559139785,
+    "products": 33.483870967741936,
+    "specific_product": 33.053763440860216
+  },
+  "statusCodes": {
+    "0": 5032,
+    "200": 4268
+  },
+  "successRate": "45.89%",
+  "successfulRequests": 4268,
+  "targetRPS": 23,
+  "testDuration": "6m40.005211398s",
+  "totalRequests": 9300
+}
+{
+  "actualRPS": "23.25",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 5147,
+  "latency": {
+    "p50": "10.000102313s",
+    "p90": "10.000951531s",
+    "p95": "10.001089151s",
+    "p99": "10.001667577s"
+  },
+  "operationDistribution": {
+    "categories": 33.52097716409984,
+    "products": 33.3935209771641,
+    "specific_product": 33.08550185873606
+  },
+  "statusCodes": {
+    "0": 5147,
+    "200": 4268
+  },
+  "successRate": "45.33%",
+  "successfulRequests": 4268,
+  "targetRPS": 23,
+  "testDuration": "6m45.005371411s",
+  "totalRequests": 9415
+}
+Error rate 100.00% exceeds threshold. Decreasing RPS from 23 to 20
+{
+  "actualRPS": "23.24",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 5262,
+  "latency": {
+    "p50": "10.000110695s",
+    "p90": "10.000955261s",
+    "p95": "10.001103662s",
+    "p99": "10.001667577s"
+  },
+  "operationDistribution": {
+    "categories": 33.51521511017838,
+    "products": 33.389296956977965,
+    "specific_product": 33.09548793284365
+  },
+  "statusCodes": {
+    "0": 5262,
+    "200": 4268
+  },
+  "successRate": "44.78%",
+  "successfulRequests": 4268,
+  "targetRPS": 20,
+  "testDuration": "6m50.005814615s",
+  "totalRequests": 9530
+}
+{
+  "actualRPS": "23.24",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 5377,
+  "latency": {
+    "p50": "10.000122054s",
+    "p90": "10.00095201s",
+    "p95": "10.001098672s",
+    "p99": "10.001667577s"
+  },
+  "operationDistribution": {
+    "categories": 33.50959046137895,
+    "products": 33.44738206324521,
+    "specific_product": 33.043027475375844
+  },
+  "statusCodes": {
+    "0": 5377,
+    "200": 4268
+  },
+  "successRate": "44.25%",
+  "successfulRequests": 4268,
+  "targetRPS": 20,
+  "testDuration": "6m55.005502795s",
+  "totalRequests": 9645
+}
+Test duration completed.
+{
+  "actualRPS": "23.20",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-11T16:07:45Z"
+    }
+  ],
+  "failedRequests": 5477,
+  "latency": {
+    "p50": "10.000127519s",
+    "p90": "10.000957919s",
+    "p95": "10.00110038s",
+    "p99": "10.001667577s"
+  },
+  "operationDistribution": {
+    "categories": 33.412006157003596,
+    "products": 33.514622883530016,
+    "specific_product": 33.073370959466395
+  },
+  "statusCodes": {
+    "0": 5477,
+    "200": 4268
+  },
+  "successRate": "43.80%",
+  "successfulRequests": 4268,
+  "targetRPS": 20,
+  "testDuration": "7m0.005298591s",
+  "totalRequests": 9745
+}
