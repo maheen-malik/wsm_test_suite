@@ -603,10 +603,10 @@ func createDefaultConfig(path string) {
 	// Set default endpoints matching the K6 script
 	config.Endpoints.Products = "https://wsm-medusa.alphasquadit.com/store/products"
 	config.Endpoints.Categories = "https://wsm-medusa.alphasquadit.com/store/product-categories/"
-	config.Endpoints.SpecificCategory = "https://wsm-medusa.alphasquadit.com/store/product-categories/pcat_01JNGVR2XQS0BWM1VNFBVH8KJ9"
+	config.Endpoints.SpecificCategory = "https://wsm-medusa.alphasquadit.com/store/product-categories/prod_01JP2X308PB6HM5XD9ERCZC38T"
 	
 	// Set default API key
-	config.APIKey = "pk_05c09b4f04e7185405f50dee26b6846b278aa7bd7b4b42b1fe6d42e5fe9ee390"
+	config.APIKey = "pk_96823f646044c6fdd44578c072dbd5ced80934a3affc3ea72411958fcfb52a55"
 	
 	// Set default test configuration
 	config.Test.MaxWorkers = 2500
