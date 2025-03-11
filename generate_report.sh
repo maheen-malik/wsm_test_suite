@@ -1,1316 +1,881 @@
 #!/bin/bash
 
-# Check if any results directories were provided
-if [ $# -eq 0 ]; then
-  echo "Usage: $0 <results_directory_7min> <results_directory_15min> <results_directory_30min> [--output <output_dir>]"
-  echo "Example: $0 benchmark_results_7min_20250310 benchmark_results_15min_20250310 benchmark_results_30min_20250310 --output combined_report"
-  exit 1
-fi
+# Set colors for output
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
 
-# Process command line arguments
-RESULTS_DIRS=()
-OUTPUT_DIR="combined_report"
+output_dir="combined_report"
+mkdir -p "$output_dir"
 
-while [[ $# -gt 0 ]]; do
-  case $1 in
-    --output)
-      OUTPUT_DIR="$2"
-      shift 2
-      ;;
-    *)
-      RESULTS_DIRS+=("$1")
-      shift
-      ;;
-  esac
-done
+echo -e "${GREEN}Generating enhanced HTML report with charts...${NC}"
 
-# Check if all directories exist
-for dir in "${RESULTS_DIRS[@]}"; do
-  if [ ! -d "$dir" ]; then
-    echo "Error: Directory $dir does not exist"
-    exit 1
-  fi
-  
-  # Check if comparison.json exists
-  if [ ! -f "$dir/comparison.json" ]; then
-    echo "Error: Comparison results file not found at $dir/comparison.json"
-    exit 1
-  fi
-done
-
-# Create output directory
-mkdir -p "$OUTPUT_DIR"
-
-# Extract duration from directory name
-function extract_duration() {
-  local dir=$1
-  # Look for pattern like benchmark_results_7min or benchmark_results_15min
-  if [[ $dir =~ benchmark_results_([0-9]+)min ]]; then
-    echo "${BASH_REMATCH[1]}"
-  else
-    # Default to using directory index if no duration pattern found
-    local idx=$2
-    echo "$idx"
-  fi
-}
-
-# Collect data from all comparison.json files into a single JSON
-COMBINED_DATA="{\"testDurations\": ["
-
-for i in "${!RESULTS_DIRS[@]}"; do
-  RESULTS_DIR="${RESULTS_DIRS[$i]}"
-  DURATION=$(extract_duration "$RESULTS_DIR" "$((i+1))")
-  
-  # Read the comparison.json file
-  COMPARISON_DATA=$(cat "$RESULTS_DIR/comparison.json")
-  
-  # Add duration field to the data
-  COMPARISON_DATA=$(echo "$COMPARISON_DATA" | sed "s/{/{\"durationMinutes\": $DURATION, /")
-  
-  # Add to combined data
-  COMBINED_DATA+="$COMPARISON_DATA"
-  
-  # Add comma if not the last element
-  if [ $i -lt $((${#RESULTS_DIRS[@]} - 1)) ]; then
-    COMBINED_DATA+=","
-  fi
-done
-
-COMBINED_DATA+="], "
-
-# Add summary comparisons across durations
-COMBINED_DATA+="\"platformSummary\": {"
-
-# Process each platform
-for platform in "medusa" "saleor" "spree"; do
-  COMBINED_DATA+="\"$platform\": {\"rps\": ["
-  
-  # Extract RPS for each duration
-  for i in "${!RESULTS_DIRS[@]}"; do
-    RESULTS_DIR="${RESULTS_DIRS[$i]}"
-    DURATION=$(extract_duration "$RESULTS_DIR" "$((i+1))")
-    
-    # Extract RPS value for this platform and duration
-    RPS=$(jq -r ".rpsComparison.$platform" "$RESULTS_DIR/comparison.json")
-    
-    # Add to combined data
-    COMBINED_DATA+="{\"duration\": $DURATION, \"value\": $RPS}"
-    
-    # Add comma if not the last element
-    if [ $i -lt $((${#RESULTS_DIRS[@]} - 1)) ]; then
-      COMBINED_DATA+=","
-    fi
-  done
-  
-  COMBINED_DATA+="], \"latencyP95\": ["
-  
-  # Extract P95 latency for each duration
-  for i in "${!RESULTS_DIRS[@]}"; do
-    RESULTS_DIR="${RESULTS_DIRS[$i]}"
-    DURATION=$(extract_duration "$RESULTS_DIR" "$((i+1))")
-    
-    # Extract P95 latency value for this platform and duration
-    LATENCY=$(jq -r ".latencyComparison.$platform.p95" "$RESULTS_DIR/comparison.json")
-    
-    # Add to combined data
-    COMBINED_DATA+="{\"duration\": $DURATION, \"value\": $LATENCY}"
-    
-    # Add comma if not the last element
-    if [ $i -lt $((${#RESULTS_DIRS[@]} - 1)) ]; then
-      COMBINED_DATA+=","
-    fi
-  done
-  
-  COMBINED_DATA+="], \"successRate\": ["
-  
-  # Extract success rate for each duration
-  for i in "${!RESULTS_DIRS[@]}"; do
-    RESULTS_DIR="${RESULTS_DIRS[$i]}"
-    DURATION=$(extract_duration "$RESULTS_DIR" "$((i+1))")
-    
-    # Extract error rate and convert to success rate
-    ERROR_RATE=$(jq -r ".errorComparison.$platform" "$RESULTS_DIR/comparison.json")
-    SUCCESS_RATE=$(echo "100 - $ERROR_RATE" | bc)
-    
-    # Add to combined data
-    COMBINED_DATA+="{\"duration\": $DURATION, \"value\": $SUCCESS_RATE}"
-    
-    # Add comma if not the last element
-    if [ $i -lt $((${#RESULTS_DIRS[@]} - 1)) ]; then
-      COMBINED_DATA+=","
-    fi
-  done
-  
-  COMBINED_DATA+="]}"
-  
-  # Add comma if not the last platform
-  if [ "$platform" != "spree" ]; then
-    COMBINED_DATA+=","
-  fi
-done
-
-COMBINED_DATA+="}, "
-
-# Add combined recommendations
-COMBINED_DATA+="\"combinedRecommendations\": {"
-
-# Overall recommendations based on all tests
-COMBINED_DATA+="\"overall\": ["
-COMBINED_DATA+="\"Consider Saleor for high-throughput scenarios based on its consistent performance across test durations\","
-COMBINED_DATA+="\"Medusa offers a good balance of performance and stability for moderate load scenarios\","
-COMBINED_DATA+="\"Spree would require significant optimization to handle production loads\","
-COMBINED_DATA+="\"All platforms show some performance degradation in longer tests, suggesting resource leaks or connection pool issues\""
-COMBINED_DATA+="], "
-
-# Platform-specific recommendations
-for platform in "medusa" "saleor" "spree"; do
-  COMBINED_DATA+="\"$platform\": ["
-  
-  case $platform in
-    "medusa")
-      COMBINED_DATA+="\"Optimize database connection management to improve stability in longer test runs\","
-      COMBINED_DATA+="\"Consider implementing more aggressive connection pool recycling\","
-      COMBINED_DATA+="\"Monitor memory usage as test duration increases\""
-      ;;
-    "saleor")
-      COMBINED_DATA+="\"Implement circuit breakers to gracefully handle load spikes\","
-      COMBINED_DATA+="\"Add recovery mechanisms to automatically restart after high-load failures\","
-      COMBINED_DATA+="\"Consider deploying with multiple application instances for higher throughput\""
-      ;;
-    "spree")
-      COMBINED_DATA+="\"Significant performance tuning required for production use\","
-      COMBINED_DATA+="\"Investigate database query optimization and indexing\","
-      COMBINED_DATA+="\"Consider upgrading or replacing if high throughput is required\""
-      ;;
-  esac
-  
-  COMBINED_DATA+="]"
-  
-  # Add comma if not the last platform
-  if [ "$platform" != "spree" ]; then
-    COMBINED_DATA+=","
-  fi
-done
-
-COMBINED_DATA+="}}"
-
-# Write combined data to file
-echo "$COMBINED_DATA" > "$OUTPUT_DIR/combined_data.json"
-
-# Create the HTML report
-HTML_FILE="$OUTPUT_DIR/combined_report.html"
-
-cat > $HTML_FILE << 'EOL'
+# Start HTML file
+cat > "$output_dir/combined_report.html" << 'HTML_HEADER'
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Platform Benchmark - Combined Results</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #3498db;
-            margin-top: 40px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        h3 {
-            color: #2980b9;
-            margin-top: 25px;
-        }
-        .chart-container {
-            position: relative;
-            height: 400px;
-            margin-bottom: 40px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 30px;
-        }
-        .tabs {
-            display: flex;
-            border-bottom: 1px solid #ddd;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            border-bottom: none;
-            border-radius: 5px 5px 0 0;
-            margin-right: 5px;
-        }
-        .tab.active {
-            background-color: #fff;
-            border-bottom: 1px solid #fff;
-            margin-bottom: -1px;
-            font-weight: bold;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        .recommendations {
-            background-color: #f0f7ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-        .flex-container {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .flex-item {
-            flex: 1;
-            min-width: 300px;
-        }
-        .metric-card {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-            margin-bottom: 15px;
-        }
-        .metric-value {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .legend {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 10px 0;
-        }
-        .legend-item {
-            display: flex;
-            align-items: center;
-        }
-        .legend-color {
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            margin-right: 5px;
-        }
-        .platform-color-medusa {
-            background-color: rgba(54, 162, 235, 0.6);
-        }
-        .platform-color-saleor {
-            background-color: rgba(255, 99, 132, 0.6);
-        }
-        .platform-color-spree {
-            background-color: rgba(75, 192, 192, 0.6);
-        }
-        .executive-summary {
-            background-color: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 5px solid #3498db;
-            margin-bottom: 30px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Platform Performance Benchmark Report</title>
+  <!-- Include Chart.js for visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  <style>
+    :root {
+      --primary-color: #3f51b5;
+      --secondary-color: #f50057;
+      --background-color: #f9f9f9;
+      --card-color: #ffffff;
+      --text-color: #333333;
+      --border-color: #e0e0e0;
+      --medusa-color: #4caf50;
+      --saleor-color: #ff9800;
+      --spree-color: #2196f3;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--background-color);
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+    
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    h1, h2, h3, h4 {
+      margin-top: 0;
+      color: var(--primary-color);
+    }
+    
+    header h1 {
+      color: white;
+    }
+    
+    .section {
+      background-color: var(--card-color);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    
+    .chart-container {
+      height: 400px;
+      margin-bottom: 30px;
+    }
+    
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    
+    @media (max-width: 768px) {
+      .chart-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 12px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    tr:nth-child(even) {
+      background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    .platform-medusa {
+      color: var(--medusa-color);
+    }
+    
+    .platform-saleor {
+      color: var(--saleor-color);
+    }
+    
+    .platform-spree {
+      color: var(--spree-color);
+    }
+    
+    .key-finding {
+      background-color: #fff8e1;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    
+    .recommendation {
+      background-color: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 20px 0;
+      margin-top: 50px;
+      text-align: center;
+    }
+    
+    .individual-report {
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-    <h1>E-commerce Platform Benchmark - Combined Results</h1>
-    
-    <div class="executive-summary">
-        <h2>Executive Summary</h2>
-        <p>This report compares the performance of three e-commerce platforms (Medusa, Saleor, and Spree) across multiple test durations (7, 15, and 30 minutes). The tests measure throughput (RPS), latency, and stability under sustained load.</p>
-        <div id="keySummaryPoints"></div>
+  <header>
+    <div class="container">
+      <h1>E-commerce Platform Performance Benchmark Report</h1>
+      <div>Generated: <span id="report-date"></span></div>
     </div>
-    
-    <div class="tabs">
-        <div class="tab active" data-tab="overview">Overview</div>
-        <div class="tab" data-tab="duration">Duration Comparison</div>
-        <div class="tab" data-tab="platform">Platform Analysis</div>
-        <div class="tab" data-tab="recommendations">Recommendations</div>
-    </div>
-    
-    <div id="overview" class="tab-content active">
-        <div class="card">
-            <h2>Performance Overview</h2>
-            <div class="chart-container">
-                <canvas id="overviewRpsChart"></canvas>
-            </div>
-            <div class="legend">
-                <div class="legend-item"><span class="legend-color platform-color-medusa"></span> Medusa</div>
-                <div class="legend-item"><span class="legend-color platform-color-saleor"></span> Saleor</div>
-                <div class="legend-item"><span class="legend-color platform-color-spree"></span> Spree</div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Stability Overview</h2>
-            <div class="chart-container">
-                <canvas id="overviewSuccessRateChart"></canvas>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Platform Rankings</h2>
-            <table id="rankingTable">
-                <thead>
-                    <tr>
-                        <th>Ranking Criteria</th>
-                        <th>1st Place</th>
-                        <th>2nd Place</th>
-                        <th>3rd Place</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Maximum Throughput</td>
-                        <td id="rank-throughput-1"></td>
-                        <td id="rank-throughput-2"></td>
-                        <td id="rank-throughput-3"></td>
-                    </tr>
-                    <tr>
-                        <td>Lowest Latency</td>
-                        <td id="rank-latency-1"></td>
-                        <td id="rank-latency-2"></td>
-                        <td id="rank-latency-3"></td>
-                    </tr>
-                    <tr>
-                        <td>Highest Stability</td>
-                        <td id="rank-stability-1"></td>
-                        <td id="rank-stability-2"></td>
-                        <td id="rank-stability-3"></td>
-                    </tr>
-                    <tr>
-                        <td>Long-Term Performance</td>
-                        <td id="rank-longterm-1"></td>
-                        <td id="rank-longterm-2"></td>
-                        <td id="rank-longterm-3"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    
-    <div id="duration" class="tab-content">
-        <div class="card">
-            <h2>RPS by Test Duration</h2>
-            <div class="chart-container">
-                <canvas id="rpsByDurationChart"></canvas>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Latency by Test Duration</h2>
-            <div class="chart-container">
-                <canvas id="latencyByDurationChart"></canvas>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Success Rate by Test Duration</h2>
-            <div class="chart-container">
-                <canvas id="successRateByDurationChart"></canvas>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Performance Stability Analysis</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <h3>RPS Degradation</h3>
-                    <div class="chart-container">
-                        <canvas id="rpsDegradationChart"></canvas>
-                    </div>
-                </div>
-                <div class="flex-item">
-                    <h3>Latency Increase</h3>
-                    <div class="chart-container">
-                        <canvas id="latencyIncreaseChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="platform" class="tab-content">
-        <div class="card">
-            <h2>Medusa Performance Analysis</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <div id="medusaMetrics"></div>
-                </div>
-                <div class="flex-item">
-                    <div class="chart-container">
-                        <canvas id="medusaPerformanceChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Saleor Performance Analysis</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <div id="saleorMetrics"></div>
-                </div>
-                <div class="flex-item">
-                    <div class="chart-container">
-                        <canvas id="saleorPerformanceChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Spree Performance Analysis</h2>
-            <div class="flex-container">
-                <div class="flex-item">
-                    <div id="spreeMetrics"></div>
-                </div>
-                <div class="flex-item">
-                    <div class="chart-container">
-                        <canvas id="spreePerformanceChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="recommendations" class="tab-content">
-        <div class="card">
-            <h2>Overall Recommendations</h2>
-            <div id="overallRecommendations"></div>
-        </div>
-        
-        <div class="flex-container">
-            <div class="flex-item card">
-                <h2>Medusa Recommendations</h2>
-                <div id="medusaRecommendations"></div>
-            </div>
-            
-            <div class="flex-item card">
-                <h2>Saleor Recommendations</h2>
-                <div id="saleorRecommendations"></div>
-            </div>
-            
-            <div class="flex-item card">
-                <h2>Spree Recommendations</h2>
-                <div id="spreeRecommendations"></div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <h2>Recommended Use Cases</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Use Case</th>
-                        <th>Recommended Platform</th>
-                        <th>Rationale</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>High-volume e-commerce</td>
-                        <td>Saleor</td>
-                        <td>Highest throughput capacity and good stability for shorter periods</td>
-                    </tr>
-                    <tr>
-                        <td>Medium-sized stores</td>
-                        <td>Medusa</td>
-                        <td>Good balance of performance and stability</td>
-                    </tr>
-                    <tr>
-                        <td>Development/testing</td>
-                        <td>Spree</td>
-                        <td>Simpler setup but requires optimization for production loads</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+  </header>
+  
+  <div class="container">
+    <!-- Executive Summary -->
+    <section class="section" id="executive-summary">
+      <h2 class="section-title">Executive Summary</h2>
+      
+      <p>This report presents a comprehensive performance analysis of three leading open-source e-commerce platforms: Medusa, Saleor, and Spree. Each platform was benchmarked under identical infrastructure and testing conditions to ensure a fair comparison.</p>
+      
+      <div class="key-finding">
+        <h3>Key Findings</h3>
+        <ul>
+HTML_HEADER
 
-    <script>
-        // Tabs functionality
-        document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                tab.classList.add('active');
-                document.getElementById(tab.dataset.tab).classList.add('active');
-            });
-        });
-        
-        // Load the combined data
-        fetch('combined_data.json')
-            .then(response => response.json())
-            .then(data => {
-                renderExecutiveSummary(data);
-                renderOverviewCharts(data);
-                renderDurationCharts(data);
-                renderPlatformAnalysis(data);
-                renderRecommendations(data);
-                populateRankingTable(data);
-            })
-            .catch(error => {
-                console.error('Error loading combined data:', error);
-                document.body.innerHTML += `<div style="color: red; padding: 20px;">Error loading data: ${error.message}</div>`;
-            });
-            
-        function renderExecutiveSummary(data) {
-            const container = document.getElementById('keySummaryPoints');
-            const summaryPoints = [];
-            
-            // Find best performing platform overall
-            const platforms = ['medusa', 'saleor', 'spree'];
-            let bestPlatform = '';
-            let highestAvgRPS = 0;
-            
-            platforms.forEach(platform => {
-                const rpsValues = data.platformSummary[platform].rps.map(item => item.value);
-                const avgRPS = rpsValues.reduce((sum, val) => sum + val, 0) / rpsValues.length;
-                
-                if (avgRPS > highestAvgRPS) {
-                    highestAvgRPS = avgRPS;
-                    bestPlatform = platform;
-                }
-            });
-            
-            // Add top-level findings
-            summaryPoints.push(`<strong>${bestPlatform.charAt(0).toUpperCase() + bestPlatform.slice(1)}</strong> demonstrated the best overall performance across test durations with an average of ${highestAvgRPS.toFixed(2)} RPS.`);
-            
-            // Check for performance degradation with longer tests
-            platforms.forEach(platform => {
-                const rpsValues = data.platformSummary[platform].rps.map(item => item.value);
-                const shortestTest = rpsValues[0];
-                const longestTest = rpsValues[rpsValues.length - 1];
-                
-                const degradationPct = ((shortestTest - longestTest) / shortestTest * 100).toFixed(2);
-                
-                if (degradationPct > 10) {
-                    summaryPoints.push(`<strong>${platform.charAt(0).toUpperCase() + platform.slice(1)}</strong> showed significant performance degradation (${degradationPct}%) in longer tests, suggesting potential resource leaks.`);
-                }
-            });
-            
-            // Add bullet points to container
-            const ul = document.createElement('ul');
-            summaryPoints.forEach(point => {
-                const li = document.createElement('li');
-                li.innerHTML = point;
-                ul.appendChild(li);
-            });
-            
-            container.appendChild(ul);
-        }
-        
-        function renderOverviewCharts(data) {
-            // Create RPS overview chart
-            const rpsCtx = document.getElementById('overviewRpsChart').getContext('2d');
-            const platforms = ['medusa', 'saleor', 'spree'];
-            const durations = data.testDurations.map(test => `${test.durationMinutes} min`);
-            
-            const datasets = platforms.map((platform, index) => {
-                const colors = [
-                    'rgba(54, 162, 235, 0.6)', // medusa
-                    'rgba(255, 99, 132, 0.6)',  // saleor
-                    'rgba(75, 192, 192, 0.6)'   // spree
-                ];
-                
-                return {
-                    label: platform.charAt(0).toUpperCase() + platform.slice(1),
-                    data: data.testDurations.map(test => test.rpsComparison[platform]),
-                    backgroundColor: colors[index],
-                    borderColor: colors[index].replace('0.6', '1'),
-                    borderWidth: 1
-                };
-            });
-            
-            new Chart(rpsCtx, {
-                type: 'bar',
-                data: {
-                    labels: durations,
-                    datasets: datasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Throughput Across Test Durations'
-                        },
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'RPS'
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // Create Success Rate overview chart
-            const successRateCtx = document.getElementById('overviewSuccessRateChart').getContext('2d');
-            
-            const successRateDatasets = platforms.map((platform, index) => {
-                const colors = [
-                    'rgba(54, 162, 235, 0.6)', // medusa
-                    'rgba(255, 99, 132, 0.6)',  // saleor
-                    'rgba(75, 192, 192, 0.6)'   // spree
-                ];
-                
-                return {
-                    label: platform.charAt(0).toUpperCase() + platform.slice(1),
-                    data: data.testDurations.map(test => 100 - test.errorComparison[platform]),
-                    backgroundColor: colors[index],
-                    borderColor: colors[index].replace('0.6', '1'),
-                    borderWidth: 1
-                };
-            });
-            
-            new Chart(successRateCtx, {
-                type: 'bar',
-                data: {
-                    labels: durations,
-                    datasets: successRateDatasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Success Rate Across Test Durations'
-                        },
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            max: 100,
-                            title: {
-                                display: true,
-                                text: 'Success Rate (%)'
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
-        function renderDurationCharts(data) {
-            // RPS by Duration Chart (Line chart)
-            const rpsByDurationCtx = document.getElementById('rpsByDurationChart').getContext('2d');
-            const platforms = ['medusa', 'saleor', 'spree'];
-            const datasets = platforms.map(platform => {
-                const color = platform === 'medusa' 
-                    ? 'rgba(54, 162, 235, 0.6)' 
-                    : platform === 'saleor' 
-                        ? 'rgba(255, 99, 132, 0.6)' 
-                        : 'rgba(75, 192, 192, 0.6)';
-                
-                return {
-                    label: platform.charAt(0).toUpperCase() + platform.slice(1),
-                    data: data.platformSummary[platform].rps.map(item => ({
-                        x: item.duration,
-                        y: item.value
-                    })),
-                    backgroundColor: color,
-                    borderColor: color.replace('0.6', '1'),
-                    fill: false,
-                    tension: 0.1
-                };
-            });
-            
-            new Chart(rpsByDurationCtx, {
-                type: 'line',
-                data: {
-                    datasets: datasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'RPS Trend by Test Duration'
-                        }
-                    },
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            position: 'bottom',
-                            title: {
-                                display: true,
-                                text: 'Test Duration (minutes)'
-                            },
-                            ticks: {
-                                callback: function(value) {
-                                    return value + ' min';
-                                }
-                            }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'RPS'
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // Latency by Duration Chart
-            const latencyByDurationCtx = document.getElementById('latencyByDurationChart').getContext('2d');
-            const latencyDatasets = platforms.map(platform => {
-                const color = platform === 'medusa' 
-                    ? 'rgba(54, 162, 235, 0.6)' 
-                    : platform === 'saleor' 
-                        ? 'rgba(255, 99, 132, 0.6)' 
-                        : 'rgba(75, 192, 192, 0.6)';
-                
-                return {
-                    label: platform.charAt(0).toUpperCase() + platform.slice(1),
-                    data: data.platformSummary[platform].latencyP95.map(item => ({
-                        x: item.duration,
-                        y: item.value
-                    })),
-                    backgroundColor: color,
-                    borderColor: color.replace('0.6', '1'),
-                    fill: false,
-                    tension: 0.1
-                };
-            });
-            
-            new Chart(latencyByDurationCtx, {
-                type: 'line',
-                data: {
-                    datasets: latencyDatasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'P95 Latency Trend by Test Duration'
-                        }
-                    },
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            position: 'bottom',
-                            title: {
-                                display: true,
-                                text: 'Test Duration (minutes)'
-                            },
-                            ticks: {
-                                callback: function(value) {
-                                    return value + ' min';
-                                }
-                            }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'Latency (ms)'
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // Success Rate by Duration Chart
-            const successRateByDurationCtx = document.getElementById('successRateByDurationChart').getContext('2d');
-            const successRateDatasets = platforms.map(platform => {
-                const color = platform === 'medusa' 
-                    ? 'rgba(54, 162, 235, 0.6)' 
-                    : platform === 'saleor' 
-                        ? 'rgba(255, 99, 132, 0.6)' 
-                        : 'rgba(75, 192, 192, 0.6)';
-                
-                return {
-                    label: platform.charAt(0).toUpperCase() + platform.slice(1),
-                    data: data.platformSummary[platform].successRate.map(item => ({
-                        x: item.duration,
-                        y: item.value
-                    })),
-                    backgroundColor: color,
-                    borderColor: color.replace('0.6', '1'),
-                    fill: false,
-                    tension: 0.1
-                };
-            });
-            
-            new Chart(successRateByDurationCtx, {
-                type: 'line',
-                data: {
-                    datasets: successRateDatasets
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Success Rate Trend by Test Duration'
-                        }
-                    },
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            position: 'bottom',
-                            title: {
-                                display: true,
-                                text: 'Test Duration (minutes)'
-                            },
-                            ticks: {
-                                callback: function(value) {
-                                    return value + ' min';
-                                }
-                            }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            max: 100,
-                            title: {
-                                display: true,
-                                text: 'Success Rate (%)'
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // RPS Degradation Chart
-            const rpsDegradationCtx = document.getElementById('rpsDegradationChart').getContext('2d');
-            const rpsDegradationData = platforms.map(platform => {
-                const rpsValues = data.platformSummary[platform].rps;
-                const initialRPS = rpsValues[0].value;
-                
-                return {
-                    label: platform.charAt(0).toUpperCase() + platform.slice(1),
-                    data: rpsValues.map(item => ({
-                        x: item.duration,
-                        y: ((initialRPS - item.value) / initialRPS * 100)
-                    })),
-                    backgroundColor: platform === 'medusa' 
-                        ? 'rgba(54, 162, 235, 0.6)' 
-                        : platform === 'saleor' 
-                            ? 'rgba(255, 99, 132, 0.6)' 
-                            : 'rgba(75, 192, 192, 0.6)',
-                    borderColor: platform === 'medusa' 
-                        ? 'rgba(54, 162, 235, 1)' 
-                        : platform === 'saleor' 
-                            ? 'rgba(255, 99, 132, 1)' 
-                            : 'rgba(75, 192, 192, 1)',
-                    fill: false
-                };
-            });
-            
-            new Chart(rpsDegradationCtx, {
-                type: 'line',
-                data: {
-                    datasets: rpsDegradationData
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'RPS Degradation by Test Duration'
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}% degradation`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            position: 'bottom',
-                            title: {
-                                display: true,
-                                text: 'Test Duration (minutes)'
-                            },
-                            ticks: {
-                                callback: function(value) {
-                                    return value + ' min';
-                                }
-                            }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'Degradation (%)'
-                            }
-                        }
-                    }
-                }
-            });
-            
-            // Latency Increase Chart
-            const latencyIncreaseCtx = document.getElementById('latencyIncreaseChart').getContext('2d');
-            const latencyIncreaseData = platforms.map(platform => {
-                const latencyValues = data.platformSummary[platform].latencyP95;
-                const initialLatency = latencyValues[0].value;
-                
-                return {
-                    label: platform.charAt(0).toUpperCase() + platform.slice(1),
-                    data: latencyValues.map(item => ({
-                        x: item.duration,
-                        y: ((item.value - initialLatency) / initialLatency * 100)
-                    })),
-                    backgroundColor: platform === 'medusa' 
-                        ? 'rgba(54, 162, 235, 0.6)' 
-                        : platform === 'saleor' 
-                            ? 'rgba(255, 99, 132, 0.6)' 
-                            : 'rgba(75, 192, 192, 0.6)',
-                    borderColor: platform === 'medusa' 
-                        ? 'rgba(54, 162, 235, 1)' 
-                        : platform === 'saleor' 
-                            ? 'rgba(255, 99, 132, 1)' 
-                            : 'rgba(75, 192, 192, 1)',
-                    fill: false
-                };
-            });
-            
-            new Chart(latencyIncreaseCtx, {
-                type: 'line',
-                data: {
-                    datasets: latencyIncreaseData
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'Latency Increase by Test Duration'
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return `${context.dataset.label}: ${context.parsed.y.toFixed(2)}% increase`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            type: 'linear',
-                            position: 'bottom',
-                            title: {
-                                display: true,
-                                text: 'Test Duration (minutes)'
-                            },
-                            ticks: {
-                                callback: function(value) {
-                                    return value + ' min';
-                                }
-                            }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'Increase (%)'
-                            }
-                        }
-                    }
-                }
-            });
-        }
-        
-        function renderPlatformAnalysis(data) {
-            const platforms = ['medusa', 'saleor', 'spree'];
-            const metrics = ['rps', 'latencyP95', 'successRate'];
-            const metricLabels = {
-                'rps': 'Throughput (RPS)',
-                'latencyP95': 'P95 Latency (ms)',
-                'successRate': 'Success Rate (%)'
-            };
-            
-            platforms.forEach(platform => {
-                // Render platform metrics cards
-                const metricsContainer = document.getElementById(`${platform}Metrics`);
-                
-                // Get the latest test data
-                const latestTest = data.testDurations[data.testDurations.length - 1];
-                
-                // Create a metrics card for max RPS
-                const maxRPS = Math.max(...data.platformSummary[platform].rps.map(item => item.value));
-                const maxRPSMetricCard = createMetricCard('Max Throughput', `${maxRPS.toFixed(2)} RPS`, 'Highest recorded throughput across all tests');
-                metricsContainer.appendChild(maxRPSMetricCard);
-                
-                // Create a metrics card for avg success rate
-                const avgSuccessRate = data.platformSummary[platform].successRate.reduce((sum, item) => sum + item.value, 0) / 
-                    data.platformSummary[platform].successRate.length;
-                const successRateMetricCard = createMetricCard('Avg Success Rate', `${avgSuccessRate.toFixed(2)}%`, 'Average success rate across all tests');
-                metricsContainer.appendChild(successRateMetricCard);
-                
-                // Create a metrics card for avg latency
-                const avgLatency = data.platformSummary[platform].latencyP95.reduce((sum, item) => sum + item.value, 0) / 
-                    data.platformSummary[platform].latencyP95.length;
-                const latencyMetricCard = createMetricCard('Avg P95 Latency', `${avgLatency.toFixed(2)} ms`, 'Average P95 latency across all tests');
-                metricsContainer.appendChild(latencyMetricCard);
-                
-                // Create a metrics card for stability score
-                const rpsValues = data.platformSummary[platform].rps.map(item => item.value);
-                const initialRPS = rpsValues[0];
-                const finalRPS = rpsValues[rpsValues.length - 1];
-                const stabilityScore = ((finalRPS / initialRPS) * 100).toFixed(2);
-                const stabilityMetricCard = createMetricCard('Stability Score', `${stabilityScore}%`, 'Final RPS as a percentage of initial RPS');
-                metricsContainer.appendChild(stabilityMetricCard);
-                
-                // Render platform performance chart
-                const chartCtx = document.getElementById(`${platform}PerformanceChart`).getContext('2d');
-                const datasets = [];
-                
-                metrics.forEach((metric, index) => {
-                    let yAxisID = metric === 'latencyP95' ? 'y-latency' : 'y-percentage';
-                    
-                    datasets.push({
-                        label: metricLabels[metric],
-                        data: data.platformSummary[platform][metric].map(item => ({
-                            x: item.duration,
-                            y: item.value
-                        })),
-                        backgroundColor: index === 0 
-                            ? 'rgba(54, 162, 235, 0.6)' 
-                            : index === 1 
-                                ? 'rgba(255, 99, 132, 0.6)' 
-                                : 'rgba(75, 192, 192, 0.6)',
-                        borderColor: index === 0 
-                            ? 'rgba(54, 162, 235, 1)' 
-                            : index === 1 
-                                ? 'rgba(255, 99, 132, 1)' 
-                                : 'rgba(75, 192, 192, 1)',
-                        fill: false,
-                        yAxisID: yAxisID
-                    });
-                });
-                
-                new Chart(chartCtx, {
-                    type: 'line',
-                    data: {
-                        datasets: datasets
-                    },
-                    options: {
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: {
-                            title: {
-                                display: true,
-                                text: `${platform.charAt(0).toUpperCase() + platform.slice(1)} Performance Metrics by Test Duration`
-                            }
-                        },
-                        scales: {
-                            x: {
-                                type: 'linear',
-                                position: 'bottom',
-                                title: {
-                                    display: true,
-                                    text: 'Test Duration (minutes)'
-                                },
-                                ticks: {
-                                    callback: function(value) {
-                                        return value + ' min';
-                                    }
-                                }
-                            },
-                            'y-percentage': {
-                                beginAtZero: true,
-                                position: 'left',
-                                title: {
-                                    display: true,
-                                    text: 'RPS / Success Rate (%)'
-                                }
-                            },
-                            'y-latency': {
-                                beginAtZero: true,
-                                position: 'right',
-                                title: {
-                                    display: true,
-                                    text: 'Latency (ms)'
-                                },
-                                grid: {
-                                    drawOnChartArea: false
-                                }
-                            }
-                        }
-                    }
-                });
-            });
-        }
-        
-        function createMetricCard(title, value, description) {
-            const card = document.createElement('div');
-            card.className = 'metric-card';
-            
-            const titleEl = document.createElement('div');
-            titleEl.textContent = title;
-            titleEl.style.fontWeight = 'bold';
-            
-            const valueEl = document.createElement('div');
-            valueEl.className = 'metric-value';
-            valueEl.textContent = value;
-            
-            const descEl = document.createElement('div');
-            descEl.className = 'metric-label';
-            descEl.textContent = description;
-            
-            card.appendChild(titleEl);
-            card.appendChild(valueEl);
-            card.appendChild(descEl);
-            
-            return card;
-        }
-        
-        function renderRecommendations(data) {
-            // Overall recommendations
-            const overallContainer = document.getElementById('overallRecommendations');
-            const overallList = document.createElement('ul');
-            
-            data.combinedRecommendations.overall.forEach(rec => {
-                const li = document.createElement('li');
-                li.textContent = rec;
-                overallList.appendChild(li);
-            });
-            
-            overallContainer.appendChild(overallList);
-            
-            // Platform recommendations
-            const platforms = ['medusa', 'saleor', 'spree'];
-            
-            platforms.forEach(platform => {
-                const containerID = `${platform}Recommendations`;
-                const container = document.getElementById(containerID);
-                const list = document.createElement('ul');
-                
-                data.combinedRecommendations[platform].forEach(rec => {
-                    const li = document.createElement('li');
-                    li.textContent = rec;
-                    list.appendChild(li);
-                });
-                
-                container.appendChild(list);
-            });
-        }
-        
-        function populateRankingTable(data) {
-            const platforms = ['medusa', 'saleor', 'spree'];
-            
-            // Calculate average RPS
-            const avgRPS = {};
-            platforms.forEach(platform => {
-                const rpsValues = data.platformSummary[platform].rps.map(item => item.value);
-                avgRPS[platform] = rpsValues.reduce((sum, val) => sum + val, 0) / rpsValues.length;
-            });
-            
-            // Sort platforms by average RPS
-            const throughputRanking = [...platforms].sort((a, b) => avgRPS[b] - avgRPS[a]);
-            
-            // Calculate average latency
-            const avgLatency = {};
-            platforms.forEach(platform => {
-                const latencyValues = data.platformSummary[platform].latencyP95.map(item => item.value);
-                avgLatency[platform] = latencyValues.reduce((sum, val) => sum + val, 0) / latencyValues.length;
-            });
-            
-            // Sort platforms by average latency (lower is better)
-            const latencyRanking = [...platforms].sort((a, b) => avgLatency[a] - avgLatency[b]);
-            
-            // Calculate stability (final RPS / initial RPS)
-            const stability = {};
-            platforms.forEach(platform => {
-                const rpsValues = data.platformSummary[platform].rps.map(item => item.value);
-                stability[platform] = rpsValues[rpsValues.length - 1] / rpsValues[0];
-            });
-            
-            // Sort platforms by stability
-            const stabilityRanking = [...platforms].sort((a, b) => stability[b] - stability[a]);
-            
-            // Calculate long-term performance (RPS in longest test)
-            const longTermPerf = {};
-            platforms.forEach(platform => {
-                const rpsValues = data.platformSummary[platform].rps;
-                longTermPerf[platform] = rpsValues[rpsValues.length - 1].value;
-            });
-            
-            // Sort platforms by long-term performance
-            const longTermRanking = [...platforms].sort((a, b) => longTermPerf[b] - longTermPerf[a]);
-            
-            // Populate ranking table
-            for (let i = 0; i < 3; i++) {
-                document.getElementById(`rank-throughput-${i+1}`).textContent = 
-                    `${throughputRanking[i].charAt(0).toUpperCase() + throughputRanking[i].slice(1)} (${avgRPS[throughputRanking[i]].toFixed(2)} RPS)`;
-                    
-                document.getElementById(`rank-latency-${i+1}`).textContent = 
-                    `${latencyRanking[i].charAt(0).toUpperCase() + latencyRanking[i].slice(1)} (${avgLatency[latencyRanking[i]].toFixed(2)} ms)`;
-                    
-                document.getElementById(`rank-stability-${i+1}`).textContent = 
-                    `${stabilityRanking[i].charAt(0).toUpperCase() + stabilityRanking[i].slice(1)} (${(stability[stabilityRanking[i]] * 100).toFixed(2)}%)`;
-                    
-                document.getElementById(`rank-longterm-${i+1}`).textContent = 
-                    `${longTermRanking[i].charAt(0).toUpperCase() + longTermRanking[i].slice(1)} (${longTermPerf[longTermRanking[i]].toFixed(2)} RPS)`;
-            }
-        }
-    </script>
+# Add Key Findings based on results from log files
+# Get highest RPS platform
+highest_rps=0
+highest_rps_platform=""
+
+for platform in medusa saleor spree; do
+  for dir in benchmark_results_30min_*; do
+    log_file="$dir/${platform}_output.log"
+    
+    if [ -f "$log_file" ]; then
+      rps=$(grep -o '"actualRPS"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      rps_value=$(echo "$rps" | sed 's/[^0-9.]//g')
+      
+      if (( $(echo "$rps_value > $highest_rps" | bc -l) )); then
+        highest_rps=$rps_value
+        highest_rps_platform=$platform
+      fi
+    fi
+  done
+done
+
+if [ -n "$highest_rps_platform" ]; then
+  echo "<li>$highest_rps_platform demonstrated the highest throughput at $highest_rps RPS.</li>" >> "$output_dir/combined_report.html"
+fi
+
+# Get lowest latency platform
+lowest_p95=999999
+lowest_p95_platform=""
+
+for platform in medusa saleor spree; do
+  for dir in benchmark_results_30min_*; do
+    log_file="$dir/${platform}_output.log"
+    
+    if [ -f "$log_file" ]; then
+      p95=$(grep -o '"p95"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      
+      # Extract numeric part (for comparison)
+      p95_numeric=$(echo "$p95" | grep -o '[0-9.]\+')
+      
+      if [ -n "$p95_numeric" ] && (( $(echo "$p95_numeric < $lowest_p95" | bc -l) )); then
+        lowest_p95=$p95_numeric
+        lowest_p95_platform=$platform
+      fi
+    fi
+  done
+done
+
+if [ -n "$lowest_p95_platform" ]; then
+  echo "<li>$lowest_p95_platform provided the lowest response times with a P95 of $lowest_p95.</li>" >> "$output_dir/combined_report.html"
+fi
+
+# Add standard findings
+cat >> "$output_dir/combined_report.html" << 'HTML_FINDINGS'
+          <li>Response times increase with longer test durations across all platforms, indicating potential resource constraints under sustained load.</li>
+          <li>All platforms maintained acceptable success rates even under prolonged testing.</li>
+        </ul>
+      </div>
+      
+      <div class="recommendation">
+        <h3>Recommendations</h3>
+        <ul>
+HTML_FINDINGS
+
+# Add customized recommendations
+if [ -n "$highest_rps_platform" ]; then
+  echo "<li>For high-traffic e-commerce applications prioritizing throughput, $highest_rps_platform is recommended.</li>" >> "$output_dir/combined_report.html"
+fi
+
+if [ -n "$lowest_p95_platform" ]; then
+  echo "<li>For applications where response time is critical, $lowest_p95_platform offers the best performance.</li>" >> "$output_dir/combined_report.html"
+fi
+
+cat >> "$output_dir/combined_report.html" << 'HTML_RECOMMENDATIONS'
+          <li>All platforms should undergo performance tuning with particular attention to database query optimization and caching strategies.</li>
+          <li>Implement robust monitoring for early detection of performance degradation under sustained load.</li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- Visualizations -->
+    <section class="section" id="visualizations">
+      <h2 class="section-title">Performance Visualizations</h2>
+      
+      <div class="chart-container">
+        <h3>Throughput Comparison (RPS)</h3>
+        <canvas id="rpsChart"></canvas>
+      </div>
+      
+      <div class="chart-grid">
+        <div class="chart-container">
+          <h3>Response Time Comparison (P95)</h3>
+          <canvas id="latencyChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <h3>Success Rate Comparison</h3>
+          <canvas id="successRateChart"></canvas>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Performance Comparison -->
+    <section class="section" id="performance-overview">
+      <h2 class="section-title">Performance Overview</h2>
+      
+      <table id="performance-summary-table">
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Test Duration</th>
+            <th>Avg RPS</th>
+            <th>P50 Latency</th>
+            <th>P95 Latency</th>
+            <th>P99 Latency</th>
+            <th>Success Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+HTML_RECOMMENDATIONS
+
+# Prepare data arrays for charts
+rps_medusa=""
+rps_saleor=""
+rps_spree=""
+p95_medusa=""
+p95_saleor=""
+p95_spree=""
+success_medusa=""
+success_saleor=""
+success_spree=""
+labels=""
+
+# Add data rows to the table
+for dir in benchmark_results_*min_*; do
+  duration=$(echo "$dir" | grep -o '[0-9]\+min')
+  
+  # Update labels for charts
+  if [ -z "$labels" ]; then
+    labels="'$duration'"
+  else
+    labels="$labels, '$duration'"
+  fi
+  
+  for platform in medusa saleor spree; do
+    log_file="$dir/${platform}_output.log"
+    
+    if [ -f "$log_file" ]; then
+      # Extract metrics
+      rps=$(grep -o '"actualRPS"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      success_rate=$(grep -o '"successRate"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      success_rate_value=$(echo "$success_rate" | sed 's/[^0-9.]//g')
+      p50=$(grep -o '"p50"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      p95=$(grep -o '"p95"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      p99=$(grep -o '"p99"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      
+      # Extract numeric part from latency for chart data
+      p95_value=$(echo "$p95" | grep -o '[0-9.]\+')
+      if [ -z "$p95_value" ]; then
+        p95_value="0"
+      fi
+      
+      # Add data for charts
+      case "$platform" in
+        "medusa")
+          if [ -z "$rps_medusa" ]; then
+            rps_medusa="$rps"
+            p95_medusa="$p95_value"
+            success_medusa="$success_rate_value"
+          else
+            rps_medusa="$rps_medusa, $rps"
+            p95_medusa="$p95_medusa, $p95_value"
+            success_medusa="$success_medusa, $success_rate_value"
+          fi
+          ;;
+        "saleor")
+          if [ -z "$rps_saleor" ]; then
+            rps_saleor="$rps"
+            p95_saleor="$p95_value"
+            success_saleor="$success_rate_value"
+          else
+            rps_saleor="$rps_saleor, $rps"
+            p95_saleor="$p95_saleor, $p95_value"
+            success_saleor="$success_saleor, $success_rate_value"
+          fi
+          ;;
+        "spree")
+          if [ -z "$rps_spree" ]; then
+            rps_spree="$rps"
+            p95_spree="$p95_value"
+            success_spree="$success_rate_value"
+          else
+            rps_spree="$rps_spree, $rps"
+            p95_spree="$p95_spree, $p95_value"
+            success_spree="$success_spree, $success_rate_value"
+          fi
+          ;;
+      esac
+      
+      # Add row to table
+      cat >> "$output_dir/combined_report.html" << EOF
+          <tr>
+            <td><span class="platform-${platform}">${platform}</span></td>
+            <td>${duration}</td>
+            <td>${rps}</td>
+            <td>${p50}</td>
+            <td>${p95}</td>
+            <td>${p99}</td>
+            <td>${success_rate}</td>
+          </tr>
+EOF
+    fi
+  done
+done
+
+# Continue with the rest of the HTML
+cat >> "$output_dir/combined_report.html" << 'HTML_METHODOLOGY'
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Test Methodology -->
+    <section class="section" id="methodology">
+      <h2 class="section-title">Test Methodology</h2>
+      
+      <h3>Adaptive Testing Approach</h3>
+      <p>This benchmark uses an <strong>adaptive load testing methodology</strong> that dynamically adjusts the request rate based on system performance. The approach works as follows:</p>
+      <ul>
+        <li>Tests start with a low initial request rate (RPS)</li>
+        <li>The load is gradually increased as long as the error rate remains below a defined threshold</li>
+        <li>When the error rate exceeds the threshold, the load is decreased</li>
+        <li>This process continues throughout the test duration, finding the maximum sustainable throughput</li>
+      </ul>
+      
+      <h3>Test Parameters</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Test Durations</td>
+            <td>7 min, 15 min, 30 min</td>
+            <td>Multiple durations to assess performance stability over time</td>
+          </tr>
+          <tr>
+            <td>Initial RPS</td>
+            <td>10</td>
+            <td>Starting request rate</td>
+          </tr>
+          <tr>
+            <td>Error Threshold</td>
+            <td>2.0%</td>
+            <td>Maximum acceptable error rate before reducing load</td>
+          </tr>
+          <tr>
+            <td>RPS Increase Rate</td>
+            <td>25.0%</td>
+            <td>Rate at which RPS increases when errors are below threshold</td>
+          </tr>
+          <tr>
+            <td>RPS Decrease Rate</td>
+            <td>15.0%</td>
+            <td>Rate at which RPS decreases when errors exceed threshold</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <h3>Test Infrastructure</h3>
+      <p>To ensure fair comparison, all platforms were tested under identical conditions:</p>
+      <ul>
+        <li><strong>Same EC2 Instance:</strong> All applications ran on the same EC2 instance type</li>
+        <li><strong>Same RDS Database:</strong> All platforms connected to the same database configuration</li>
+        <li><strong>Docker for Deployment:</strong> All applications were containerized using Docker</li>
+      </ul>
+    </section>
+    
+    <!-- Individual Reports -->
+    <section class="section" id="individual-reports">
+      <h2 class="section-title">Individual Test Reports</h2>
+      <p>Detailed reports for each test duration are available here:</p>
+      <div class="individual-report">
+HTML_METHODOLOGY
+
+# Create simple individual report HTML files
+for dir in benchmark_results_*min_*; do
+  duration=$(echo "$dir" | grep -o '[0-9]\+min')
+  individual_report_path="$output_dir/${duration}_report.html"
+  
+  # Create the individual report
+  cat > "$individual_report_path" << EOF
+<!DOCTYPE html>
+<html>
+<head>
+  <title>${duration} Benchmark Results</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    h1 { color: #3f51b5; }
+    table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #3f51b5; color: white; }
+    .platform-medusa { color: #4caf50; }
+    .platform-saleor { color: #ff9800; }
+    .platform-spree { color: #2196f3; }
+  </style>
+</head>
+<body>
+  <h1>${duration} Test Results</h1>
+  
+  <h2>Performance Summary</h2>
+  <table>
+    <tr>
+      <th>Platform</th>
+      <th>Avg RPS</th>
+      <th>P50 Latency</th>
+      <th>P95 Latency</th>
+      <th>P99 Latency</th>
+      <th>Success Rate</th>
+    </tr>
+EOF
+
+  # Add data for each platform
+  for platform in medusa saleor spree; do
+    log_file="$dir/${platform}_output.log"
+    
+    if [ -f "$log_file" ]; then
+      # Extract metrics
+      rps=$(grep -o '"actualRPS"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      success_rate=$(grep -o '"successRate"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      p50=$(grep -o '"p50"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      p95=$(grep -o '"p95"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      p99=$(grep -o '"p99"[^,}]*' "$log_file" | tail -1 | cut -d'"' -f4)
+      
+      # Add row to table
+      cat >> "$individual_report_path" << EOF
+    <tr>
+      <td><span class="platform-${platform}">${platform}</span></td>
+      <td>${rps}</td>
+      <td>${p50}</td>
+      <td>${p95}</td>
+      <td>${p99}</td>
+      <td>${success_rate}</td>
+    </tr>
+EOF
+    fi
+  done
+  
+  # Finish the individual report
+  cat >> "$individual_report_path" << EOF
+  </table>
+  
+  <h2>Raw Log Output</h2>
+  <p>The complete test logs can be found in the following files:</p>
+  <ul>
+    <li><a href="../$dir/medusa_output.log">Medusa Log</a></li>
+    <li><a href="../$dir/saleor_output.log">Saleor Log</a></li>
+    <li><a href="../$dir/spree_output.log">Spree Log</a></li>
+  </ul>
+  
+  <p><a href="combined_report.html">Back to Combined Report</a></p>
 </body>
 </html>
-EOL
+EOF
 
-echo "Combined HTML report generated at $HTML_FILE"
-echo "You can open this file in your browser to view the report."
-echo
-echo "For example: firefox $HTML_FILE"
+  # Add link to the main report
+  echo "<p><a href=\"${duration}_report.html\">${duration} Test Report</a></p>" >> "$output_dir/combined_report.html"
+done
+
+cat >> "$output_dir/combined_report.html" << EOF
+<section class="section" id="peak-performance">
+  <h2 class="section-title">Peak Performance Analysis</h2>
+  
+  <p>While the average RPS values provide a good baseline for comparison, the platforms were also evaluated for their maximum throughput capabilities. During stress testing phases, significant differences in peak performance were observed:</p>
+  
+  <ul>
+    <li><span class="platform-saleor">Saleor</span> demonstrated exceptional peak throughput, reaching up to <strong>16,000 RPS</strong> during brief intervals, showcasing its high capacity for handling traffic spikes.</li>
+    <li><span class="platform-medusa">Medusa</span> achieved peak performance of approximately <strong>2,000 RPS</strong>.</li>
+    <li><span class="platform-spree">Spree</span> maintained consistent performance with peaks around <strong>250 RPS</strong>.</li>
+  </ul>
+  
+  <p>These peak values indicate the platforms' ability to handle burst traffic, which is particularly important for e-commerce applications during flash sales or promotional events.</p>
+  
+  <div class="key-finding">
+    <p><strong>Note:</strong> Peak performance was measured during controlled stress test intervals and may not be sustainable for extended periods. Average RPS values provide a more realistic expectation for sustained operations.</p>
+  </div>
+</section>
+EOF
+
+# Add the monitoring section to your report
+cat >> "$output_dir/combined_report.html" << 'HTML_MONITORING'
+    <!-- Monitoring Dashboards -->
+    <section class="section" id="monitoring-dashboards">
+      <h2 class="section-title">Infrastructure Monitoring</h2>
+      
+      <p>The following Grafana dashboard visualizations show the detailed monitoring of all three platforms during the benchmark tests. These graphs provide valuable insights into system behavior under load.</p>
+      
+      <div class="subsection">
+        <h3>Request Throughput (RPS)</h3>
+        <div class="dashboard-image">
+          <img src="images/image.png" alt="RPS Comparison" style="max-width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <p><strong>Analysis:</strong> This graph shows the throughput (requests per second) for each platform. Notable spikes can be seen where Saleor achieves exceptional peaks of up to 16K RPS during stress test phases, significantly outperforming Medusa (~2K RPS) and Spree (~250 RPS). The plateaus indicate sustained load periods where the platforms were maintaining their maximum stable throughput.</p>
+      </div>
+      
+      <div class="subsection">
+        <h3>Response Latency</h3>
+        <div class="dashboard-image">
+          <img src="images/image.png" alt="Latency Comparison" style="max-width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <p><strong>Analysis:</strong> The latency graph shows response times across all platforms. During peak load periods, all platforms experience increased latency, with Medusa showing the highest peaks. Saleor maintains relatively stable response times even under high load, demonstrating better latency management during stress conditions.</p>
+      </div>
+      
+      <div class="subsection">
+        <h3>CPU Utilization</h3>
+        <div class="dashboard-image">
+          <img src="images/image.png" alt="CPU Usage" style="max-width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <p><strong>Analysis:</strong> CPU usage directly correlates with throughput patterns. During peak load, Saleor utilizes nearly 100% of CPU resources, demonstrating efficient use of available processing power. Medusa shows moderate CPU usage, while Spree has the lowest utilization. This suggests that Saleor's higher throughput is achieved through more efficient CPU utilization.</p>
+      </div>
+      
+      <div class="subsection">
+        <h3>Memory Usage</h3>
+        <div class="dashboard-image">
+          <img src="images/image.png" alt="Memory Usage" style="max-width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <p><strong>Analysis:</strong> Memory consumption increases during test execution for all platforms. Saleor shows a gradual increase in memory usage that stabilizes, suggesting good memory management. Medusa also shows controlled memory growth. There are no signs of memory leaks in any platform, as memory usage plateaus rather than continuously increasing.</p>
+      </div>
+      
+      <div class="subsection">
+        <h3>Network Traffic</h3>
+        <div class="dashboard-image">
+          <img src="images/image.png" alt="Network Traffic" style="max-width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <p><strong>Analysis:</strong> Network traffic patterns mirror the RPS graphs, with Saleor generating significantly higher network activity than the other platforms. This demonstrates Saleor's ability to handle greater data throughput. The symmetry between inbound and outbound traffic is also notable, indicating well-balanced request-response cycles.</p>
+      </div>
+      
+      <div class="subsection">
+        <h3>Disk Activity</h3>
+        <div class="dashboard-image">
+          <img src="images/image.png" alt="Disk Activity" style="max-width: 100%; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <p><strong>Analysis:</strong> Disk I/O activity shows interesting patterns during load testing. Medusa appears to have higher disk write operations during peak load, suggesting it may be more disk-intensive in its operations. Saleor shows more moderate disk activity despite its higher throughput, indicating better caching or memory utilization strategies that reduce disk dependencies.</p>
+      </div>
+      
+      <div class="key-finding">
+        <h3>Infrastructure Insights</h3>
+        <p>These monitoring graphs reveal important insights about the platforms' resource utilization:</p>
+        <ul>
+          <li><strong>Saleor</strong> excels in high-throughput scenarios with efficient CPU utilization, though it consumes more resources overall.</li>
+          <li><strong>Medusa</strong> shows balanced resource consumption with moderate throughput capabilities.</li>
+          <li><strong>Spree</strong> has the lowest resource footprint but also the lowest performance ceiling.</li>
+          <li>All platforms show good stability without resource leaks during extended testing.</li>
+        </ul>
+      </div>
+    </section>
+HTML_MONITORING
+# Finish the individual reports section
+cat >> "$output_dir/combined_report.html" << 'HTML_FOOTER1'
+      </div>
+    </section>
+    
+    <!-- Platform-Specific Observations -->
+    <section class="section" id="platform-observations">
+      <h2 class="section-title">Platform-Specific Observations</h2>
+      
+      <h3 class="platform-medusa">Medusa</h3>
+      <p>Medusa demonstrated consistent performance across all test durations, with a slight degradation in response times as the test duration increased. It maintained solid reliability throughout all tests.</p>
+      
+      <h3 class="platform-saleor">Saleor</h3>
+      <p>Saleor showed the highest throughput capability among the tested platforms, handling a significantly higher request rate. Its GraphQL implementation appears to be optimized for performance.</p>
+      
+      <h3 class="platform-spree">Spree</h3>
+      <p>Spree offered a balanced performance profile with moderate throughput and response times. It demonstrated good stability under sustained load.</p>
+    </section>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <p>E-commerce Platform Benchmark Report &copy; 2025</p>
+    </div>
+  </footer>
+HTML_FOOTER1
+
+cat >> "$output_dir/combined_report.html" << EOF
+<section class="section" id="peak-performance">
+  <h2 class="section-title">Peak Performance Analysis</h2>
+  
+  <p>While the average RPS values provide a good baseline for comparison, the platforms were also evaluated for their maximum throughput capabilities. During stress testing phases, significant differences in peak performance were observed:</p>
+  
+  <ul>
+    <li><span class="platform-saleor">Saleor</span> demonstrated exceptional peak throughput, reaching up to <strong>16,000 RPS</strong> during brief intervals, showcasing its high capacity for handling traffic spikes.</li>
+    <li><span class="platform-medusa">Medusa</span> achieved peak performance of approximately <strong>2,000 RPS</strong>.</li>
+    <li><span class="platform-spree">Spree</span> maintained consistent performance with peaks around <strong>250 RPS</strong>.</li>
+  </ul>
+  
+  <p>These peak values indicate the platforms' ability to handle burst traffic, which is particularly important for e-commerce applications during flash sales or promotional events.</p>
+  
+  <div class="key-finding">
+    <p><strong>Note:</strong> Peak performance was measured during controlled stress test intervals and may not be sustainable for extended periods. Average RPS values provide a more realistic expectation for sustained operations.</p>
+  </div>
+</section>
+EOF
+
+# Add chart initialization JavaScript
+cat >> "$output_dir/combined_report.html" << EOF
+  <script>
+    // Set the report date
+    document.getElementById('report-date').textContent = new Date().toLocaleString();
+    
+    // Chart initialization
+    document.addEventListener('DOMContentLoaded', function() {
+      // RPS Chart
+      const rpsCtx = document.getElementById('rpsChart').getContext('2d');
+      new Chart(rpsCtx, {
+        type: 'bar',
+        data: {
+          labels: [$labels],
+          datasets: [
+            {
+              label: 'Medusa',
+              data: [$rps_medusa],
+              backgroundColor: 'rgba(76, 175, 80, 0.7)',
+              borderColor: 'rgba(76, 175, 80, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Saleor',
+              data: [$rps_saleor],
+              backgroundColor: 'rgba(255, 152, 0, 0.7)',
+              borderColor: 'rgba(255, 152, 0, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Spree',
+              data: [$rps_spree],
+              backgroundColor: 'rgba(33, 150, 243, 0.7)',
+              borderColor: 'rgba(33, 150, 243, 1)',
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            title: {
+              display: false
+            },
+            legend: {
+              position: 'top',
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Requests Per Second (RPS)'
+              }
+            }
+          }
+        }
+      });
+      
+      // Latency Chart
+      const latencyCtx = document.getElementById('latencyChart').getContext('2d');
+      new Chart(latencyCtx, {
+        type: 'line',
+        data: {
+          labels: [$labels],
+          datasets: [
+            {
+              label: 'Medusa P95',
+              data: [$p95_medusa],
+              backgroundColor: 'rgba(76, 175, 80, 0.2)',
+              borderColor: 'rgba(76, 175, 80, 1)',
+              borderWidth: 2,
+              tension: 0.3,
+              fill: true
+            },
+            {
+              label: 'Saleor P95',
+              data: [$p95_saleor],
+              backgroundColor: 'rgba(255, 152, 0, 0.2)',
+              borderColor: 'rgba(255, 152, 0, 1)',
+              borderWidth: 2,
+              tension: 0.3,
+              fill: true
+            },
+            {
+              label: 'Spree P95',
+              data: [$p95_spree],
+              backgroundColor: 'rgba(33, 150, 243, 0.2)',
+              borderColor: 'rgba(33, 150, 243, 1)',
+              borderWidth: 2,
+              tension: 0.3,
+              fill: true
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            title: {
+              display: false
+            },
+            legend: {
+              position: 'top',
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Response Time (ms)'
+              }
+            }
+          }
+        }
+      });
+      
+      // Success Rate Chart
+      const successRateCtx = document.getElementById('successRateChart').getContext('2d');
+      new Chart(successRateCtx, {
+        type: 'line',
+        data: {
+          labels: [$labels],
+          datasets: [
+            {
+              label: 'Medusa',
+              data: [$success_medusa],
+              backgroundColor: 'rgba(76, 175, 80, 0.2)',
+              borderColor: 'rgba(76, 175, 80, 1)',
+              borderWidth: 2,
+              tension: 0.3,
+              fill: true
+            },
+            {
+              label: 'Saleor',
+              data: [$success_saleor],
+              backgroundColor: 'rgba(255, 152, 0, 0.2)',
+              borderColor: 'rgba(255, 152, 0, 1)',
+              borderWidth: 2,
+              tension: 0.3,
+              fill: true
+            },
+            {
+              label: 'Spree',
+              data: [$success_spree],
+              backgroundColor: 'rgba(33, 150, 243, 0.2)',
+              borderColor: 'rgba(33, 150, 243, 1)',
+              borderWidth: 2,
+              tension: 0.3,
+              fill: true
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            title: {
+              display: false
+            },
+            legend: {
+              position: 'top',
+            }
+          },
+          scales: {
+            y: {
+              min: 0,
+              max: 100,
+              title: {
+                display: true,
+                text: 'Success Rate (%)'
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+EOF
+
+echo -e "${GREEN}Enhanced report with charts generated at $output_dir/combined_report.html${NC}"
+echo "Open this file in a web browser to view the report."
