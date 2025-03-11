@@ -29,8 +29,6 @@ type Config struct {
 		MaxQueueSize int
 		RampupStages []Stage
 		ReportingSeconds int
-		
-		// Adaptive testing configuration
 		AdaptiveRPS bool
 		AdaptiveConfig struct {
 			InitialRPS               int64
@@ -61,8 +59,6 @@ type Metrics struct {
 	FailedRequests int64
 	RequestDurations []time.Duration
 	mutex sync.Mutex
-	
-	// For adaptive testing
 	recentSuccessfulRequests int64
 	recentFailedRequests int64
 	lastSamplingTime time.Time
@@ -78,8 +74,6 @@ func (m *Metrics) AddResult(duration time.Duration, success bool) {
 		atomic.AddInt64(&m.FailedRequests, 1)
 		atomic.AddInt64(&m.recentFailedRequests, 1)
 	}
-	
-	// Only store a sample of durations to avoid memory issues
 	if rand.Float64() < 0.01 { // Store only 1% of durations
 		m.mutex.Lock()
 		m.RequestDurations = append(m.RequestDurations, duration)
@@ -206,7 +200,7 @@ type Task struct {
 	URL     string
 	Headers map[string]string
 	Method  string
-	Type    string // For metrics tracking
+	Type    string 
 }
 
 // Worker pool for handling concurrent requests
@@ -222,7 +216,6 @@ type WorkerPool struct {
 
 // NewWorkerPool creates a new worker pool
 func NewWorkerPool(workers, queueSize int, metrics *Metrics) *WorkerPool {
-	// Create an optimized HTTP transport
 	transport := &http.Transport{
 		MaxIdleConns:        workers,
 		MaxIdleConnsPerHost: workers,
@@ -308,8 +301,6 @@ func (p *WorkerPool) executeTask(task Task) {
 	
 	p.Metrics.AddResult(duration, success)
 }
-
-// LoadGenerator controls the rate of request generation
 type LoadGenerator struct {
 	Pool      *WorkerPool
 	Config    *Config
@@ -317,7 +308,6 @@ type LoadGenerator struct {
 	WaitGroup sync.WaitGroup
 }
 
-// NewLoadGenerator creates a new load generator
 func NewLoadGenerator(pool *WorkerPool, config *Config) *LoadGenerator {
 	return &LoadGenerator{
 		Pool:     pool,
@@ -326,7 +316,6 @@ func NewLoadGenerator(pool *WorkerPool, config *Config) *LoadGenerator {
 	}
 }
 
-// Start begins the load generation process
 func (g *LoadGenerator) Start() {
 	g.WaitGroup.Add(1)
 	go g.generateLoad()
