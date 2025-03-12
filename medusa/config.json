@@ -3,7 +3,7 @@
     "Products": "http://wsm-medusa.alphasquadit.com/store/products",
     "Categories": "http://wsm-medusa.alphasquadit.com/store/product-categories/"
   },
-  "APIKey": "pk_05c09b4f04e7185405f50dee26b6846b278aa7bd7b4b42b1fe6d42e5fe9ee390",
+  "APIKey": "pk_cf8ea2bcf8f97ee114ed8797b464ffb068777ff1751ac7b0612f58b06dca21fa",
   "Test": {
     "MaxWorkers": 2500,
     "MaxQueueSize": 5000,

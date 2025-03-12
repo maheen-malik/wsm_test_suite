@@ -604,7 +604,7 @@ func createDefaultConfig(path string) {
 	config.Endpoints.Categories = "http://wsm-medusa.alphasquadit.com/store/product-categories/"
 	
 	// Set default API key
-	config.APIKey = "pk_96823f646044c6fdd44578c072dbd5ced80934a3affc3ea72411958fcfb52a55"
+	config.APIKey = "pk_cf8ea2bcf8f97ee114ed8797b464ffb068777ff1751ac7b0612f58b06dca21fa"
 	
 	// Set default test configuration
 	config.Test.MaxWorkers = 2500
