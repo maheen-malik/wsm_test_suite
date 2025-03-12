@@ -1,0 +1,29 @@
+{
+  "Endpoints": {
+    "Products": "https://wsm-medusa.alphasquadit.com/store/products",
+    "Categories": "https://wsm-medusa.alphasquadit.com/store/product-categories/",
+    "SpecificCategory": "https://wsm-medusa.alphasquadit.com/store/product-categories/pcat_01JNGVR2XQS0BWM1VNFBVH8KJ9"
+  },
+  "APIKey": "pk_05c09b4f04e7185405f50dee26b6846b278aa7bd7b4b42b1fe6d42e5fe9ee390",
+  "Test": {
+    "MaxWorkers": 2500,
+    "MaxQueueSize": 5000,
+    "ReportingSeconds": 5,
+    "LogErrors": true,
+    "ErrorSampleRate": 0.05,
+    "BackoffEnabled": true,
+    "AdaptiveRPS": true,
+    "AdaptiveConfig": {
+      "InitialRPS": 10,
+      "ErrorThresholdPercentage": 2.0,
+      "RPSIncreasePercentage": 25.0,
+      "RPSDecreasePercentage": 15.0,
+      "MinimumRPS": 5,
+      "MaximumRPS": 500,
+      "SamplingWindow": 5000000000,
+      "StabilizationWindow": 15000000000
+    },
+    "Duration": 900000000000,
+    "RampupStages": []
+  }
+}
