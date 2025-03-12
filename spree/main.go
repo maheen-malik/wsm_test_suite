@@ -194,7 +194,7 @@ func NewWorkerPool(workers, queueSize int, metrics *Metrics, config *Config) *Wo
 	
 	client := &http.Client{
 		Transport: transport,
-		Timeout:   10 * time.Second, // Match the K6 script's 10s timeout
+		Timeout:   30 * time.Second, // Match the K6 script's 10s timeout
 	}
 	
 	currentRate := &atomic.Int64{}

@@ -1,20 +1,21 @@
 package main
 
 import (
-	"math/rand"
-	"sync"
-	"sync/atomic"
-	"time"
+	"encoding/json"
 	"flag"
 	"fmt"
+	"io"
 	"log"
 	"math"
+	"math/rand"
 	"net/http"
 	"os"
 	"os/signal"
 	"runtime"
+	"sync"
+	"sync/atomic"
 	"syscall"
-	"encoding/json"
+	"time"
 )
 
 type Config struct {
@@ -228,7 +229,7 @@ func NewWorkerPool(workers, queueSize int, metrics *Metrics) *WorkerPool {
 	
 	client := &http.Client{
 		Transport: transport,
-		Timeout:   5 * time.Second,
+		Timeout:   15 * time.Second,
 	}
 	
 	currentRate := &atomic.Int64{}
@@ -292,12 +293,13 @@ func (p *WorkerPool) executeTask(task Task) {
 	resp, err := p.HTTPClient.Do(req)
 	duration := time.Since(start)
 	
-	success := err == nil && resp != nil && resp.StatusCode == http.StatusOK
+	success := err == nil && resp != nil && resp.StatusCode >= 200 && resp.StatusCode < 300
 	
 	if resp != nil {
-		// Discard response body but ensure connection is closed properly
-		resp.Body.Close()
-	}
+    // Always read the body fully before closing
+    io.Copy(io.Discard, resp.Body)
+    resp.Body.Close()
+}
 	
 	p.Metrics.AddResult(duration, success)
 }
