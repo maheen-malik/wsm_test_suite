@@ -1,0 +1,37 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Combined E-commerce Platform Benchmark Report</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 20px; }
+      h1 { color: #333; }
+      table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+      th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+      th { background-color: #f2f2f2; }
+      tr:nth-child(even) { background-color: #f9f9f9; }
+    </style>
+  </head>
+  <body>
+    <h1>Combined E-commerce Platform Benchmark Report</h1>
+    <p>This report combines results from multiple benchmark durations.</p>
+    
+    <h2>Individual Reports</h2>
+    <ul>
+  EOF
+  
+  # Add links to individual reports
+  for dir in "benchmark_results_7min_20250312_163436 benchmark_results_15min_20250312_164637 benchmark_results_30min_20250312_170638 --output combined_report"; do
+    if [[  != "--output" &&  != combined_report ]]; then
+      echo "  <li><a href=\"..//report.html\"></a></li>" >> "combined_report/combined_report.html"
+    fi
+  done
+  
+  # Close the HTML
+  cat >> "combined_report/combined_report.html" << EOF
+    </ul>
+  </body>
+  </html>
+  EOF
+  
+  echo "Combined report generated at combined_report/combined_report.html"
+  
