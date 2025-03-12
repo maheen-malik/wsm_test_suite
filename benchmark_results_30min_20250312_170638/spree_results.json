@@ -1,0 +1,55 @@
+{"platform":"spree",
+  "actualRPS": "6.05",
+  "endpointDistribution": {
+    "products": 60.060639470782796,
+    "specificProduct": 39.9393605292172
+  },
+  "errorSamples": [
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-12T17:06:58Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-12T17:06:58Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-12T17:06:58Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-12T17:06:59Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    },
+    {
+      "error": "request error: Get \"https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "statusCode": 0,
+      "time": "2025-03-12T17:06:59Z",
+      "url": "https://wsm-spree.alphasquadit.com/api/v2/storefront/products/1"
+    }
+  ],
+  "failedRequests": 10831,
+  "latency": {
+    "p50": "10.000572437s",
+    "p90": "10.001117475s",
+    "p95": "10.001235783s",
+    "p99": "10.001549071s"
+  },
+  "statusCodes": {
+    "0": 10831,
+    "200": 53
+  },
+  "successRate": "0.49%",
+  "successfulRequests": 53,
+  "targetRPS": 6,
+  "testDuration": "30m0.00504462s",
+  "totalRequests": 10884
+}

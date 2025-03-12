@@ -496,16 +496,13 @@ func (g *LoadGenerator) generateLoad() {
 func (g *LoadGenerator) generateTask() Task {
 	// Distribute traffic across endpoints
 	var url, taskType string
-	switch rand.Intn(3) {
+	switch rand.Intn(2) {
 	case 0:
 		url = g.Config.Endpoints.Products
 		taskType = "products"
-	case 1:
+	default	:
 		url = g.Config.Endpoints.Categories
 		taskType = "categories"
-	default:
-		url = g.Config.Endpoints.SpecificCategory
-		taskType = "specific_category"
 	}
 	
 	headers := map[string]string{
@@ -601,9 +598,8 @@ func createDefaultConfig(path string) {
 	config := Config{}
 	
 	// Set default endpoints matching the K6 script
-	config.Endpoints.Products = "https://wsm-medusa.alphasquadit.com/store/products"
-	config.Endpoints.Categories = "https://wsm-medusa.alphasquadit.com/store/product-categories/"
-	config.Endpoints.SpecificCategory = "https://wsm-medusa.alphasquadit.com/store/product-categories/prod_01JP2X308PB6HM5XD9ERCZC38T"
+	config.Endpoints.Products = "http://wsm-medusa.alphasquadit.com/store/products"
+	config.Endpoints.Categories = "http://wsm-medusa.alphasquadit.com/store/product-categories/"
 	
 	// Set default API key
 	config.APIKey = "pk_96823f646044c6fdd44578c072dbd5ced80934a3affc3ea72411958fcfb52a55"
