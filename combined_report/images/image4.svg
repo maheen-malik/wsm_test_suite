@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
-  <rect width="800" height="400" fill="#f5f5f5"/>
-  <text x="400" y="200" text-anchor="middle" font-family="Arial" font-size="20" fill="#555">Placeholder Chart 4</text>
-  <text x="400" y="230" text-anchor="middle" font-family="Arial" font-size="16" fill="#777">Actual monitoring data will appear here</text>
-</svg>
