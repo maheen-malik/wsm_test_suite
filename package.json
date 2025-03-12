@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-benchmark-report",
+  "version": "1.0.0",
+  "description": "E-commerce Platform Performance Benchmark Report",
+  "scripts": {
+    "start": "serve combined_report"
+  },
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+}

@@ -1,0 +1,57 @@
+{"platform":"saleor",
+  "actualRPS": "21.59",
+  "errorSamples": [
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-12T18:43:46Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-12T18:43:46Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-12T18:43:46Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{categories(first: 10) {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-12T18:43:46Z"
+    },
+    {
+      "error": "request error: Post \"https://wsm-saleor.alphasquadit.com/graphql/\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+      "operation": "{products(first: 10, channel: \"default-channel\") {edges {node {id name}}}}",
+      "statusCode": 0,
+      "time": "2025-03-12T18:43:46Z"
+    }
+  ],
+  "failedRequests": 4042,
+  "latency": {
+    "p50": "8.417392199s",
+    "p90": "10.000843649s",
+    "p95": "10.001071701s",
+    "p99": "10.001480289s"
+  },
+  "operationDistribution": {
+    "categories": 33.73773023050623,
+    "products": 31.862799161795525,
+    "specific_product": 34.39947060769825
+  },
+  "statusCodes": {
+    "0": 4025,
+    "200": 5025,
+    "502": 17
+  },
+  "successRate": "55.42%",
+  "successfulRequests": 5025,
+  "targetRPS": 15,
+  "testDuration": "7m0.00524715s",
+  "totalRequests": 9067
+}

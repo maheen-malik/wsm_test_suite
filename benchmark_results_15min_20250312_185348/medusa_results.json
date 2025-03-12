@@ -1,0 +1,15 @@
+{"platform":"medusa",
+  "actualRPS": "41.83",
+  "failedRequests": 3097,
+  "latency": {
+    "p50": "10.840009205s",
+    "p90": "11.779455943s",
+    "p95": "11.930983271s",
+    "p99": "12.29294236s"
+  },
+  "successRate": "91.77%",
+  "successfulRequests": 34552,
+  "targetRPS": 40,
+  "testDuration": "15m0.006968975s",
+  "totalRequests": 37649
+}
