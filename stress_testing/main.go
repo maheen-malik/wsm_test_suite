@@ -7,9 +7,11 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math"
 	"net/http"
 	"os"
 	"os/signal"
+	"runtime"
 	"sync"
 	"sync/atomic"
 	"syscall"
@@ -32,7 +34,7 @@ type Config struct {
 	Test   struct {
 		DurationSeconds int
 		RPS             int
-		Workers         int
+		TotalRequests   int // Total requests to send
 	}
 }
 
@@ -87,9 +89,9 @@ type Platform struct {
 func NewPlatform(config PlatformConfig) *Platform {
 	// Configure transport for high-performance, high-concurrency testing
 	transport := &http.Transport{
-		MaxIdleConns:        500,
-		MaxIdleConnsPerHost: 500,
-		MaxConnsPerHost:     500,
+		MaxIdleConns:        1000,
+		MaxIdleConnsPerHost: 1000,
+		MaxConnsPerHost:     1000,
 		IdleConnTimeout:     90 * time.Second,
 		DisableCompression:  true,
 		DisableKeepAlives:   false,
@@ -98,7 +100,7 @@ func NewPlatform(config PlatformConfig) *Platform {
 
 	client := &http.Client{
 		Transport: transport,
-		Timeout:   10 * time.Second,
+		Timeout:   5 * time.Second, // Shorter timeout to fail faster
 	}
 
 	return &Platform{
@@ -159,66 +161,85 @@ func (p *Platform) ExecuteRequest() {
 	p.Metrics.AddResult(success)
 }
 
-// RunTest executes the load test for the platform
-func (p *Platform) RunTest(rps int, duration time.Duration, wg *sync.WaitGroup) {
+// RunFixedRequestCountTest sends exactly the specified number of requests
+func (p *Platform) RunFixedRequestCountTest(totalRequests int, targetRPS int, wg *sync.WaitGroup) {
 	defer wg.Done()
 
-	fmt.Printf("Starting test for %s at %d RPS for %v\n", p.Config.Name, rps, duration)
+	fmt.Printf("Starting test for %s with %d total requests at target rate of %d RPS\n", 
+		p.Config.Name, totalRequests, targetRPS)
+
+	// Create a worker pool
+	numWorkers := 200
 	
-	// Create a worker pool for better performance at high RPS
-	workerCount := 200 // Use enough workers to handle high RPS
+	// Create a channel to distribute work
+	tasks := make(chan struct{}, numWorkers*2)
+	
+	// Launch workers
 	workerWg := sync.WaitGroup{}
-	workerChan := make(chan struct{}, rps*2) // Buffer channel for worker tasks
-	
-	// Start worker pool
-	for i := 0; i < workerCount; i++ {
+	for i := 0; i < numWorkers; i++ {
 		workerWg.Add(1)
 		go func() {
 			defer workerWg.Done()
-			for range workerChan {
+			for range tasks {
 				p.ExecuteRequest()
 			}
 		}()
 	}
 	
-	// Distribute requests at the target rate
-	ticker := time.NewTicker(time.Second / time.Duration(rps))
-	defer ticker.Stop()
+	// Used for rate limiting
+	interval := time.Second / time.Duration(targetRPS)
+	nextRequestTime := time.Now()
 	
-	timeout := time.After(duration)
+	// Initialize progress tracking
+	lastReportTime := time.Now()
+	lastReportCount := int64(0)
 	
-	// Track actual requests per second for reporting
-	secondTicker := time.NewTicker(time.Second)
-	defer secondTicker.Stop()
-	
-	requestsThisSecond := 0
-	
-	for {
+	// Send exactly the requested number of requests
+	for i := 0; i < totalRequests; i++ {
+		// Check for stop signal
 		select {
-		case <-ticker.C:
-			select {
-			case workerChan <- struct{}{}:
-				requestsThisSecond++
-			default:
-				// Queue full, log as error
-				p.Metrics.AddResult(false)
-			}
-		case <-secondTicker.C:
-			if requestsThisSecond > 0 {
-				fmt.Printf("%s: Sent %d requests in the last second\n", p.Config.Name, requestsThisSecond)
-				requestsThisSecond = 0
-			}
-		case <-timeout:
-			fmt.Printf("Test completed for %s\n", p.Config.Name)
-			close(workerChan)
-			workerWg.Wait()
-			return
 		case <-p.StopChan:
-			close(workerChan)
+			fmt.Printf("Test for %s stopped early after %d requests\n", p.Config.Name, i)
+			close(tasks)
 			workerWg.Wait()
 			return
+		default:
+			// Continue with test
+		}
+		
+		// Simple rate limiting
+		now := time.Now()
+		if now.Before(nextRequestTime) {
+			sleepTime := nextRequestTime.Sub(now)
+			if sleepTime > 0 {
+				time.Sleep(sleepTime)
+			}
+		}
+		nextRequestTime = time.Now().Add(interval)
+		
+		// Submit task
+		tasks <- struct{}{}
+		
+		// Report progress every second
+		if time.Since(lastReportTime) >= time.Second {
+			currentCount := atomic.LoadInt64(&p.Metrics.TotalRequests)
+			rps := currentCount - lastReportCount
+			lastReportCount = currentCount
+			
+			percentComplete := float64(currentCount) / float64(totalRequests) * 100
+			fmt.Printf("%s: %d/%d requests (%.1f%%) - Current rate: %d RPS\n", 
+				p.Config.Name, currentCount, totalRequests, percentComplete, rps)
+				
+			lastReportTime = time.Now()
 		}
 	}
+	
+	// Wait for all tasks to complete
+	close(tasks)
+	workerWg.Wait()
+	
+	fmt.Printf("Test completed for %s - Total requests: %d\n", 
+		p.Config.Name, atomic.LoadInt64(&p.Metrics.TotalRequests))
 }
 
 func main() {
@@ -226,6 +247,9 @@ func main() {
 	configPath := flag.String("config", "error_rate_config.json", "Path to the configuration file")
 	flag.Parse()
 
+	// Set GOMAXPROCS to use all available CPU cores
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	
 	// Load or create configuration
 	config, err := loadConfig(*configPath)
 	if err != nil {
@@ -240,15 +264,7 @@ func main() {
 	sigChan := make(chan os.Signal, 1)
 	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
 
-	// Start the tests
-	var wg sync.WaitGroup
-	wg.Add(2)
-
-	testDuration := time.Duration(config.Test.DurationSeconds) * time.Second
-	go saleor.RunTest(config.Test.RPS, testDuration, &wg)
-	go medusa.RunTest(config.Test.RPS, testDuration, &wg)
-
-	// Wait for interrupt or completion
+	// Create a goroutine to handle the interrupt signal
 	go func() {
 		<-sigChan
 		fmt.Println("\nReceived interrupt signal, shutting down...")
@@ -256,12 +272,23 @@ func main() {
 		close(medusa.StopChan)
 	}()
 
+	// Start the tests
+	var wg sync.WaitGroup
+	wg.Add(2)
+
+	// Calculate the exact number of requests to send
+	totalRequests := config.Test.RPS * config.Test.DurationSeconds
+
+	go saleor.RunFixedRequestCountTest(totalRequests, config.Test.RPS, &wg)
+	go medusa.RunFixedRequestCountTest(totalRequests, config.Test.RPS, &wg)
+
 	// Wait for tests to complete
 	wg.Wait()
 
 	// Print comparison results
 	fmt.Println("\n----- ERROR RATE COMPARISON RESULTS -----")
-	fmt.Printf("Test Duration: %d seconds at %d RPS\n\n", config.Test.DurationSeconds, config.Test.RPS)
+	fmt.Printf("Test completed: %d requests at target %d RPS over %d seconds\n\n", 
+		totalRequests, config.Test.RPS, config.Test.DurationSeconds)
 
 	saleorSuccessRate := saleor.Metrics.GetSuccessRate()
 	saleorErrorRate := saleor.Metrics.GetErrorRate()
@@ -291,7 +318,8 @@ func main() {
 	// Save results to file
 	results := map[string]interface{}{
 		"testDuration": config.Test.DurationSeconds,
-		"rps":          config.Test.RPS,
+		"targetRPS":    config.Test.RPS,
+		"totalRequestsPerPlatform": totalRequests,
 		"saleor": map[string]interface{}{
 			"totalRequests": saleor.Metrics.TotalRequests,
 			"successRate":   saleorSuccessRate,
@@ -301,6 +329,17 @@ func main() {
 			"totalRequests": medusa.Metrics.TotalRequests,
 			"successRate":   medusaSuccessRate,
 			"errorRate":     medusaErrorRate,
+		},
+		"comparison": map[string]interface{}{
+			"errorRateDifference": math.Abs(saleorErrorRate - medusaErrorRate),
+			"betterPlatform": func() string {
+				if saleorErrorRate < medusaErrorRate {
+					return "Saleor"
+				} else if medusaErrorRate < saleorErrorRate {
+					return "Medusa"
+				}
+				return "Tie"
+			}(),
 		},
 	}
 
@@ -371,8 +410,8 @@ func createDefaultConfig(path string) (*Config, error) {
 
 	// Test configuration
 	config.Test.DurationSeconds = 60 // 1 minute
-	config.Test.RPS = 1000
-	config.Test.Workers = 200
+	config.Test.RPS = 1000          // Target 1000 RPS
+	config.Test.TotalRequests = 60000 // 60 seconds * 1000 RPS
 
 	// Write configuration to file
 	configFile, err := os.Create(path)
