@@ -8,6 +8,7 @@ import (
 	"io"
 	"log"
 	"math"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
@@ -34,7 +35,6 @@ type Config struct {
 	Test   struct {
 		DurationSeconds int
 		RPS             int
-		TotalRequests   int // Total requests to send
 	}
 }
 
@@ -44,11 +44,6 @@ type Metrics struct {
 	SuccessfulRequests int64
 	FailedRequests     int64
 	mutex              sync.RWMutex
-}
-
-// NewMetrics creates a new metrics instance
-func NewMetrics() *Metrics {
-	return &Metrics{}
 }
 
 // AddResult adds a result to the metrics
@@ -80,39 +75,51 @@ func (m *Metrics) GetErrorRate() float64 {
 // Platform represents an e-commerce platform to test
 type Platform struct {
 	Config   PlatformConfig
-	Client   *http.Client
 	Metrics  *Metrics
 	StopChan chan struct{}
+	client   *http.Client
 }
 
-// NewPlatform creates a new platform instance
+// NewPlatform creates a new platform instance with optimized HTTP client
 func NewPlatform(config PlatformConfig) *Platform {
-	// Configure transport for high-performance, high-concurrency testing
+	// Create a custom dialer with shorter timeouts
+	dialer := &net.Dialer{
+		Timeout:   5 * time.Second,
+		KeepAlive: 30 * time.Second,
+	}
+
+	// Configure transport for high-concurrency testing
 	transport := &http.Transport{
-		MaxIdleConns:        1000,
-		MaxIdleConnsPerHost: 1000,
-		MaxConnsPerHost:     1000,
-		IdleConnTimeout:     90 * time.Second,
-		DisableCompression:  true,
-		DisableKeepAlives:   false,
-		ForceAttemptHTTP2:   true,
+		Proxy:                 http.ProxyFromEnvironment,
+		DialContext:           dialer.DialContext,
+		MaxIdleConns:          3000,
+		MaxIdleConnsPerHost:   1000,
+		MaxConnsPerHost:       1000,
+		IdleConnTimeout:       90 * time.Second,
+		TLSHandshakeTimeout:   5 * time.Second,
+		ExpectContinueTimeout: 1 * time.Second,
+		DisableCompression:    true,
+		DisableKeepAlives:     false,
+		ForceAttemptHTTP2:     true,
 	}
 
 	client := &http.Client{
 		Transport: transport,
-		Timeout:   5 * time.Second, // Shorter timeout to fail faster
+		Timeout:   10 * time.Second,
 	}
 
 	return &Platform{
 		Config:   config,
-		Client:   client,
-		Metrics:  NewMetrics(),
+		Metrics:  &Metrics{},
 		StopChan: make(chan struct{}),
+		client:   client,
 	}
 }
 
-// Execute a request to the platform
-func (p *Platform) ExecuteRequest() {
+// ExecuteRequest performs a single request to the platform
+func (p *Platform) ExecuteRequest(wg *sync.WaitGroup) {
+	defer wg.Done()
+	
 	var req *http.Request
 	var err error
 
@@ -145,106 +152,92 @@ func (p *Platform) ExecuteRequest() {
 	}
 
 	// Execute request
-	resp, err := p.Client.Do(req)
+	resp, err := p.client.Do(req)
+	
+	// Handle response
 	if err != nil {
 		p.Metrics.AddResult(false)
 		return
 	}
 
-	defer func() {
-		io.Copy(io.Discard, resp.Body)
-		resp.Body.Close()
-	}()
+	// Read and discard body to properly reuse connections
+	io.Copy(io.Discard, resp.Body)
+	resp.Body.Close()
 
 	// Check if request was successful
 	success := resp.StatusCode >= 200 && resp.StatusCode < 300
 	p.Metrics.AddResult(success)
 }
 
-// RunFixedRequestCountTest sends exactly the specified number of requests
-func (p *Platform) RunFixedRequestCountTest(totalRequests int, targetRPS int, wg *sync.WaitGroup) {
-	defer wg.Done()
+// StressTest runs a high-RPS stress test against the platform
+func StressTest(p *Platform, rps int, duration time.Duration) {
+	fmt.Printf("Starting stress test for %s at %d RPS for %s\n", 
+		p.Config.Name, rps, duration.String())
 
-	fmt.Printf("Starting test for %s with %d total requests at target rate of %d RPS\n", 
-		p.Config.Name, totalRequests, targetRPS)
+	// Calculate total requests
+	totalRequests := int(duration.Seconds()) * rps
+	fmt.Printf("Will send %d total requests to %s\n", totalRequests, p.Config.Name)
 
-	// Create a worker pool
-	numWorkers := 200
+	// For precise timing
+	ticker := time.NewTicker(time.Second / time.Duration(rps))
+	defer ticker.Stop()
+
+	// Set up reporting
+	reportTicker := time.NewTicker(1 * time.Second)
+	defer reportTicker.Stop()
+
+	// Set deadline
+	deadline := time.Now().Add(duration)
 	
-	// Create a channel to distribute work
-	tasks := make(chan struct{}, numWorkers*2)
+	// WaitGroup for tracking in-flight requests
+	var wg sync.WaitGroup
 	
-	// Launch workers
-	workerWg := sync.WaitGroup{}
-	for i := 0; i < numWorkers; i++ {
-		workerWg.Add(1)
-		go func() {
-			defer workerWg.Done()
-			for range tasks {
-				p.ExecuteRequest()
+	// Track progress
+	var requestsSent int64
+	
+	// Report current status
+	go func() {
+		lastReported := int64(0)
+		for {
+			select {
+			case <-reportTicker.C:
+				current := atomic.LoadInt64(&requestsSent)
+				currentReqs := atomic.LoadInt64(&p.Metrics.TotalRequests)
+				rate := current - lastReported
+				lastReported = current
+				percent := float64(current) / float64(totalRequests) * 100
+				fmt.Printf("%s: %d/%d requests (%.1f%%) - Sent: %d RPS, Completed: %d\n", 
+					p.Config.Name, current, totalRequests, percent, rate, currentReqs)
+			case <-p.StopChan:
+				return
 			}
-		}()
-	}
-	
-	// Used for rate limiting
-	interval := time.Second / time.Duration(targetRPS)
-	nextRequestTime := time.Now()
-	
-	// Initialize progress tracking
-	lastReportTime := time.Now()
-	lastReportCount := int64(0)
-	
-	// Send exactly the requested number of requests
-	for i := 0; i < totalRequests; i++ {
-		// Check for stop signal
+		}
+	}()
+
+	// Send requests at the specified rate
+	for time.Now().Before(deadline) {
 		select {
+		case <-ticker.C:
+			wg.Add(1)
+			atomic.AddInt64(&requestsSent, 1)
+			go p.ExecuteRequest(&wg)
 		case <-p.StopChan:
-			fmt.Printf("Test for %s stopped early after %d requests\n", p.Config.Name, i)
-			close(tasks)
-			workerWg.Wait()
+			fmt.Printf("%s: Test interrupted\n", p.Config.Name)
+			wg.Wait()
 			return
-		default:
-			// Continue with test
-		}
-		
-		// Simple rate limiting
-		now := time.Now()
-		if now.Before(nextRequestTime) {
-			sleepTime := nextRequestTime.Sub(now)
-			if sleepTime > 0 {
-				time.Sleep(sleepTime)
-			}
-		}
-		nextRequestTime = time.Now().Add(interval)
-		
-		// Submit task
-		tasks <- struct{}{}
-		
-		// Report progress every second
-		if time.Since(lastReportTime) >= time.Second {
-			currentCount := atomic.LoadInt64(&p.Metrics.TotalRequests)
-			rps := currentCount - lastReportCount
-			lastReportCount = currentCount
-			
-			percentComplete := float64(currentCount) / float64(totalRequests) * 100
-			fmt.Printf("%s: %d/%d requests (%.1f%%) - Current rate: %d RPS\n", 
-				p.Config.Name, currentCount, totalRequests, percentComplete, rps)
-				
-			lastReportTime = time.Now()
 		}
 	}
-	
-	// Wait for all tasks to complete
-	close(tasks)
-	workerWg.Wait()
-	
-	fmt.Printf("Test completed for %s - Total requests: %d\n", 
-		p.Config.Name, atomic.LoadInt64(&p.Metrics.TotalRequests))
+
+	// Wait for any remaining requests to complete
+	fmt.Printf("%s: All requests sent, waiting for completion...\n", p.Config.Name)
+	wg.Wait()
+	fmt.Printf("%s: Test completed. Sent %d requests, processed %d responses\n", 
+		p.Config.Name, requestsSent, p.Metrics.TotalRequests)
 }
 
 func main() {
 	// Parse command line arguments
-	configPath := flag.String("config", "error_rate_config.json", "Path to the configuration file")
+	configPath := flag.String("config", "stress_test_config.json", "Path to the configuration file")
 	flag.Parse()
 
 	// Set GOMAXPROCS to use all available CPU cores
@@ -272,45 +265,53 @@ func main() {
 		close(medusa.StopChan)
 	}()
 
-	// Start the tests
+	// Set test parameters
+	testDuration := time.Duration(config.Test.DurationSeconds) * time.Second
+	rps := config.Test.RPS
+
+	// Run tests in parallel
 	var wg sync.WaitGroup
 	wg.Add(2)
+	
+	go func() {
+		defer wg.Done()
+		StressTest(saleor, rps, testDuration)
+	}()
+	
+	go func() {
+		defer wg.Done()
+		StressTest(medusa, rps, testDuration)
+	}()
 
-	// Calculate the exact number of requests to send
-	totalRequests := config.Test.RPS * config.Test.DurationSeconds
-
-	go saleor.RunFixedRequestCountTest(totalRequests, config.Test.RPS, &wg)
-	go medusa.RunFixedRequestCountTest(totalRequests, config.Test.RPS, &wg)
-
-	// Wait for tests to complete
+	// Wait for both tests to complete
 	wg.Wait()
 
 	// Print comparison results
 	fmt.Println("\n----- ERROR RATE COMPARISON RESULTS -----")
-	fmt.Printf("Test completed: %d requests at target %d RPS over %d seconds\n\n", 
-		totalRequests, config.Test.RPS, config.Test.DurationSeconds)
+	fmt.Printf("Test Duration: %d seconds at target %d RPS\n\n", 
+		config.Test.DurationSeconds, config.Test.RPS)
 
-	saleorSuccessRate := saleor.Metrics.GetSuccessRate()
 	saleorErrorRate := saleor.Metrics.GetErrorRate()
-	medusaSuccessRate := medusa.Metrics.GetSuccessRate()
 	medusaErrorRate := medusa.Metrics.GetErrorRate()
 
 	fmt.Printf("Saleor:\n")
-	fmt.Printf("  Total Requests: %d\n", saleor.Metrics.TotalRequests)
-	fmt.Printf("  Success Rate: %.2f%%\n", saleorSuccessRate)
+	fmt.Printf("  Total Requests Processed: %d\n", saleor.Metrics.TotalRequests)
+	fmt.Printf("  Success Rate: %.2f%%\n", saleor.Metrics.GetSuccessRate())
 	fmt.Printf("  Error Rate: %.2f%%\n\n", saleorErrorRate)
 
 	fmt.Printf("Medusa:\n")
-	fmt.Printf("  Total Requests: %d\n", medusa.Metrics.TotalRequests)
-	fmt.Printf("  Success Rate: %.2f%%\n", medusaSuccessRate)
+	fmt.Printf("  Total Requests Processed: %d\n", medusa.Metrics.TotalRequests)
+	fmt.Printf("  Success Rate: %.2f%%\n", medusa.Metrics.GetSuccessRate())
 	fmt.Printf("  Error Rate: %.2f%%\n\n", medusaErrorRate)
 
 	// Determine which platform performed better
 	fmt.Println("Comparison:")
+	errorRateDiff := math.Abs(saleorErrorRate - medusaErrorRate)
+	
 	if saleorErrorRate < medusaErrorRate {
-		fmt.Printf("Saleor has a lower error rate by %.2f percentage points\n", medusaErrorRate-saleorErrorRate)
+		fmt.Printf("Saleor has a lower error rate by %.2f percentage points\n", errorRateDiff)
 	} else if medusaErrorRate < saleorErrorRate {
-		fmt.Printf("Medusa has a lower error rate by %.2f percentage points\n", saleorErrorRate-medusaErrorRate)
+		fmt.Printf("Medusa has a lower error rate by %.2f percentage points\n", errorRateDiff)
 	} else {
 		fmt.Println("Both platforms have the same error rate")
 	}
@@ -319,19 +320,18 @@ func main() {
 	results := map[string]interface{}{
 		"testDuration": config.Test.DurationSeconds,
 		"targetRPS":    config.Test.RPS,
-		"totalRequestsPerPlatform": totalRequests,
 		"saleor": map[string]interface{}{
 			"totalRequests": saleor.Metrics.TotalRequests,
-			"successRate":   saleorSuccessRate,
+			"successRate":   saleor.Metrics.GetSuccessRate(),
 			"errorRate":     saleorErrorRate,
 		},
 		"medusa": map[string]interface{}{
 			"totalRequests": medusa.Metrics.TotalRequests,
-			"successRate":   medusaSuccessRate,
+			"successRate":   medusa.Metrics.GetSuccessRate(),
 			"errorRate":     medusaErrorRate,
 		},
-		"comparison": map[string]interface{}{
-			"errorRateDifference": math.Abs(saleorErrorRate - medusaErrorRate),
+		"comparisonResult": map[string]interface{}{
+			"errorRateDifference": errorRateDiff,
 			"betterPlatform": func() string {
 				if saleorErrorRate < medusaErrorRate {
 					return "Saleor"
@@ -344,11 +344,11 @@ func main() {
 	}
 
 	resultsJSON, _ := json.MarshalIndent(results, "", "  ")
-	err = os.WriteFile("error_rate_results.json", resultsJSON, 0644)
+	err = os.WriteFile("stress_test_results.json", resultsJSON, 0644)
 	if err != nil {
 		fmt.Printf("Error writing results file: %v\n", err)
 	} else {
-		fmt.Println("Results saved to error_rate_results.json")
+		fmt.Println("Results saved to stress_test_results.json")
 	}
 }
 
@@ -385,7 +385,7 @@ func createDefaultConfig(path string) (*Config, error) {
 			"Accept":       "application/json",
 		},
 		Query: `{
-			products(first: 10, channel: "default-channel") {
+			products(first: 5, channel: "default-channel") {
 				edges {
 					node {
 						id
@@ -411,7 +411,6 @@ func createDefaultConfig(path string) (*Config, error) {
 	// Test configuration
 	config.Test.DurationSeconds = 60 // 1 minute
 	config.Test.RPS = 1000          // Target 1000 RPS
-	config.Test.TotalRequests = 60000 // 60 seconds * 1000 RPS
 
 	// Write configuration to file
 	configFile, err := os.Create(path)
