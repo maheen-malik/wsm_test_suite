@@ -85,13 +85,15 @@ type Platform struct {
 
 // NewPlatform creates a new platform instance
 func NewPlatform(config PlatformConfig) *Platform {
+	// Configure transport for high-performance, high-concurrency testing
 	transport := &http.Transport{
-		MaxIdleConns:        10,
-		MaxIdleConnsPerHost: 10,
-		MaxConnsPerHost:     10,
-		IdleConnTimeout:     30 * time.Second,
-		DisableCompression:  false,
+		MaxIdleConns:        500,
+		MaxIdleConnsPerHost: 500,
+		MaxConnsPerHost:     500,
+		IdleConnTimeout:     90 * time.Second,
+		DisableCompression:  true,
 		DisableKeepAlives:   false,
+		ForceAttemptHTTP2:   true,
 	}
 
 	client := &http.Client{
@@ -162,20 +164,58 @@ func (p *Platform) RunTest(rps int, duration time.Duration, wg *sync.WaitGroup) 
 	defer wg.Done()
 
 	fmt.Printf("Starting test for %s at %d RPS for %v\n", p.Config.Name, rps, duration)
-
+	
+	// Create a worker pool for better performance at high RPS
+	workerCount := 200 // Use enough workers to handle high RPS
+	workerWg := sync.WaitGroup{}
+	workerChan := make(chan struct{}, rps*2) // Buffer channel for worker tasks
+	
+	// Start worker pool
+	for i := 0; i < workerCount; i++ {
+		workerWg.Add(1)
+		go func() {
+			defer workerWg.Done()
+			for range workerChan {
+				p.ExecuteRequest()
+			}
+		}()
+	}
+	
+	// Distribute requests at the target rate
 	ticker := time.NewTicker(time.Second / time.Duration(rps))
 	defer ticker.Stop()
-
+	
 	timeout := time.After(duration)
-
+	
+	// Track actual requests per second for reporting
+	secondTicker := time.NewTicker(time.Second)
+	defer secondTicker.Stop()
+	
+	requestsThisSecond := 0
+	
 	for {
 		select {
 		case <-ticker.C:
-			go p.ExecuteRequest()
+			select {
+			case workerChan <- struct{}{}:
+				requestsThisSecond++
+			default:
+				// Queue full, log as error
+				p.Metrics.AddResult(false)
+			}
+		case <-secondTicker.C:
+			if requestsThisSecond > 0 {
+				fmt.Printf("%s: Sent %d requests in the last second\n", p.Config.Name, requestsThisSecond)
+				requestsThisSecond = 0
+			}
 		case <-timeout:
 			fmt.Printf("Test completed for %s\n", p.Config.Name)
+			close(workerChan)
+			workerWg.Wait()
 			return
 		case <-p.StopChan:
+			close(workerChan)
+			workerWg.Wait()
 			return
 		}
 	}
@@ -331,8 +371,8 @@ func createDefaultConfig(path string) (*Config, error) {
 
 	// Test configuration
 	config.Test.DurationSeconds = 60 // 1 minute
-	config.Test.RPS = 1
-	config.Test.Workers = 10
+	config.Test.RPS = 1000
+	config.Test.Workers = 200
 
 	// Write configuration to file
 	configFile, err := os.Create(path)
