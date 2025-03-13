@@ -1,0 +1,18 @@
+{
+  "comparisonResult": {
+    "betterPlatform": "Saleor",
+    "errorRateDifference": 0.009722983462950197
+  },
+  "medusa": {
+    "errorRate": 99.73711882229233,
+    "successRate": 0.26288117770767616,
+    "totalRequests": 55158
+  },
+  "saleor": {
+    "errorRate": 99.72739583882938,
+    "successRate": 0.27260416117061503,
+    "totalRequests": 56859
+  },
+  "targetRPS": 1000,
+  "testDuration": 60
+}
